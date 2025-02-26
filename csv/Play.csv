@@ -1,0 +1,8 @@
+subject,predicate,object
+Play,crm:P102_has_title,Diatriba de amor contra un hombre sentado
+Play,dcTerms:creator,Gabriel Garcia Marquez
+Play,schema:genre,monodramas
+Play,dcTerms:extent,69 pages
+Play,cdTerms:pulisher,Arango Editores
+Play,schema:edition,1st edition
+Play,dcTerms:issued,1994

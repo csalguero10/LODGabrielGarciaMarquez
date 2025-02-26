@@ -1,0 +1,11 @@
+subject,predicate,object
+Manuscript general,crm:P102_has_title,El general en su laberinto
+Manuscript general,dcTerms:creator, Gabriel Garcia Marquez
+Manuscript general,dcTerms:created,1988
+Manuscript general,crm:P2_has_type,manuscript
+Manuscript general,dcTerms:extent,247 pages
+Manuscript general,schema:genre,novels
+Manuscript general,crm:P72_has_language,spanish
+Manuscript general,crm:P55_has_current_location,Austin
+Manuscript general,crm:P52_has_current_owner,HRC University of Texas
+Manuscript general,dcTerms:isPartOf,Gabriel Garcia Marquez Collection

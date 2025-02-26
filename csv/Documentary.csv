@@ -1,0 +1,9 @@
+Subject,Predicate,Object
+Documentary,crm:P102_has_title,"Gabo, la creacion de Gabriel Garcia Marquez"
+Documentary,schema:genre,Documentary Film
+Documentary,schema:CountryOfOrigin,Colombia
+Documentary,crm:P72_has_language,Spanish
+Documentary,dcterms:created,2015
+Documentary,schema:director,Justin Webster
+Documentary,schema:duration,PT90M
+
