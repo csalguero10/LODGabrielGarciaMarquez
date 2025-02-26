@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_ms.rng"
+    type="application/xml"
+    schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cor.0001">
+
+
+    <teiHeader>
+        <fileDesc>
+            <!--Information about the work titles and those responsible for its content, u referes to unpublished material as it was a draft of the final book-->
+            <titleStmt>
+                <title level="u" type="main">El general en su laberinto</title>
+                <title level="u" type="alternative">The General in His Labyrinth</title>
+                <author xml:id="ggm">Gabriel García Márquez</author>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="cs">Catalina Salguero</persName>
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <edition source="#project">
+                    <date>November 2014</date>
+                    <note>Typescript with revisions: a machine readable transcription</note>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>The University of Texas at Austin</publisher>
+                <address>
+                    <addrLine>Harry Ransom Center</addrLine>
+                    <addrLine>The University of Texas</addrLine>
+                    <addrLine>Austin, TX 78712</addrLine>
+                    <addrLine>reference@hrc.utexas.edu</addrLine>
+                </address>
+                <availability>
+                    <p> The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners. To read more about the public domain, visit the <ref target="http://creativecommons.org/publicdomain/">Creative Commons Public Domain Dedication</ref>. </p>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note type="project"> This manuscript form part of <ref target="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51">Gabriel García Márquez Collection</ref>
+                </note>
+            </notesStmt>
+
+            <sourceDesc>
+                <bibl type="base">
+                    <title type="main">El general en su laberinto</title>
+                    <author sameAs="ggm">García Márquez, Gabriel</author>
+                    <date when="1988-10-05">5 de octubre 1988</date>
+                    <pubPlace>México</pubPlace>
+                    <extent n="247">247 pages</extent>
+                    <note>Final version 1.</note>
+                </bibl>
+
+                <msDesc type="source">
+                    <msIdentifier>
+                        <institution xml:id="Asutin">Harry Ransom Center, The University of Texas at Austin</institution>
+                        <repository>Harry Ransom Center</repository>
+                        <collection>Gabriel García Márquez Collection. Gabriel García Márquez Papers, 1930s-2014 (bulk 1966-2006)</collection>
+                        <idno type="callno">MS-5353</idno>
+                        <idno type="box">Box 1</idno>
+                        <idno type="folder">Folder 3</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="es">Spanish</textLang>
+                        <titlePage>
+                            <docTitle>
+                                <titlePart type="main">El general en su laberinto</titlePart>
+                                <titlePart type="alternative">The General in His Labyrinth</titlePart>
+                            </docTitle>
+                        </titlePage>
+                        <msItem>
+                            <author sameAs="ggm">Gabriel García Márquez</author>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>Typewriting paper with revitions.</support>
+                                <extent>
+                                    <measure type="pages">247</measure>
+                                </extent>
+                                <foliation>Original foliation in regular numerals.</foliation>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+
+        <profileDesc>
+            <langUsage xml:lang="es">
+                <language ident="es-CO">Spanish</language>
+            </langUsage>
+            <handNotes>
+                <handNote xml:id="hand1" scribeRef="#ggm" medium="pencil" />
+                <handNote xml:id="hand2" scribeRef="#ggm" medium="blue ink" />
+                <handNote xml:id="hand3" scribeRef="#ggm" medium="black ink" />
+                <handNote xml:id="hand4" scribeRef="#ggm" medium="green ink" />
+            </handNotes>
+        </profileDesc>
+
+        <encodingDesc>
+            <projectDesc xml:id="GGMproject">
+                <p>
+                    The text encoding was created and/or prepared for the GGM Project in LOD for the final project course in Information Science and Cultural Heritage as part of the Digital Humanities and Digital Knowledge master's degree program at the University of Bologna.
+                </p>
+                <p>
+                    The text encoding refers to the transcription and encoding of the first 10 pages of the original manuscript, digitized by the Harry Ransom Center.
+                </p>
+            </projectDesc>
+            <editorialDecl>
+                <correction>
+                    <p>
+                        Original spelling and punctuation have been preserved. Obvious typographical errors corrected by the author has been marked using "del" and "add" elements. When the text is not comprehensible, the element "unclear" is used.
+                    </p>
+                </correction>
+                <quotation>
+                    <p>
+                        All quotations are encoded with the "q" element, and direct speech is marked using "said" when necessary.
+                    </p>
+                </quotation>
+                <segmentation>
+                    <p>
+                        Line breaks have been encoded using "lb", and paragraph "p" divisions follow the manuscript's structure.
+                    </p>
+                </segmentation>
+                <interpretation>
+                    <p>
+                        Editorial notes are provided in "note" elements and include clarifications about the placement of the marginalia.
+                    </p>
+                </interpretation>
+            </editorialDecl>
+        </encodingDesc>
+
+        <revisionDesc>
+            <change who="#cs" when="2025-01-14">Transcribed and encoded on 14 of January of 2025</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text xml:lang="es" type="typescript">
+        <!--Front page containing header, title page and epigraph-->
+        <front>
+            <pb xml:id="leaf001r" facs="p15878coll51_14529.jpg" type="recto" />
+            <div type="titlePage">
+                <head type="cover">
+                    <title>
+                        <hi rend="caps">G</hi>abriel 
+                        <hi rend="caps">G</hi>arcía 
+                        <hi rend="caps">M</hi>árquez
+                        <l /><hi rend="caps">EL GENERAL EN SU LABERINTO</hi>
+                    </title>
+                </head>
+                <note type="authorial" place="center" hand="#hand3">
+                    <unclear>Raimondo Manifescoli</unclear>
+                </note>
+                <note type="authorial" place="center" hand="#hand2">
+                    Mexico 5 de Octubre/88
+                </note>
+                <note type="authorial" place="center" hand="#hand3">
+                    <hi rend="caps">VERSION FINAL N° 1</hi>
+                </note>
+            </div>
+
+            <pb xml:id="leaf001v" facs="p15878coll51_14529.jpg" type="verso" />
+            <div>
+                <figure type="authorial" hand="=#hand2">
+                    <figDesc>It appears to be a drawing of a floor plan of a space/house.</figDesc>
+                </figure>
+            </div>
+
+
+            <pb xml:id="leaf002r" facs="p15878coll51_14531.jpg" type="recto" />
+            
+            <div>
+                <note type="authorial" place="center" hand="#hand3">
+                    <unclear>Sangre negra: Fue Martin de Narváez en el siglo XVII, tercer abuelo aleman de Bol.</unclear><gap reason="illegible" extent="6 words" cert="low" resp="#cs" />
+                    <unclear>Josefa hija descendiente fue </unclear><gap reason="illegible" extent="4 words" cert="low" resp="#cs"/><add rend="overwrite" hand="#hand4" place="over" seq="1">O.K</add>
+                    <del rend="overstrike"><unclear reason="illegible" cert="medium">Sandra tenía pintas de vincel en tu carro.</unclear></del>
+                </note>
+                <note type="authorial" place="left" resp="#hand3">(tatarabuelo)
+                </note>
+                <note type="authorial" place="right" resp="#hand4">
+                    <hi rend="caps" rendition="rectangle">SANDRA QUIROGA</hi>
+                </note>
+            </div>
+
+            <div>
+                <epigraph>
+                    <quote>Parece que el demonio dirige las cosas de mi vida.</quote>
+                    <l rend="right"><said rend="caps">SIMÓN BOLIVAR</said>
+                    </l>
+                    <l rend="left">
+                        <date>(Carta a Santander, agosto 4 de 182<del rend="overstrike" hand="#hand4">5</del><add hand="#hand4" seq="2">3</add>)
+                        </date>
+                    </l>
+                </epigraph>
+            </div>
+            
+            <div>
+                <note type="authorial" place="center" hand="#hand3">
+                    <hi rend="underline"><unclear reason="illegible" cert="low">Casaconicia:</unclear></hi> Julio 4 <del rend="overstrike">1824:<unclear reason="illegible" extent="8 words" cert="low" resp="#cs"></unclear></del>
+                    <hi rend="underline">MASUR:</hi> <del rend="overstrike" hand="#hand4"><unclear reason="illegible">352 encargos de Sder: 325</unclear></del>
+                </note>
+            </div>
+
+            <pb xml:id="leaf002v" facs="p15878coll51_14532.jpg" type="verso" />
+
+            <div>
+                <figure type="authorial" resp="=#hand2">
+                    <figDesc>It appears to be a drawing of a floor plan of a space/house.</figDesc>
+                </figure>
+                <lb />
+            </div>
+        </front>
+
+        <body>
+            <pb xml:id="leaf003r" facs="lp15878coll51_14533.jpg" type="recto" />
+            <fw type="pageNum" place="top right" hand="#hand1">1</fw>
+
+            <div>
+                <note type="authorial" place="up center" resp="#hand1">Parque Humboldt. Mijares 76 <del rend="overstrike" resp="#hand3"><unclear reason="illegible">final: sentarse siempre de pantalones</unclear></del><add rend="insertion" seq="1" place="right">(8 cap)</add>
+                </note>
+            </div>
+
+            <div>
+                <p rend="first-line-indent">
+                    José Palacios, su servidor más antiguo, lo encontró flotando en las aguas depurativas de la bañera, desnudo y con los ojos abiertos, y creyó que se había ahogado. Sabía que ese era uno de sus muchos modos de meditar, pero el estado de éxtasis en que yacía a la deriva parecía de alguien que ya no era de este mundo. No se atrevió a acercarse, sino que lo llamó con voz sorda de acuerdo con la orden de despertarlo antes de las cinco para viajar con las primeras luces. Él emergió del hechizo, reconoció a su mayordomo de todos los días parado en la puerta del baño con un pocilio de infusión de amapolas con goma <add rend="insertion" hand="#hand1">arábiga</add>, y salió chorreando de la bañera con un ímpetu de delfín que no era de esperar en un cuerpo tan desmedrado.
+                </p>
+
+                <p rend="first-line-indent">
+                    <lb /><said who="Coronel">"Vamonós"</said> dijo, <said who="Coronel">"<add hand="#hand3">volando</add> que aquí no nos quiere nadie"</said>
+                </p>
+
+                <p rend="first-line-indent">
+                    José Palacios se lo había oído decir tantas veces y en ocasiones tan diversas, que todavía no creyó que fuera cierto, a pesar de que las recuas estaban preparadas en las caballerizas y la comitiva oficial empezaba a reunirse en la sala. Lo ayudó a secarse de cualquier modo, y le puso la ruana de los paramo sobre el cuerpo desnudo, porque la taza le castañeteaba con el temblor de las manos, tlesesajites, puiliéttdose unos pantalones de gamuza que no usaba desde las noches romanas de
+                </p>
+            </div>
+
+            <pb xml:id="leaf004r" facs="p15878coll51_14534.jpg" type="recto" />
+            <fw type="pageNum" place="top right" hand="#hand1">2</fw>
+            <div>
+                <p rend="first-line-indent"> 
+                    Lima, él había descubierto que a medida que bajaba de peso iba disminuyendo de estatura. Hasta su desnudez era distinta, pues tenía el cuerpo pálido, y la cabeza y las manos <del rend="overstrike" hand="#hand1">casi negras</del> <add hand="#hand1">como achicharradas</add> por el abuso de la intemperie. Había cumplido cuarenta y seis años el pasado mes de julio, pero ya sus ásperos rizos caribes se habían vuelto de ceniza, y tenía los huesos desordenados por la decrepitud prematura, y todo él se veía tan desmerecido que no parecía capaz de perdurar hasta el julio siguiente. Sin embargo, sus ademanes resueltos parecían ser de otra menos dañado por la vida, y aun a la intemperie caminaba sin cesar alrededor de nada. Se bebió la tizana de cinco sorbos ardientes que por poco no le ampollaron la lengua, huyendo de sus propias huellas de agua en las esteras desgreñadas del piso, y fue como beberse el filtro de la resurrección. Pero no dijo una palabra hasta que no sonaron las cinco enla torre de la catedral vecina. 
+                </p>
+
+                <p rend="first-line-indent">
+                    <said who="mayordomo">"Sábado ocho de mayo, día de Santa Juana de Arco"</said>, anunció el mayordomo. <said who="mayordomo">"Está lloviendo desde las tres de la madrugada".</said>
+                </p>
+
+                <p rend="first-line-indent">
+                    <said who="Coronel">"Desde las tres de la madrugada del día en que la asaron los ingleses"</said>, dijo él con la voz todavía perturbada por el aliento acre del insomnio, y agregó en serio: <said who="Coronel">"No oí los gallos".</said>
+                </p>
+
+                <p rend="first-line-indent">
+                    <said who="mayordomo">"Aquí no hay gallos"</said>, dijo el mayordomo. 
+                    </p>
+
+                <p rend="first-line-indent">
+                    <said who="Coronel">"No hay nada"</said>, dijo él. <said who="Coronel">"Es tierra de infieles".</said>
+                </p>
+
+                <p rend="first-line-indent">
+                    La alcoba enorme de paredes áridas, expuesta a los vientos helados que se filtraban por las ventanas mal ceñidas, no era la más propicia para su salud. José Palacios puso la bacía de espuma en el mármol del 
+                </p>
+            </div>
+
+            <pb xml:id="leaf005r" facs="p15878coll51_14535.jpg" type="recto" />
+            <fw type="pageNum" place="top right" hand="#hand1">3</fw>
+
+            <div>
+                <p> 
+                    tocador, y el estuche de terciopelo rojo con la brocha, la peinilla, las tijeras y la navaja, todas de metal dorado. Puso la palmatoria con la vela en una repisa cerca del espejo, de modo que él tuviera bastante luz para afeitarse, y acercó el brasero para que se le calentaran los pies. Después le dio unas antiparras de cristales cuadrados con una armazón de plata fina, que llevaba siempre para él en el bolsillo del chaleco. El se las puso, y se afeitó gobernando la navaja <del rend="overstrike" hand="#hand1">lo mismo con</del> <add hand="#hand1">con igual destreza en</add> la mano izquierda <del rend="overstrike" hand="#hand1">que con</del> <add hand="#hand1">como en</add> la derecha, y con el mismo pulso que minutos antes no le había servido para sostener la taza. Terminó afeitándose o ciegas sin dejar de dar vueltas por el cuarto, pues procuraba verse en el espejp lo menos posible para no encontrarse con sus propios ojos. Luego <add rend="insertion" hand="#hand1">se arrancó a tirones los pelos de la nariz y las orejas,</add> se pulió los dientes perfectos con polvo de carbón en un cepillo con mango de plata, se cortó y se pulió las uñas de las manos y de los pies, <del rendition="rectangle" hand="#hand1">se arrancó a tirones los pelos de la nariz y las orejas,</del> y por último se quitó la ruana y se vació encima un frasco grande de agua de colonia, dándose fricciones con ambas manos en el cuerpo entero hasta quedar exhausto. Pues aquella madrugada oficiaba la misa diaria de la limpieza con una sevicia más frenética que la habitual, tratando de purificar el cuerpo y el ánima de veinte años de guerras inútiles y desengaños de poder. 
+                </p>
+
+                <p rend="first-line-indent">
+                    La última visita gue recibió la noche anterior fue la de Manuela Saenz, la aguerrida guiteña gue amaba y gue lo amaba, pero que no iba a seguirlo hasta la muerte. Se quedaba, en efecto, porque él quería estarmbien informado de todo cuanto ocurriera en ausencia suya, y no confiaba
+                </p>
+            </div>
+
+            <pb xml:id="leaf005v" facs="p15878coll51_14536.jpg" type="verso" />
+            <fw type="pageNum" place="top right" hand="#hand1">4</fw>
+            <div>
+                <p> 
+                    en nadie más que en ella. <del rend="overstrike" hand="#hand1">Por to mismo</del> le d<del rend="overstrike" hand="#hand1">a</del><add hand="#hand1">e</add>jaba en custodia algunas reliquias sin más valor que el de haber sido suyas, así como <corr rend="insertion">algunos de</corr>sus libros más preciados y dos cofres de sus archivos personales. El día anterior, durante la breve despedida formal, le había dicho: <said who="Coronel">"Mucho te amo, pero más te amaré si ahora tienes más juicio que nunca"</said>. Ella 1o entendió como otro homenaje de los tantos que él le había rendido en ocho años de amores <del rend="overstrike" hand="#hand1">de guerra</del><add hand="#hand1"> ardientes</add>. De todos sus conocidos ella era la única que lo sabía: esta vez era verdad que se iba. Pero también era la única que tenía al menos un motivo cierto para esperar que volviera. 
+                </p>
+                <p rend="first-line-indent">
+                    No pensaban verse otra vez antes del viaje. Sin embargo, doña Amalia, la dueña de casa, quiso darles a ambos el regalo de un último adiós furtivo, e hizo entrar a Manuela vestida de jinete por el portón de los establos burlando los prejuicios de la beata comunidad local. No porque fueran amantes clandestinos, pues lo eran a plena luz y con escándalo público, sino por preservar a toda costa el buen nombre de la casa. Él fue aún más timorato, pues le ordenó a José Palacios que no cerrara la puerte de la sala contigua, que era un paso obligado de la servidumbre domestica, y donde los edecanes de guardia jugaron a las barajas hasta mucho después que terminó la visita.
+                </p>
+                <p rend="first-line-indent">
+                    Manuela le leyó durante dos horas. Había sido joven hasta hacía muy poco tiempo, cuando sus carnes empezaron a ganarle a su edad, y le gustaba fumar una cachimba de marinero, vestirse de hombre y andar entre soldados, pero su voz afónica seguía siendo buena para las penumbras del amor. Leía a la luz escasa de la palmatoria, sentada en
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
