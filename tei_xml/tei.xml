@@ -3,16 +3,15 @@
     type="application/xml"
     schematypens="http://relaxng.org/ns/structure/1.0"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cor.0001">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cor.0001" xml:lang="es">
 
 
     <teiHeader>
         <fileDesc>
             <!--Information about the work titles and those responsible for its content, u referes to unpublished material as it was a draft of the final book-->
             <titleStmt>
-                <title level="u" type="main">El general en su laberinto</title>
-                <title level="u" type="alternative">The General in His Labyrinth</title>
-                <author xml:id="ggm">Gabriel García Márquez</author>
+                <title level="u" type="main">LOD Gabriel García Márquez</title>
+                <title level="u" type="subtitle">Information Science and Cultural Heritage Project</title>
                 <respStmt>
                     <resp>Transcription and encoding</resp>
                     <persName xml:id="cs">Catalina Salguero</persName>
@@ -21,8 +20,7 @@
 
             <editionStmt>
                 <edition source="#project">
-                    <date>November 2014</date>
-                    <note>Typescript with revisions: a machine readable transcription</note>
+                    <date>February, 2025.</date>
                 </edition>
             </editionStmt>
 
@@ -47,7 +45,8 @@
             <sourceDesc>
                 <bibl type="base">
                     <title type="main">El general en su laberinto</title>
-                    <author sameAs="ggm">García Márquez, Gabriel</author>
+                    <title type="alternative">The General in His Labyrinth</title>
+                    <author xml:id="ggm">García Márquez, Gabriel</author>
                     <date when="1988-10-05">5 de octubre 1988</date>
                     <pubPlace>México</pubPlace>
                     <extent n="247">247 pages</extent>
@@ -78,7 +77,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>Typewriting paper with revitions.</support>
+                                <support>Typescript with revisions: a machine readable transcription.</support>
                                 <extent>
                                     <measure type="pages">247</measure>
                                 </extent>
@@ -86,6 +85,12 @@
                             </supportDesc>
                         </objectDesc>
                     </physDesc>
+                    <history>
+                        <acquisition>
+                            <date when="2014">November, 2014</date>
+                            <note>Acquired by the Harry Ransom Center in 2014.</note>
+                        </acquisition>
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -150,7 +155,7 @@
                         <hi rend="caps">G</hi>abriel 
                         <hi rend="caps">G</hi>arcía 
                         <hi rend="caps">M</hi>árquez
-                        <l /><hi rend="caps">EL GENERAL EN SU LABERINTO</hi>
+                        <lb/><hi rend="caps">EL GENERAL EN SU LABERINTO</hi>
                     </title>
                 </head>
                 <note type="authorial" place="center" hand="#hand3">
