@@ -38,7 +38,7 @@
             </publicationStmt>
 
             <notesStmt>
-                <note type="project"> This manuscript form part of <ref target="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51">Gabriel García Márquez Collection</ref>
+                <note type="project"> This manuscript form part of <ref target="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51">Gabriel García Márquez Collection.</ref>
                 </note>
             </notesStmt>
 
@@ -100,10 +100,10 @@
                 <language ident="es-CO">Spanish</language>
             </langUsage>
             <handNotes>
-                <handNote xml:id="hand1" scribeRef="#ggm" medium="pencil" />
-                <handNote xml:id="hand2" scribeRef="#ggm" medium="blue ink" />
-                <handNote xml:id="hand3" scribeRef="#ggm" medium="black ink" />
-                <handNote xml:id="hand4" scribeRef="#ggm" medium="green ink" />
+                <handNote xml:id="hand1" scribeRef="#ggm" medium="Pencil" />
+                <handNote xml:id="hand2" scribeRef="#ggm" medium="Blue ink" />
+                <handNote xml:id="hand3" scribeRef="#ggm" medium="Black ink" />
+                <handNote xml:id="hand4" scribeRef="#ggm" medium="Green ink" />
             </handNotes>
         </profileDesc>
 
@@ -155,8 +155,10 @@
                         <hi rend="caps">G</hi>abriel 
                         <hi rend="caps">G</hi>arcía 
                         <hi rend="caps">M</hi>árquez
-                        <lb/><hi rend="caps">EL GENERAL EN SU LABERINTO</hi>
                     </title>
+                    <name>
+                        <hi rend="caps">EL GENERAL EN SU LABERINTO</hi>
+                    </name>
                 </head>
                 <note type="authorial" place="center" hand="#hand3">
                     <unclear>Raimondo Manifescoli</unclear>
@@ -170,7 +172,8 @@
             </div>
 
             <pb xml:id="leaf001v" facs="p15878coll51_14529.jpg" type="verso" />
-            <div>
+
+            <div type="drawing">
                 <figure type="authorial" hand="=#hand2">
                     <figDesc>It appears to be a drawing of a floor plan of a space/house.</figDesc>
                 </figure>
@@ -179,7 +182,7 @@
 
             <pb xml:id="leaf002r" facs="p15878coll51_14531.jpg" type="recto" />
             
-            <div>
+            <div type="additionalInfo">
                 <note type="authorial" place="center" hand="#hand3">
                     <unclear>Sangre negra: Fue Martin de Narváez en el siglo XVII, tercer abuelo aleman de Bol.</unclear><gap reason="illegible" extent="6 words" cert="low" resp="#cs" />
                     <unclear>Josefa hija descendiente fue </unclear><gap reason="illegible" extent="4 words" cert="low" resp="#cs"/><add rend="overwrite" hand="#hand4" place="over" seq="1">O.K</add>
@@ -192,11 +195,12 @@
                 </note>
             </div>
 
-            <div>
+            <div type="epigraph">
                 <epigraph>
                     <quote>Parece que el demonio dirige las cosas de mi vida.</quote>
-                    <l rend="right"><said rend="caps">SIMÓN BOLIVAR</said>
+                    <l rend="right"><said rend="caps">- SIMÓN BOLIVAR</said>
                     </l>
+                    <lb />
                     <l rend="left">
                         <date>(Carta a Santander, agosto 4 de 182<del rend="overstrike" hand="#hand4">5</del><add hand="#hand4" seq="2">3</add>)
                         </date>
@@ -204,7 +208,7 @@
                 </epigraph>
             </div>
             
-            <div>
+            <div type="additionalInfo">
                 <note type="authorial" place="center" hand="#hand3">
                     <hi rend="underline"><unclear reason="illegible" cert="low">Casaconicia:</unclear></hi> Julio 4 <del rend="overstrike">1824:<unclear reason="illegible" extent="8 words" cert="low" resp="#cs"></unclear></del>
                     <hi rend="underline">MASUR:</hi> <del rend="overstrike" hand="#hand4"><unclear reason="illegible">352 encargos de Sder: 325</unclear></del>
@@ -213,39 +217,39 @@
 
             <pb xml:id="leaf002v" facs="p15878coll51_14532.jpg" type="verso" />
 
-            <div>
+            <div type="drawing">
                 <figure type="authorial" resp="=#hand2">
                     <figDesc>It appears to be a drawing of a floor plan of a space/house.</figDesc>
                 </figure>
-                <lb />
             </div>
         </front>
 
         <body>
-            <pb xml:id="leaf003r" facs="lp15878coll51_14533.jpg" type="recto" />
+            <pb xml:id="leaf003r" facs="lp15878coll51_14533.jpg" type="recto" n="1"/>
             <fw type="pageNum" place="top right" hand="#hand1">1</fw>
 
-            <div>
+            <div type="handNotes">
                 <note type="authorial" place="up center" resp="#hand1">Parque Humboldt. Mijares 76 <del rend="overstrike" resp="#hand3"><unclear reason="illegible">final: sentarse siempre de pantalones</unclear></del><add rend="insertion" seq="1" place="right">(8 cap)</add>
                 </note>
             </div>
 
-            <div>
+            <div type="text">
                 <p rend="first-line-indent">
                     José Palacios, su servidor más antiguo, lo encontró flotando en las aguas depurativas de la bañera, desnudo y con los ojos abiertos, y creyó que se había ahogado. Sabía que ese era uno de sus muchos modos de meditar, pero el estado de éxtasis en que yacía a la deriva parecía de alguien que ya no era de este mundo. No se atrevió a acercarse, sino que lo llamó con voz sorda de acuerdo con la orden de despertarlo antes de las cinco para viajar con las primeras luces. Él emergió del hechizo, reconoció a su mayordomo de todos los días parado en la puerta del baño con un pocilio de infusión de amapolas con goma <add rend="insertion" hand="#hand1">arábiga</add>, y salió chorreando de la bañera con un ímpetu de delfín que no era de esperar en un cuerpo tan desmedrado.
                 </p>
 
                 <p rend="first-line-indent">
-                    <lb /><said who="Coronel">"Vamonós"</said> dijo, <said who="Coronel">"<add hand="#hand3">volando</add> que aquí no nos quiere nadie"</said>
+                    <said who="Coronel">"Vamonós"</said> dijo, <said who="Coronel">"<add hand="#hand3">volando</add> que aquí no nos quiere nadie"</said>
                 </p>
 
                 <p rend="first-line-indent">
-                    José Palacios se lo había oído decir tantas veces y en ocasiones tan diversas, que todavía no creyó que fuera cierto, a pesar de que las recuas estaban preparadas en las caballerizas y la comitiva oficial empezaba a reunirse en la sala. Lo ayudó a secarse de cualquier modo, y le puso la ruana de los paramo sobre el cuerpo desnudo, porque la taza le castañeteaba con el temblor de las manos, tlesesajites, puiliéttdose unos pantalones de gamuza que no usaba desde las noches romanas de
+                    José Palacios se lo había oído decir tantas veces y en ocasiones tan diversas, que todavía no creyó que fuera cierto, a pesar de que las recuas estaban preparadas en las caballerizas y la comitiva oficial empezaba a reunirse en la sala. Lo ayudó a secarse de cualquier modo, y le puso la ruana de los paramo sobre el cuerpo desnudo, porque la taza le castañeteaba con el temblor de las manos. Meses antes, puiliéndose unos pantalones de gamuza que no usaba desde las noches romanas de
                 </p>
             </div>
 
-            <pb xml:id="leaf004r" facs="p15878coll51_14534.jpg" type="recto" />
+            <pb xml:id="leaf004r" facs="p15878coll51_14534.jpg" type="recto" n="2"/>
             <fw type="pageNum" place="top right" hand="#hand1">2</fw>
+
             <div>
                 <p rend="first-line-indent"> 
                     Lima, él había descubierto que a medida que bajaba de peso iba disminuyendo de estatura. Hasta su desnudez era distinta, pues tenía el cuerpo pálido, y la cabeza y las manos <del rend="overstrike" hand="#hand1">casi negras</del> <add hand="#hand1">como achicharradas</add> por el abuso de la intemperie. Había cumplido cuarenta y seis años el pasado mes de julio, pero ya sus ásperos rizos caribes se habían vuelto de ceniza, y tenía los huesos desordenados por la decrepitud prematura, y todo él se veía tan desmerecido que no parecía capaz de perdurar hasta el julio siguiente. Sin embargo, sus ademanes resueltos parecían ser de otra menos dañado por la vida, y aun a la intemperie caminaba sin cesar alrededor de nada. Se bebió la tizana de cinco sorbos ardientes que por poco no le ampollaron la lengua, huyendo de sus propias huellas de agua en las esteras desgreñadas del piso, y fue como beberse el filtro de la resurrección. Pero no dijo una palabra hasta que no sonaron las cinco enla torre de la catedral vecina. 
