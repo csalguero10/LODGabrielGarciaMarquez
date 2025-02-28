@@ -28,6 +28,7 @@
             <body>
 
                 <div class="metadata">
+                    <!-- Extracting metadata -->
                     <h1><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']"/></h1>
                     <h2><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='subtitle']"/></h2>
                     <br/>
@@ -53,6 +54,7 @@
 
                     <p><b>Project Description: </b> <xsl:value-of select="//tei:encodingDesc/tei:projectDesc" /></p>
                     
+                    <!-- Extracting handnotes info -->
                     <h3>Handnotes from the original source: </h3>
                     <ul>
                         <xsl:for-each select="tei:teiHeader/tei:profileDesc/tei:handNotes/tei:handNote">
@@ -65,7 +67,7 @@
                 </div>
 
                 <div class="content">
-                    <!-- Extracting Main Text -->
+                    <!-- Extracting main text -->
                     <xsl:apply-templates select="tei:text"/>
                 </div>
             </body>
