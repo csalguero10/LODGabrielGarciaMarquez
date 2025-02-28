@@ -72,89 +72,21 @@
         </html>
     </xsl:template>
 
+    <!-- Template matching title and name -->
     <xsl:template match="tei:title | tei:name">
         <h3>
             <xsl:apply-templates/>
         </h3>
     </xsl:template>
 
+    <!-- Template matching div -->
     <xsl:template match="tei:div">
         <div class="spaced">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:figure">
-        <div class="figure">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="tei:pb">
-        <div class="page-break spaced">
-            <xsl:if test="@facs">
-                <img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/{@facs}" alt="Page Image"/>
-            </xsl:if>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="tei:fw">
-        <span class="folio spaced" style="float:right; font-weight:bold;">
-            Página <xsl:value-of select="."/>
-
-        </span>
-    </xsl:template>
-
-    <xsl:template match="tei:quote">
-        <span class="quote spaced">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
-    <xsl:template match="tei:epigraph">
-        <blockquote>    
-            <xsl:apply-templates/>
-        </blockquote>
-    </xsl:template>
-
-    <xsl:template match="tei:lb">
-        <br/>
-    </xsl:template> 
-
-    <xsl:template match="tei:del">
-        <del title="Deletion">
-            <xsl:apply-templates/>
-        </del>
-    </xsl:template>
-
-    <xsl:template match="tei:add">
-        <ins title="Insertion">
-            <xsl:apply-templates/>
-        </ins>
-    </xsl:template>
-
-    <xsl:template match="tei:unclear">
-        <span class="unclear" title="Unclear text">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
-    <xsl:template match="tei:gap">
-        <span class="gap" title="Text impossible to transcribe">[…]</span>
-    </xsl:template>
-
-    <xsl:template match="tei:note">
-        <span class="note spaced" title="Note">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
-    <xsl:template match="tei:ref">
-        <a href="{ @target }">
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-
+    <!-- Template matching paragraph -->
     <xsl:template match="tei:p">
         <p>
             <xsl:if test="@rend='first-line-indent'">
@@ -164,7 +96,7 @@
         </p>
     </xsl:template>
 
-    <!-- Template for Emphasized Text (hi elements) -->
+    <!-- Template for emphasized text (hi elements) -->
     <xsl:template match="tei:hi">
         <span>
             <xsl:choose>
@@ -180,4 +112,87 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+
+    <!-- Template matching figure -->
+    <xsl:template match="tei:figure">
+        <div class="figure">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+
+    <!-- Template matching page break and pagination -->
+    <xsl:template match="tei:pb">
+        <div class="page-break spaced">
+            <xsl:if test="@facs">
+                <img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/{@facs}" alt="Page Image"/>
+            </xsl:if>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="tei:fw">
+        <span class="folio spaced" style="float:right; font-weight:bold;">
+            Página <xsl:value-of select="."/>
+
+        </span>
+    </xsl:template>
+
+    <!-- Template matching quote -->
+    <xsl:template match="tei:quote">
+        <span class="quote spaced">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <!-- Template matching epigraph -->
+    <xsl:template match="tei:epigraph">
+        <blockquote>    
+            <xsl:apply-templates/>
+        </blockquote>
+    </xsl:template>
+
+    <!-- Template matching line break -->
+    <xsl:template match="tei:lb">
+        <br/>
+    </xsl:template> 
+
+    <!-- Template matching annotation deletions -->
+    <xsl:template match="tei:del">
+        <del title="Deletion">
+            <xsl:apply-templates/>
+        </del>
+    </xsl:template>
+
+    <!-- Template matching annotation insertions/corrections -->
+    <xsl:template match="tei:add">
+        <ins title="Insertion">
+            <xsl:apply-templates/>
+        </ins>
+    </xsl:template>
+
+    <!-- Template matching annotation: unclear text -->
+    <xsl:template match="tei:unclear">
+        <span class="unclear" title="Unclear text">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <!-- Template matching annotation: text impossible to transcribe -->
+    <xsl:template match="tei:gap">
+        <span class="gap" title="Text impossible to transcribe">[…]</span>
+    </xsl:template>
+
+    <!-- Template matching notes -->
+    <xsl:template match="tei:note">
+        <span class="note spaced" title="Note">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <!-- Template matching link references -->
+    <xsl:template match="tei:ref">
+        <a href="{ @target }">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+
 </xsl:stylesheet>
