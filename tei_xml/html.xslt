@@ -9,7 +9,7 @@
             <head>
                 <meta charset="UTF-8"/>
                 <title>
-                    <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']"/>
+                    <xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='desc']"/>
                 </title>
                 <style>
                     body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
@@ -20,25 +20,32 @@
                     .gap { color: red; font-weight: bold; }
                     .quote { font-style: italic; }
                     .note { font-style: italic; color: #666; }
+                    .del { text-decoration: line-through; color: red; }
+                    .add { text-decoration: underline; color: green; }
                     .page-break { margin: 20px 0; text-align: center; }
                     .spaced { display: inline-block; width: 100%; margin-top: 10px; }
-                    .figure { font-style: italic; color:rgb(38, 107, 46) }
+                    .figure { font-style: italic;}
+                    /* CSS para asignar colores según el medio */
+                    .hand-pencil { color: gray; }
+                    .hand-blue-ink { color: blue; }
+                    .hand-black-ink { color: black; }
+                    .hand-green-ink { color: green; }
                 </style>
             </head>
             <body>
 
                 <div class="metadata">
                     <!-- Extracting metadata -->
-                    <h1><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='main']"/></h1>
-                    <h2><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='subtitle']"/></h2>
+                    <h1><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='desc']"/></h1>
+                    <h2><xsl:value-of select="tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='sub']"/></h2>
                     <br/>
                     <h3>Transcription and Encoding: </h3>
                     <p><b>Responsible: </b> <xsl:value-of select="//tei:respStmt/tei:persName" /></p>
-                    <p><b>Date: </b><xsl:value-of select="//tei:editionStmt/tei:edition/tei:date" /></p>
+                    <p><xsl:value-of select="//tei:editionStmt/tei:edition" /></p>
                     
                     <h3>Source Description: </h3>
                     <p><b>Title: </b> <xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:title[@type='main']" /></p>
-                    <p><b>Alternative Title: </b> <xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:title[@type='alternative']" /></p>
+                    <p><b>Alternative Title: </b> <xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:title[@type='alt']" /></p>
                     <p><b>Author: </b><xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:author" /></p>
                     <p><b>Date: </b> <xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:date" /></p>
                     <p><b>Place: </b> <xsl:value-of select="//tei:sourceDesc/tei:bibl/tei:pubPlace" /></p>
@@ -75,7 +82,7 @@
     </xsl:template>
 
     <!-- Template matching title and name -->
-    <xsl:template match="tei:title | tei:name">
+    <xsl:template match="tei:title[@type='main'] | tei:name[@type='author']">
         <h3>
             <xsl:apply-templates/>
         </h3>
@@ -157,35 +164,64 @@
         <br/>
     </xsl:template> 
 
-    <!-- Template matching annotation deletions -->
-    <xsl:template match="tei:del">
-        <del title="Deletion">
-            <xsl:apply-templates/>
-        </del>
-    </xsl:template>
-
-    <!-- Template matching annotation insertions/corrections -->
-    <xsl:template match="tei:add">
-        <ins title="Insertion">
-            <xsl:apply-templates/>
-        </ins>
-    </xsl:template>
-
-    <!-- Template matching annotation: unclear text -->
-    <xsl:template match="tei:unclear">
-        <span class="unclear" title="Unclear text">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
     <!-- Template matching annotation: text impossible to transcribe -->
     <xsl:template match="tei:gap">
         <span class="gap" title="Text impossible to transcribe">[…]</span>
     </xsl:template>
 
-    <!-- Template matching notes -->
+    <!-- Template para aplicar estilos y colores de la mano sin perder los efectos originales -->
+    <xsl:template match="tei:add">
+        <ins title="Insertion">
+            <xsl:attribute name="class">
+                add <xsl:choose>
+                    <xsl:when test="@hand='#hand1'">hand-pencil</xsl:when>
+                    <xsl:when test="@hand='#hand2'">hand-blue-ink</xsl:when>
+                    <xsl:when test="@hand='#hand3'">hand-black-ink</xsl:when>
+                    <xsl:when test="@hand='#hand4'">hand-green-ink</xsl:when>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </ins>
+    </xsl:template>
+
+    <xsl:template match="tei:del">
+        <del title="Deletion">
+            <xsl:attribute name="class">
+                del <xsl:choose>
+                    <xsl:when test="@hand='#hand1'">hand-pencil</xsl:when>
+                    <xsl:when test="@hand='#hand2'">hand-blue-ink</xsl:when>
+                    <xsl:when test="@hand='#hand3'">hand-black-ink</xsl:when>
+                    <xsl:when test="@hand='#hand4'">hand-green-ink</xsl:when>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </del>
+    </xsl:template>
+
+    <xsl:template match="tei:unclear">
+        <span title="Unclear text">
+            <xsl:attribute name="class">
+                unclear <xsl:choose>
+                    <xsl:when test="@hand='#hand1'">hand-pencil</xsl:when>
+                    <xsl:when test="@hand='#hand2'">hand-blue-ink</xsl:when>
+                    <xsl:when test="@hand='#hand3'">hand-black-ink</xsl:when>
+                    <xsl:when test="@hand='#hand4'">hand-green-ink</xsl:when>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
     <xsl:template match="tei:note">
-        <span class="note spaced" title="Note">
+        <span>
+            <xsl:attribute name="class">
+                note spaced <xsl:choose>
+                    <xsl:when test="@hand='#hand1'">hand-pencil</xsl:when>
+                    <xsl:when test="@hand='#hand2'">hand-blue-ink</xsl:when>
+                    <xsl:when test="@hand='#hand3'">hand-black-ink</xsl:when>
+                    <xsl:when test="@hand='#hand4'">hand-green-ink</xsl:when>
+                </xsl:choose>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </span>
     </xsl:template>
