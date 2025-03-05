@@ -1,0 +1,22 @@
+Tokens originales: ['lod', 'gabriel', 'garcía', 'márquez', 'information', 'science', 'and', 'cultural', 'heritage', 'project', 'transcription', 'and', 'encoding', 'catalina', 'salguero', 'scholarly', 'digital', 'edition', 'february', ',', '2025.', 'the', 'university', 'of', 'texas', 'at', 'austin', 'harry', 'ransom', 'center']
+Tokens limpios: ['lod', 'gabriel', 'garcía', 'márquez', 'information', 'science', 'and', 'cultural', 'heritage', 'project', 'transcription', 'and', 'encoding', 'catalina', 'salguero', 'scholarly', 'digital', 'edition', 'february', '2025.', 'the', 'university', 'of', 'texas', 'at', 'austin', 'harry', 'ransom', 'center', 'the']
+Frecuencia de palabras: [('the', 22), ('of', 16), ('``', 16), ("''", 14), ('and', 9), ('in', 7), ('gabriel', 5), ('garcía', 5), ('márquez', 5), ('to', 5), ('university', 4), ('is', 4), ('public', 4), ('domain', 4), ('final', 4), ('josé', 4), ('palacios', 4), ('project', 3), ('digital', 3), ('texas', 3), ('at', 3), ('austin', 3), ('text', 3), ('original', 3), ('be', 3), ('general', 3), ('1', 3), ('3', 3), ('luz', 3), ('manuela', 3)]
+Frecuencia con FreqDist: [('the', 22), ('of', 16), ('``', 16), ("''", 14), ('and', 9), ('in', 7), ('gabriel', 5), ('garcía', 5), ('márquez', 5), ('to', 5), ('university', 4), ('is', 4), ('public', 4), ('domain', 4), ('final', 4), ('josé', 4), ('palacios', 4), ('project', 3), ('digital', 3), ('texas', 3), ('at', 3), ('austin', 3), ('text', 3), ('original', 3), ('be', 3), ('general', 3), ('1', 3), ('3', 3), ('luz', 3), ('manuela', 3)]
+Bigramas más frecuentes: [(("''", '``'), 6), (('garcía', 'márquez'), 5), (('gabriel', 'garcía'), 4), (('the', 'university'), 4), (('university', 'of'), 4), (('of', 'the'), 4), (('public', 'domain'), 4), (('josé', 'palacios'), 4), (('of', 'texas'), 3), (('the', 'text'), 3), (('information', 'science'), 2), (('science', 'and'), 2), (('and', 'cultural'), 2), (('cultural', 'heritage'), 2), (('texas', 'at'), 2), (('at', 'austin'), 2), (('austin', 'harry'), 2), (('harry', 'ransom'), 2), (('ransom', 'center'), 2), (('in', 'the'), 2)]
+Bigrams Chi-squared:
+('garcía', 'márquez') 584.0
+('josé', 'palacios') 584.0
+('public', 'domain') 584.0
+('gabriel', 'garcía') 372.1479251046262
+('university', 'of') 142.97931034482758
+[('garcía', 'márquez'), ('josé', 'palacios'), ('public', 'domain'), ('gabriel', 'garcía'), ('university', 'of'), ('of', 'texas'), ('the', 'university'), ("''", '``'), ('the', 'text'), ('of', 'the')]
+Bigrams PMI:
+('josé', 'palacios') 7.189824558880018
+('public', 'domain') 7.189824558880018
+('garcía', 'márquez') 6.867896463992655
+('gabriel', 'garcía') 6.545968369105293
+('of', 'texas') 5.189824558880018
+[('josé', 'palacios'), ('public', 'domain'), ('garcía', 'márquez'), ('gabriel', 'garcía'), ('of', 'texas'), ('university', 'of'), ('the', 'text'), ('the', 'university'), ("''", '``'), ('of', 'the')]
+no matches
+Número de textos en el corpus: 1
+Términos con mayor IDF: ['sentada', 'numerals', 'using', '``', 'del', "''", 'add', 'elements', 'when', 'not']

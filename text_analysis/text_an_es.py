@@ -1,44 +1,32 @@
-from collections import Counter
+import spacy #this library is used for natural language processing and is useful when we have texts in spanish, it is a good alternative to nltk
 import string
-import nltk
-from nltk import word_tokenize
-from nltk.corpus import stopwords
-from nltk import FreqDist
-from nltk import ngrams
-from nltk import BigramAssocMeasures, BigramCollocationFinder
-from nltk.text import Text 
-from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np 
 import sys
+from collections import Counter
+from nltk import FreqDist, ngrams
+from nltk.collocations import BigramAssocMeasures, BigramCollocationFinder
+from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np
 
 # Redirigir la salida a un archivo
 output_file = "text_analysis/final_analysis.txt"
 sys.stdout = open(output_file, "w", encoding="utf-8")
 
-# Descargar stopwords en español (solo la primera vez)
-nltk.download('stopwords')
-nltk.download('punkt')
-
-# Crear conjuntos de puntuación y stopwords en español
-stop_words = set(stopwords.words('spanish')) 
-excluded_punct = set(string.punctuation)
+# Cargar modelo en español de spaCy
+nlp = spacy.load("es_core_news_sm")
 
 # Abrir el archivo de texto asegurando la codificación correcta
 with open("text_analysis/tei.txt", "r", encoding="utf-8") as f:
     orig_text = f.read()
 
-# Convertir a minúsculas
-text = orig_text.lower()
+# Procesar el texto con spaCy
+doc = nlp(orig_text.lower())
 
-# Tokenización
-words = word_tokenize(text)
-print("Tokens originales:", words[:30])
+# Crear conjuntos de puntuación y stopwords en español
+excluded_punct = set(string.punctuation)
+stop_words = nlp.Defaults.stop_words
 
-# Limpiar tokens de puntuación y stopwords sin list comprehension
-clean_text = []
-for w in words:
-    if w not in excluded_punct and w not in stop_words:
-        clean_text.append(w)
+# Tokenización, lematización y limpieza de stopwords y puntuación
+clean_text = [token.lemma_ for token in doc if token.text not in excluded_punct and token.text.lower() not in stop_words and not token.is_space]
 
 print("Tokens limpios:", clean_text[:30])
 
@@ -51,12 +39,12 @@ fdist1 = FreqDist(clean_text).most_common(30)
 print("Frecuencia con FreqDist:", fdist1)
 
 # Obtener bigramas y calcular frecuencia
-n_grams = ngrams(clean_text, 2)
+n_grams = list(ngrams(clean_text, 2))
 fdist3 = FreqDist(n_grams).most_common(20)
 print("Bigramas más frecuentes:", fdist3)
 
 # Medidas de colocation para bigramas
-bigrams = nltk.collocations.BigramAssocMeasures()
+bigrams = BigramAssocMeasures()
 
 # Encontrar bigramas en el corpus
 finder = BigramCollocationFinder.from_words(clean_text)
@@ -78,28 +66,24 @@ for bigram, score in scored_pmi[:5]:
 
 print(finder.nbest(bigrams.pmi, 10))
 
-# Concordancia
-tokens_to_be_analysed = Text(words)
-tokens_to_be_analysed.concordance("ojeras", 40, 20)
+# Concordancia: Buscar palabra específica en contexto
+search_word = "ojeras"
+print(f"Concordancia para '{search_word}':")
+for sent in doc.sents:
+    if search_word in sent.text:
+        print(sent.text)
 
 # TF-IDF: Dividir el texto en fragmentos separados por doble salto de línea
-texts = []
-for t in text.split('\n\n'):
-    if t and len(t) > 1:
-        texts.append(t)
-
+texts = [t for t in orig_text.split('\n\n') if t and len(t) > 1]
 print(f"Número de textos en el corpus: {len(texts)}")
 
 # Inicializar TF-IDF
-tfidf = TfidfVectorizer(analyzer='word', sublinear_tf=True, max_features=500, tokenizer=word_tokenize)
+tfidf = TfidfVectorizer(analyzer='word', sublinear_tf=True, max_features=500, tokenizer=lambda text: [token.lemma_ for token in nlp(text) if token.text not in stop_words])
 tdidf = tfidf.fit(texts)
 
-# Obtener términos con mayor IDF 
+# Obtener términos con mayor IDF
 inds = np.argsort(tfidf.idf_)[::-1][:10]
-top_IDF_tokens = []
-for ind in inds:
-    top_IDF_tokens.append(list(tfidf.vocabulary_)[ind])
-
+top_IDF_tokens = [list(tfidf.vocabulary_)[ind] for ind in inds]
 print("Términos con mayor IDF:", top_IDF_tokens)
 
 # Cerrar el archivo de salida
