@@ -1,4 +1,4 @@
 # LODGabrielGarciaMarquez
-Knowledge Organization project for UNIBO
+This project involved designing and implementing a complete workflow for the production of Linked Open Data (LOD) within the field of Digital Humanities. Starting with the selection and analysis of an observed domain—an idea represented by a notable person, place, concept, or historical event—cultural heritage objects described by institutions were identified and studied. Conceptual and entity-relationship models were then developed to represent knowledge within the domain, metadata standards were analyzed and mapped, and a theoretical model was created to interpret the collected data. Finally, semantic data was produced in RDF format, URIs were minted, links to external sources were established, and the resulting knowledge graph was visualized, completing the cycle from observation to formal knowledge representation.
 
 Catalina Salguero Palacino
