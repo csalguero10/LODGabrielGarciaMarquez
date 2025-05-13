@@ -5,9 +5,11 @@ import unicodedata
 import re
 
 # --- Configuración base ---
-NS = {"tei": "http://www.tei-c.org/ns/1.0"}
-BASE = "https://w3id.org/GGM/"
-GGM = Namespace(BASE)
+ns = {"tei": "http://www.tei-c.org/ns/1.0"}
+base = "https://w3id.org/GGM/"
+GGM = Namespace(base)
+DBO = Namespace("https://dbpedia.org/ontology/")
+SCHEMA = Namespace("https://schema.org/")
 
 # --- Función para normalizar nombres (URIs amigables) ---
 def normalize(name):
@@ -18,7 +20,7 @@ def normalize(name):
     return name
 
 # --- Parseo del TEI ---
-tree = ET.parse("tei.xml")
+tree = ET.parse("tei_xml/tei.xml")
 root = tree.getroot()
 
 # --- Inicializar grafo RDF ---
@@ -28,41 +30,43 @@ g.bind("foaf", FOAF)
 g.bind("dcterms", DCTERMS)
 g.bind("dc", DC)
 g.bind("rdfs", RDFS)
+g.bind("dbo", DBO)
+g.bind("schema", SCHEMA)
 
 # --- EXTRAER TÍTULO DE OBRA ---
-title_el = root.find(".//tei:sourceDesc/tei:bibl/tei:title[@type='main']", NS)
+title_el = root.find(".//tei:sourceDesc/tei:bibl/tei:title[@type='main']", ns)
 if title_el is not None:
     title = title_el.text
-    title_uri = URIRef(BASE + "book/" + normalize(title))
+    title_uri = URIRef(base + "book/" + normalize(title))
     g.add((title_uri, RDF.type, DCTERMS.BibliographicResource))
     g.add((title_uri, RDFS.label, Literal(title, lang="es")))
 
 # --- EXTRAER AUTOR ---
-author_el = root.find(".//tei:sourceDesc/tei:bibl/tei:author", NS)
+author_el = root.find(".//tei:sourceDesc/tei:bibl/tei:author", ns)
 if author_el is not None:
     author = author_el.text
-    author_uri = URIRef(BASE + "person/" + normalize(author))
+    author_uri = URIRef(base + "person/" + normalize(author))
     g.add((author_uri, RDF.type, FOAF.Person))
     g.add((author_uri, FOAF.name, Literal(author)))
     g.add((title_uri, DC.creator, author_uri))
 
 # --- EXTRAER PERSONAS MENCIONADAS ---
-for pers in root.xpath("//tei:name[@type='person']", namespaces=NS):
+for pers in root.xpath("//tei:name[@type='person']", namespaces=ns):
     name = pers.text
     if name:
-        person_uri = URIRef(BASE + "person/" + normalize(name))
+        person_uri = URIRef(base + "person/" + normalize(name))
         g.add((person_uri, RDF.type, FOAF.Person))
         g.add((person_uri, FOAF.name, Literal(name)))
 
 # --- EXTRAER LUGARES MENCIONADOS ---
-for place in root.xpath("//tei:name[@type='place']", namespaces=NS):
+for place in root.xpath("//tei:name[@type='place']", namespaces=ns):
     name = place.text
     if name:
-        place_uri = URIRef(BASE + "place/" + normalize(name))
+        place_uri = URIRef(base + "place/" + normalize(name))
         g.add((place_uri, RDF.type, GGM.Place))
         g.add((place_uri, RDFS.label, Literal(name)))
 
 # --- EXPORTAR ---
 output_path = "ggm_entities.ttl"
-g.serialize(destination=output_path, format="turtle", base=BASE)
+g.serialize(destination=output_path, format="turtle", base=base)
 print(f"RDF generado en {output_path}")

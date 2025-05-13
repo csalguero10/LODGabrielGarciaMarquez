@@ -1,0 +1,41 @@
+@base <https://w3id.org/GGM/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ggm: <https://w3id.org/GGM/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<book/el-general-en-su-laberinto> a dcterms:BibliographicResource ;
+    rdfs:label "El general en su laberinto"@es ;
+    dc:creator <person/garcia-marquez-gabriel> .
+
+<person/francisco-de-paula-santander> a foaf:Person ;
+    foaf:name "Francisco de Paula Santander" .
+
+<person/jose-palacios> a foaf:Person ;
+    foaf:name "José Palacios" .
+
+<person/juana-de-arco> a foaf:Person ;
+    foaf:name "Juana de Arco" .
+
+<person/manuela-saenz> a foaf:Person ;
+    foaf:name "Manuela Sáenz" .
+
+<person/martin-de-narvaez> a foaf:Person ;
+    foaf:name "Martín de Narváez" .
+
+<person/simon-bolivar> a foaf:Person ;
+    foaf:name "SIMÓN BOLIVAR" .
+
+<place/lima> a <Place> ;
+    rdfs:label "Lima" .
+
+<place/mexico> a <Place> ;
+    rdfs:label "México" .
+
+<place/parque-humboldt> a <Place> ;
+    rdfs:label "Parque Humboldt" .
+
+<person/garcia-marquez-gabriel> a foaf:Person ;
+    foaf:name "García Márquez, Gabriel" .
+
