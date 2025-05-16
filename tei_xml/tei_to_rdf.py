@@ -198,5 +198,5 @@ for fig in root.xpath(".//tei:figure", namespaces=NS):
 
 
 # === Exportar RDF ===
-g.serialize("tei_metadata_serialization.ttl", format="turtle", base=BASE)
-print("✔ RDF metadata serializada en tei_metadata_serialization.ttl")
+g.serialize("tei_xml/tei_rdf_serialization.ttl", format="turtle", base=BASE)
+print("✔ RDF metadata serializada en tei_rdf_serialization.ttl")
