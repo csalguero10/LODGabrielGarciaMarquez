@@ -48,7 +48,7 @@
                 <bibl type="base" xml:lang="es">
                     <title type="main">El general en su laberinto</title>
                     <title type="alt">The General in His Labyrinth</title>
-                    <author xml:id="ggm">García Márquez, Gabriel</author>
+                    <author xml:id="ggm">Gabriel García Márquez</author>
                     <date when="1988-10-05">5 de octubre 1988</date>
                     <pubPlace>México</pubPlace>
                     <extent n="247">247 pages</extent>
@@ -57,7 +57,7 @@
 
                 <msDesc type="source">
                     <msIdentifier>
-                        <institution>The University of Texas at Austin</institution>
+                        <institution>The University of <name type="place">Texas</name> at <name type="place">Austin</name></institution>
                         <repository>Harry Ransom Center</repository>
                         <collection>Gabriel García Márquez Collection. Gabriel García Márquez Papers, 1930s-2014 (bulk 1966-2006)</collection>
                         <idno type="callno">MS-5353</idno>
