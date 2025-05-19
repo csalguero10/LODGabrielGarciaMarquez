@@ -1,0 +1,23 @@
+Subject,Predicate,Object
+Illustration,rdf:type,schema:VisualArtwork
+Illustration,owl:sameAs,https://blanton.emuseum.com/internal/media/dispatcher/22398/full
+Illustration,crm:P102_has_title,Daguerrotipo Coronel Aureliano Buendía
+Illustration,crm:P32_used_general_technique,Daguerrotype
+Illustration,crm:P43_has_dimension,66 x 39.7
+Illustration,crm:E57_consist_of,Ink on paper
+Illustration,dcTerms:creator,Melecio Galván
+Illustration,dcTerms:created,1969
+Illustration,P138_represents,Coronel Aureliano Buendia
+Illustration,dcterms:relation,Gabriel García Márquez
+Daguerrotype,P14 carried out by,Louis Jacques Mandé Daguerre
+Daguerrotype,rdf:type,E29 Design or Procedure
+Daguerrotype,owl:sameAs,https://www.wikidata.org/wiki/Q179744
+Louis Jacques Mandé Daguerre,rdf:type,foaf:Person
+Louis Jacques Mandé Daguerre,owl:sameAs,https://www.wikidata.org/wiki/Q131405
+Melecio Galván,rdf:type,foaf:Person
+Melecio Galván,owl:sameAs,http://viaf.org/viaf/73077858
+Melecio Galván,schema:hasOccupation,Artist
+Coronel Aureliano Buendía,rdf:type,frbrer:Character
+Coronel Aureliano Buendía,dcterms:isPartOf,Cien años de soledad
+Cien años de soledad,rdf:type,schema:Book
+Cien años de soledad,owl:sameAs,https://dbpedia.org/page/One_Hundred_Years_of_Solitude

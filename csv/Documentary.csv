@@ -1,0 +1,18 @@
+Subject,Predicate,Object
+Documentary,rdf:type,schema:Movie
+Documentary,owl:sameAs,https://www.wikidata.org/wiki/Q22341402
+Documentary,crm:P102_has_title,"Gabo, la creación de Gabriel García Márquez"
+Documentary,schema:genre,Documentary Film 
+Documentary,schema:CountryOfOrigin,Colombia
+Documentary,dcterms:language,Spanish
+Documentary,dcterms:created,2015
+Documentary,schema:director,Justin Webster
+Documentary,schema:duration,PT90M
+Documentary,dcTerms:subject,Gabriel Garcia Marquez
+Documentary,dcTerms:references,Aracataca
+Aracataca,rdf:type,schema:Place
+Aracataca,owl:sameAs,https://www.geonames.org/3689760/aracataca.html
+Justin Webster,rdf:type,foaf:Person
+Justin Webster,owl:sameAs,https://viaf.org/viaf/90693839
+Colombia,rdf:type,schema:Place
+Colombia,owl:sameAs,https://www.geonames.org/3686110/republic-of-colombia.html

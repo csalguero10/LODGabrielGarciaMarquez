@@ -1,0 +1,25 @@
+Subject,Predicate,Object
+Letter,rdf:type,dcterms:Text
+Letter,owl:sameAs,https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/39842/rec/57
+Letter,crm:P102_has_title,Letter to Bochica (Comandante General)
+Letter,crm:P72_has_language,Spanish
+Letter,dcterms:extent,4 pages
+Letter,crm:P52_has_current_owner,"HRC, University of Texas"
+Letter,dcterms:format,Manuscript
+Letter,dcterms:subject,Statements
+Letter,crm:E57_consist_of,Signed typescript
+Letter,dcTerms:created,22-04-1996
+Letter,schema:sender,Gabriel García Maárquez
+Letter,schema:recipient,Hugo Antonio Toro Restrepo
+Hugo Antonio Toro Restrepo,rdf:type,foaf:Person
+Hugo Antonio Toro Restrepo,owl:sameAs,https://www.wikidata.org/wiki/Q130732719
+Hugo Antonio Toro Restrepo,P107 has current or former member,JEGA (Movimiento Jorge Eliécer Gaitán)
+JEGA (Movimiento Jorge Eliécer Gaitán),rdf:type,E74 Group
+JEGA (Movimiento Jorge Eliécer Gaitán),P10 falls within,Colombian Armed Conflict 
+Colombian Armed Conflict,rdf:type,E4 Period
+Colombian Armed Conflict,owl:sameAs,https://dbpedia.org/page/Colombian_conflict
+Colombian Armed Conflict,dcterms:relation,Politics
+Politics,rdf:type,skos:concept
+Politics,owl:sameAs,https://dbpedia.org/page/Politics
+"HRC, University of Texas",rdf:type,crm:E74_Group
+"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855

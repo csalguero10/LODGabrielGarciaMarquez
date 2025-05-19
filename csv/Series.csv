@@ -1,0 +1,31 @@
+Subject,Predicate,Object
+Series,rdf:type,schema:TVSeries
+Series,owl:SameAs,https://www.imdb.com/title/tt9892936/fullcredits/?ref_=tt_ov_st#cast
+Series,dcterms:director,Alex García López
+Series,dcterms:director,Laura Mora Ortega
+Series,schema:genre,"Political TV show, TV Drama"
+Series,dcterms:language,Spanish
+Series,dcterms:issued,2024
+Series,crm:P102_has_title,Cien años de soledad
+Series,schema:productionCompany,Dynamo
+Series,dcterms:publisher,Netflix
+Series,schema:CountryOfOrigin,Colombia
+Series,crm:P2_has_type,Color 
+Series,schema:about,Social Criticism
+Series,schema:isBasedOn,Cien años de soledad
+Series,"
+schema:numberOfEpisodes",8 Episodes
+Colombia,rdf:type,schema:Place
+Colombia,owl:sameAs,https://www.geonames.org/3686110/republic-of-colombia.html
+Alex García López,rdf:type,crm:E21_Person
+Alex García López,owl:sameAs,https://www.imdb.com/es/name/nm3421685/?ref_=ttfc_fc_dr1
+Laura Mora Ortega,rdf:type,crm:E21_Person
+Laura Mora Ortega,owl:sameAs,https://www.imdb.com/es/name/nm2005384/?ref_=ttfc_fc_dr2
+Social Criticism,rdf:type,skos:concept
+Social Criticism,owl:sameAs,https://dbpedia.org/page/Social_criticism
+Cien años de soledad,rdf:type,schema:Manuscript
+Cien años de soledad,owl:sameAs,https://hrc.contentdm.oclc.org/digital/collection/p15878coll79/id/395/rec/4
+Netflix,rdf:type,crm:E74_Group
+Netflix,owl:sameAs,https://dbpedia.org/page/Netflix
+Dynamo CO,rdf:type,crm:E74_Group
+Dynamo CO,owl:sameAs,https://pro.imdb.com/company/co0231812?r=cons_ats_co_pro&ref=cons_ats_co_pro
