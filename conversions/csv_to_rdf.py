@@ -3,6 +3,16 @@ import rdflib
 from rdflib import Namespace, URIRef, Literal
 from rdflib.namespace import RDF, OWL, DC, DCTERMS, XSD, FOAF, SKOS, RDFS
 import pandas as pd
+import unicodedata
+import re
+
+def normalize(text):
+    if pd.isna(text):
+        return None
+    text = str(text).strip()
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8')
+    text = re.sub(r'[^\w\s-]', '', text)
+    return re.sub(r'\s+', '_', text)
 
 #Namespaces
 SCHEMA = Namespace("https://schema.org/")
@@ -13,22 +23,26 @@ FRBRER = Namespace("http://iflastandards.info/ns/fr/frbr/frbrer/")
 g = rdflib.Graph()
 
 #base_uri
-ggm = URIRef("https://w3id.org/PoorThings.org/") 
+ggm = URIRef("https://w3id.org/GGM/") 
 
 #creating uris
 item = URIRef(ggm + "item/")
 person = URIRef(ggm + "person/")
+institution = URIRef(ggm + "institution/")
 organization = URIRef(ggm + "organization/")
 place = URIRef(ggm + "place/")
 concept = URIRef(ggm + "concept/")
 periodical = URIRef(ggm + "periodical/")
 event = URIRef(ggm + "event/")
+period = URIRef(ggm + "period/")
+date = URIRef(ggm + "date/")
+
 #bind namespaces to graph
 g.bind("schema", SCHEMA)
 g.bind("crm", CRM)
 
 #list of csv files
-files_csv = ["csv files/poor_things_movie.csv", "csv files/activity.csv", "csv files/article.csv", "csv files/bio_ent_char.csv", "csv files/bio_ent_person.csv", "csv files/movie.csv", "csv files/monument.csv", "csv files/book.csv", "csv files/painting.csv", "csv files/portrait.csv", "csv files/soundtrack.csv"]
+files_csv = ["csv_files/Article.csv", "csv_files/Documentary.csv", "csv_files/Illustration.csv", "csv_files/Image.csv", "csv_files/Interview.csv", "csv_files/Letter.csv", "csv_files/Manuscript_General.csv", "csv_files/Manuscript_Hundred.csv", "csv_files/Nobel_Speech.csv", "csv_files/Series.csv"]
 
 #for loop that iterates all the csv files and add data to the same graph
 for file in files_csv:
@@ -39,8 +53,8 @@ for file in files_csv:
     #dict to store uris
     uris_dict = dict()
 
-    items_list = ["Image", "Interview", "Letter", "Illustration", "Manuscript Cien Anos", "Documentary", "Nobel Speech", "Play", "Article", "Manuscript General", "Gabriel Garcia Marquez"]
- 
+    items_list = ["Article", "Documentary", "Illustration", "Letter", "Manuscript_General", "Manuscript_Hundred", "Nobel_Speech", "Series"]
+
     #iterate through the dataframe:
     for _, row in df.iterrows():
         
@@ -55,131 +69,182 @@ for file in files_csv:
             uris_dict[subject] = subject_uri   
         else:
             subject_uri = uris_dict[subject]
-                                                                   
-        #specify predicates
 
-        """elif predicate == "dcterms:isReferencedBy":
-                predicate_uri = DCTERMS.isReferencedBy"""
-
+        # specify predicates
         if predicate == "rdf:type":
             predicate_uri = RDF.type
 
-        elif predicate== "owl:sameAs":
-            predicate_uri = OWL.sameAs 
-        
-        elif predicate == "dcterms:publisher": #ok
+        elif predicate == "owl:sameAs":
+            predicate_uri = OWL.sameAs
+
+        # DCTERMS / DC
+        elif predicate == "dcterms:publisher":
             predicate_uri = DCTERMS.publisher
-        
-        elif predicate == "dcterms:contributor":  #ok
+
+        elif predicate == "dcterms:contributor":
             predicate_uri = DCTERMS.contributor
 
-        elif predicate == "dcterms:creator":  #ok
-            predicate_uri = DCTERMS.creator   
+        elif predicate == "dcterms:creator":
+            predicate_uri = DCTERMS.creator
 
-        elif predicate == "dcterms:title": #ok
+        elif predicate == "dcterms:director":
+            predicate_uri = DCTERMS.creator  # schema:director también puede usarse según el contexto
+
+        elif predicate == "dcterms:title":
             predicate_uri = DCTERMS.title
-            
-        elif predicate == "dcterms:subject": #ok
-            predicate_uri = DCTERMS.subject     
-        
-        elif predicate == "dcterms:medium": #ok
-            predicate_uri = DCTERMS.medium     
 
-        elif predicate == "dcterms:language": #ok
-            predicate_uri = DCTERMS.language  
+        elif predicate == "dcterms:subject":
+            predicate_uri = DCTERMS.subject
 
-        elif predicate == "dcterms:description": #ok
-            predicate_uri = DCTERMS.description     
+        elif predicate == "dcterms:medium":
+            predicate_uri = DCTERMS.medium
 
-        elif predicate == "dcterms:extent": #ok
+        elif predicate == "dcterms:language":
+            predicate_uri = DCTERMS.language
+
+        elif predicate == "dcterms:description":
+            predicate_uri = DCTERMS.description
+
+        elif predicate == "dcterms:extent":
             predicate_uri = DCTERMS.extent
 
-        elif predicate == "dcterms:format": #ok
+        elif predicate == "dcterms:format":
             predicate_uri = DCTERMS.format
 
-        elif predicate == "dcterms:isPartOf": #ok
+        elif predicate == "dcterms:isPartOf":
             predicate_uri = DCTERMS.isPartOf
 
-        elif predicate == "dcterms:references": #ok
-            predicate_uri = DCTERMS.references     
-     
-        elif predicate == "dcterms:created": #ok
-            predicate_uri = DCTERMS.created  
+        elif predicate == "dcterms:references":
+            predicate_uri = DCTERMS.references
 
-        elif predicate == "dcterms:issued": #ok
-            predicate_uri = DCTERMS.issued  
+        elif predicate == "dcterms:created":
+            predicate_uri = DCTERMS.created
 
-        elif predicate == "dcterms:date": # ok
-            predicate_uri = DCTERMS.date  
-        
-        elif predicate == "dcterms:relation": # ok
-            predicate_uri = DCTERMS.relation  
-        
-        elif predicate == "foaf:Person":  #ok
+        elif predicate == "dcterms:issued":
+            predicate_uri = DCTERMS.issued
+
+        elif predicate == "dcterms:date":
+            predicate_uri = DCTERMS.date
+
+        elif predicate == "dcterms:relation":
+            predicate_uri = DCTERMS.relation
+
+        elif predicate == "dcterms:type":
+            predicate_uri = DCTERMS.type
+
+        elif predicate == "dcterms:place":
+            predicate_uri = DCTERMS.spatial
+
+        # FOAF
+        elif predicate == "foaf:Person":
             predicate_uri = FOAF.Person
 
-        elif predicate == "schema:director":  #ok
+        # SCHEMA
+        elif predicate == "schema:director":
             predicate_uri = SCHEMA.director
-        
-        elif predicate == "schema:sender":  #ok
+
+        elif predicate == "schema:sender":
             predicate_uri = SCHEMA.sender
 
-        elif predicate == "schema:recipient":  #ok
+        elif predicate == "schema:recipient":
             predicate_uri = SCHEMA.recipient
 
-        elif predicate == "schema:alternateName": #ok
-            predicate_uri = SCHEMA.alternateName    
+        elif predicate == "schema:alternateName":
+            predicate_uri = SCHEMA.alternateName
 
-        elif predicate == "schema:material": #ok
-            predicate_uri = SCHEMA.material  
+        elif predicate == "schema:material":
+            predicate_uri = SCHEMA.material
 
-        elif predicate == "schema:genre": #ok
-            predicate_uri = SCHEMA.genre  
+        elif predicate == "schema:genre":
+            predicate_uri = SCHEMA.genre
 
-        elif predicate == "schema:Duration": #ok
-            predicate_uri = SCHEMA.Duration
-        
-        elif predicate == "schema:recordedAt": #ok
-            predicate_uri = SCHEMA.recordedAt        
+        elif predicate == "schema:duration":
+            predicate_uri = SCHEMA.duration
 
-        elif predicate == "schema:bookEdition": #ok
+        elif predicate == "schema:recordedAt":
+            predicate_uri = SCHEMA.recordedAt
+
+        elif predicate == "schema:bookEdition":
             predicate_uri = SCHEMA.bookEdition
 
-        elif predicate == "schema:hasOccupation": #ok
+        elif predicate == "schema:hasOccupation":
             predicate_uri = SCHEMA.hasOccupation
 
-        elif predicate == "schema:birthDate": #ok
-            predicate_uri = SCHEMA.birthDate    
+        elif predicate == "schema:birthDate":
+            predicate_uri = SCHEMA.birthDate
 
-        elif predicate == "schema:countryOfOrigin": #ok
-            predicate_uri = SCHEMA.countryOfOrigin   
+        elif predicate in "schema:countryOfOrigin":
+            predicate_uri = SCHEMA.countryOfOrigin
 
-        elif predicate == "schema:locationCreated": #ok
-            predicate_uri = SCHEMA.locationCreated         
+        elif predicate == "schema:locationCreated":
+            predicate_uri = SCHEMA.locationCreated
 
-        elif predicate == "crm:P94_has_created": #ok
+        elif predicate == "schema:about":
+            predicate_uri = SCHEMA.about
+
+        elif predicate == "schema:isBasedOn":
+            predicate_uri = SCHEMA.isBasedOn
+
+        elif predicate == "schema:location":
+            predicate_uri = SCHEMA.location
+
+        elif predicate == "schema:numberOfEpisodes":
+            predicate_uri = SCHEMA.numberOfEpisodes
+
+        elif predicate == "schema:productionCompany":
+            predicate_uri = SCHEMA.productionCompany
+
+        # CIDOC CRM
+        elif predicate == "crm:P94_has_created":
             predicate_uri = CRM.P94_has_created
 
-        elif predicate == "crm:P2_has_type": #ok
-            predicate_uri = CRM.P2_has_type   
+        elif predicate == "crm:P2_has_type":
+            predicate_uri = CRM.P2_has_type
 
-        elif predicate == "crm:P102_has_title": #ok
-            predicate_uri = CRM.P102_has_title    
+        elif predicate == "crm:P102_has_title":
+            predicate_uri = CRM.P102_has_title
 
-        elif predicate == "crm:P138_represents": #ok
-            predicate_uri = CRM.represents    
+        elif predicate == "crm:P138_represents":
+            predicate_uri = CRM.P138_represents
 
-        elif predicate == "crm:P129_is_about":  #ok
-            predicate_uri = CRM.P129_is_about       
+        elif predicate == "crm:P129_is_about":
+            predicate_uri = CRM.P129_is_about
 
-        elif predicate == "crm:P52_has_current_current": #ok
+        elif predicate == "crm:P52_has_current_current":
             predicate_uri = CRM.P52_has_current_current
 
-        elif predicate == "crm:P55_has_current_location": #ok
-            predicate_uri = CRM.P55_has_current_location 
+        elif predicate == "crm:P55_has_current_location":
+            predicate_uri = CRM.P55_has_current_location
 
-        elif predicate == "crm:P7_took_place_at": #ok
+        elif predicate == "crm:P7_took_place_at":
             predicate_uri = CRM.P7_took_place_at
+
+        elif predicate == "crm:P10_falls_within":
+            predicate_uri = CRM.P10_falls_within
+
+        elif predicate == "crm:P107_has_current_or_former_member":
+            predicate_uri = CRM.P107_has_current_or_former_member
+
+        elif predicate == "crm:P14_carried_out_by":
+            predicate_uri = CRM.P14_carried_out_by
+
+        elif predicate == "crm:P67_refers_to":
+            predicate_uri = CRM.P67_refers_to
+
+        elif predicate == "crm:E57_consist_of":
+            predicate_uri = CRM.E57_consist_of
+
+        elif predicate == "crm:P32_used_general_technique":
+            predicate_uri = CRM.P32_used_general_technique
+
+        elif predicate == "crm:P43_has_dimension":
+            predicate_uri = CRM.P43_has_dimension
+
+        elif predicate == "crm:P52_has_current_owner":
+            predicate_uri = CRM.P52_has_current_owner
+
+        elif predicate == "crm:P72_has_language":
+            predicate_uri = CRM.P72_has_language
 
 
         #specify if objects are uris or literals
