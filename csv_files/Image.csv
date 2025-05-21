@@ -1,20 +1,19 @@
 Subject,Predicate,Object
-Image,rdf:type,schema:image
+Image,rdf:type,schema:ImageObject
 Image,owl:sameAs,https://lccn.loc.gov/2017645733
 Image,crm:P102_has_title,Zona bananera
 Image,schema:locationCreated,Ciénaga
-Image,dcTerms:creator,Leo Matiz
-Image,dcTerms:created,1939
-Image,dcTerms:issued,2017
+Image,dcterms:creator,Leo Matiz
+Image,dcterms:created,1939
+Image,dcterms:issued,2017
 Image,crm:P43_has_dimension,40 x 31 cm
-Image,crm:E57_consist_of,giclee print
+Image,crm:E57_consist_of,Giclee print
 Image,crm:P52_has_current_owner,Library of Congress
-Image,crm:P2_has_type,Image
 Image ,dcterms:relation,Gabriel García Márquez
-Image ,dcterms:references,Bananas Massacre
-Ciénaga,rdf:type,schema:place
+Image ,crm:P67_refers_to,Bananas Massacre
+Ciénaga,rdf:type,schema:Place
 Ciénaga,owl:sameAs,https://www.geonames.org/3686279/cienaga.html
-Colombia,rdf:type,schema:place
+Colombia,rdf:type,schema:Place
 Colombia,owl:sameAs,https://www.geonames.org/3686110/republic-of-colombia.html
 Library of Congress,rdf:type,crm:E74_Group
 Library of Congress,owl:sameAs,https://www.wikidata.org/wiki/Q131454
@@ -22,15 +21,15 @@ Leo Matiz,rdf:type,foaf:Person
 Leo Matiz,owl:sameAs,http://viaf.org/viaf/18030004
 Leo Matiz,schema:hasOccupation,Photographer
 Aracataca,schema:birthPlace,Leo Matiz
-Zona bananera,rdf:type,schema:place
+Zona bananera,rdf:type,schema:Place
 Zona bananera,owl:sameAs,https://www.wikidata.org/wiki/Q2434796
 Gabriel Garcia Marquez,rdf:type,foaf:Person
 Gabriel Garcia Marquez,owl:sameAs,https://www.wikidata.org/wiki/Q5878
-Banana's Massacre,rdf:type,E5 Event
+Banana's Massacre,rdf:type,crm:E5_Event
 Banana's Massacre,owl:sameAs,https://www.wikidata.org/wiki/Q1134821
-Banana's Massacre,P10 falls within,Colombian Armed Conflict 
-Colombian Armed Conflict,rdf:type,E4 Period
+Banana's Massacre,crm:P10_falls_within,Colombian Armed Conflict 
+Colombian Armed Conflict,rdf:type,crm:E4_Period
 Colombian Armed Conflict,owl:sameAs,https://dbpedia.org/page/Colombian_conflict
 Colombian Armed Conflict,dcterms:relation,Politics
-Politics,rdf:type,skos:concept
+Politics,rdf:type,skos:Concept
 Politics,owl:sameAs,https://dbpedia.org/page/Politics

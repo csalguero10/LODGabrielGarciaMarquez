@@ -1,0 +1,28 @@
+Subject,Predicate,Object
+Manuscript Hundred,rdf:type,schema:Manuscript
+Manuscript Hundred,owl:sameAs,https://hrc.contentdm.oclc.org/digital/collection/p15878coll79/id/395/rec/4
+Manuscript Hundred,crm:P102_has_title,Cien anos de soledad
+Manuscript Hundred,dcterms:language,Spanish
+Manuscript Hundred,dcterms:created,1966
+Manuscript Hundred,dcterms:format,Manuscript
+Manuscript Hundred,dcterms:extent,493 pages
+Manuscript Hundred,dcterms:subject,Bananeras Massacre
+Manuscript Hundred,crm:E57_consist_of,Carbon typescript with light corrections by the author 
+Manuscript Hundred,schema:location,Macondo
+Manuscript Hundred,dcterms:subject,Latin American Literature
+Manuscript Hundred,crm:P52_has_current_owner,"HRC, University of Texas"
+Manuscript Hundred,dcterms:creator,Gabriel García Márquez
+Cien años de soledad,rdf:type,schema:Book
+Cien años de soledad,owl:sameAs,https://dbpedia.org/page/One_Hundred_Years_of_Solitude
+Cien años de soledad,schema:about,Magic Realism
+Cien años de soledad,schema:genre,Fiction Novel
+Magic realism,rdf:type,skos:Concept
+Magic Realism,owl:sameAs,https://dbpedia.org/page/Magic_realism
+"HRC, University of Texas",rdf:type,crm:E74_Group
+"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855
+Latin American Literature,rdf:type,skos:Concept
+Latin American Literature,owl:sameAs,https://www.wikidata.org/wiki/Q1147454
+Macondo,rdf:type,schema:Place
+Macondo,dcterms:relation,Aracataca
+Bananeras Massacre,rdf:type,crm:E5_Event
+Bananeras Massacre,owl:sameAs,https://www.wikidata.org/wiki/Q1134821

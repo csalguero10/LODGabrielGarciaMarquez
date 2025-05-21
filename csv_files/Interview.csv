@@ -2,16 +2,16 @@ Subject,Predicate,Object
 Interview,rdf:type,schema:Article
 Interview,owl:sameAs,http://hdl.handle.net/10366/61923
 Interview,crm:P102_has_title,"Gabriel García Márquez, la imaginación como arma política"
-Interview,crm:P72_has_language,Spanish
-Interview,dcTerms:creator,Ernesto González Bermejo
-Interview,dcTerms:pulisher,Revista Triunfo
-Interview,dcTerms:issued,12/4/1975
+Interview,dcterms:language,Spanish
+Interview,dcterms:creator,Ernesto González Bermejo
+Interview,dcterms:pulisher,Revista Triunfo
+Interview,dcterms:issued,12/4/1975
 Interview,dcterms:subject,Interview
 Interview,dcterms:extent,2 pages
 Interview,dcterms:format,PDF/application
-Interview,dcterms:subject,Gabriel García Márquez
+Interview,schema:participant,Gabriel García Márquez
 Interview,crm:P52_has_current_owner,Repositorio Documental de la Universidad de Salamanca
-Interview,P67 refers to,Politics
+Interview,schema:about,Politics
 Ernesto González Bermejo,rdf:type,foaf:Person
 Ernesto González Bermejo,owl:sameAs,http://viaf.org/viaf/76347310
 Ernesto González Bermejo,schema:hasOccupation,Journalist
@@ -21,5 +21,5 @@ Repositorio Documental de la Universidad de Salamanca,rdf:type,crm:E74_Group
 Repositorio Documental de la Universidad de Salamanca,owl:sameAs,https://www.wikidata.org/wiki/Q131454
 Gabriel Garcia Marquez,rdf:type,foaf:Person
 Gabriel Garcia Marquez,owl:sameAs,https://www.wikidata.org/wiki/Q5878
-Politics,rdf:type,skos:concept
+Politics,rdf:type,skos:Concept
 Politics,owl:sameAs,https://dbpedia.org/page/Politics

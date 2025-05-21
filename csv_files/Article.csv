@@ -2,17 +2,18 @@ Subject,Predicate,Object
 Article,rdf:type,schema:Article
 Article,owl:sameAs,https://www.nytimes.com/2014/04/21/books/review/gabriel-garcia-marquezs-work-was-rooted-in-the-real.html
 Article,crm:P102_has_title,Magic in Service of truth
-Article,dcTerms:creator,Salman Rushdie 
-Article,dcTerms:issued,21-5-2014
-Article,dcTerms:place,New York
-Article,dcTerms:pulisher,The New York Times
-Article,dcTerms:references,Gabriel Garcia Marquez
-Article,dcTerms:subject,Magic Realism
-Salman Rushdie,rdf:type,foaf:person
+Article,dcterms:language,Español
+Article,dcterms:creator,Salman Rushdie 
+Article,dcterms:issued,21-5-2014
+Article,schema:countryOfOrigin,New York
+Article,dcterms:pulisher,The New York Times
+Article,dcterms:references,Gabriel Garcia Marquez
+Article,schema:about,Magic Realism
+Salman Rushdie,rdf:type,foaf:Person
 Salman Rushdie,owl:sameAs,https://viaf.org/viaf/29540187
-Magic realism,rdf:type,skos:concept
+Magic realism,rdf:type,skos:Concept
 Magic Realism,owl:sameAs,https://dbpedia.org/page/Magic_realism
-New York,rdf:type,schema:place
+New York,rdf:type,schema:Place
 New York,owl:sameAs,https://www.geonames.org/5128581/new-york-city.html
 The New York Times,rdf:type,schema:Periodical
 The New York Times,owl:sameAs,https://www.wikidata.org/wiki/Q9684

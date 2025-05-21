@@ -4,20 +4,20 @@ Nobel Speech,dcterms:creator,Gabriel Garcia Marquez
 Nobel Speech,crm:P102_has_title,Audio recording of Nobel Prize in Literature speech
 Nobel Speech,schema:duration,PT19M13S
 Nobel Speech,dcterms:extent,1 tape
-Nobel Speech,crm:P2_has_type,sound recordings
-Nobel Speech,dcTerms:language,Spanish
-Nobel Speech,schema:genre,Speeches
+Nobel Speech,crm:P2_has_type,Sound recordings
+Nobel Speech,dcterms:language,Spanish
+Nobel Speech,schema:genre,Speech
 Nobel Speech,dcterms:created,1982
-Nobel Speech,dcTerms:isPartOf,Gabriel Garcia Marquez Collection
+Nobel Speech,dcterms:isPartOf,Gabriel Garcia Marquez Collection
 Nobel Speech,schema:countryOfOrigin,Stokholm
-Nobel Speech,dcTerms:references,Magic Realism
-Nobel Speech,dcTerms:references,Social Criticism
+Nobel Speech,schema:about,Magic Realism
+Nobel Speech,schema:about,Social Criticism
 Nobel Speech,schema:recordedAt,Nobel Ceremony
-Magic Realism,rdf:type,skos:concept
+Magic Realism,rdf:type,skos:Concept
 Magic Realism,owl:sameAs,https://dbpedia.org/page/Category:Magic_realism
-Social Criticism,rdf:type,skos:concept
+Social Criticism,rdf:type,skos:Concept
 Social Criticism,owl:sameAs,https://dbpedia.org/page/Social_criticism
 Nobel Ceremony,rdf:type,crm:E5_Event
-Stokholm,rdf:type,schema:place
+Stokholm,rdf:type,schema:Place
 Stokholm,owl:sameAs,https://www.geonames.org/2673730/stockholm.html
 Gabriel Garcia Marquez Collection,rdf:type,crm:E78_Curated_Holding

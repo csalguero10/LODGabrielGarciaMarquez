@@ -1,0 +1,24 @@
+Subject,Predicate,Object
+Book General,rdf:type,schema:Book
+Book General,dcterms:creator,Gabriel Garcia Marquez 
+Book General,crm:P102_has_title,El general en su laberinto
+Book General,dcterms:created,1988
+Book General,dcterms:extent,247 pages
+Book General,schema:genre,Novels
+Book General,dcterms:language,Spanish
+Book General,crm:P52_has_current_owner,"HRC, University of Texas"
+Book General,crm:P55_has_current_location,Austin
+Book General,dcTerms:isPartOf,Gabriel Garcia Marquez Collection
+Book General,dcterms:subject,Simon Bolivar
+Book General,dcterms:creator,Gabriel Garcia Marquez 
+Book General,schema:about,Politics
+Gabriel Garcia Marquez,rdf:type,foaf:Person
+Simon Bolivar,rdf:type,foaf:Person
+Simon Bolivar,owl:sameAs,https://viaf.org/viaf/35731693
+Austin,rdf:type,schema:Place
+Austin,owl:sameAs,https://www.geonames.org/4671654/austin.html
+"HRC, University of Texas",rdf:type,crm:E74_Group
+"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855
+Politics,rdf:type,skos:Concept
+Politics,owl:sameAs,https://dbpedia.org/page/Politics
+Gabriel Garcia Marquez Collection,rdf:type,crm:E78_Curated_Holding
