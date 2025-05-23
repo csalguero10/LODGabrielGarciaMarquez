@@ -463,7 +463,7 @@ for file in files_csv:
 turtle_str = g.serialize(format="turtle", base=ggm, encoding="utf-8") # Removed base=ggm as it's bound
 
 #write the Turtle string to a file
-with open("output_rdf_serialization.ttl", "wb") as f:
+with open("conversions/output_rdf_serialization.ttl", "wb") as f:
     f.write(turtle_str)
 
 print("RDF data generated and saved to output_rdf_visualization.ttl")
