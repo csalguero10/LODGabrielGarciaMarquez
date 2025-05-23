@@ -23,6 +23,9 @@ HRC University of Texas,owl:sameAs,https://www.wikidata.org/wiki/Q5671855
 Latin American Literature,rdf:type,skos:Concept
 Latin American Literature,owl:sameAs,https://www.wikidata.org/wiki/Q1147454
 Macondo,rdf:type,schema:Place
+Macondo,owl:sameAs,https://www.wikidata.org/wiki/Q934381
 Macondo,dcterms:relation,Aracataca
+Aracataca,rdf:type,schema:Place
+Aracataca,owl:sameAs,https://www.geonames.org/3689760/aracataca.html
 Bananeras Massacre,rdf:type,crm:E5_Event
 Bananeras Massacre,owl:sameAs,https://www.wikidata.org/wiki/Q1134821

@@ -1,0 +1,284 @@
+@base <https://w3id.org/GGM/> .
+@prefix crm: <https://www.cidoc-crm.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbrer: <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+@prefix ggm: <https://w3id.org/GGM/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<item/Article> a schema:Article ;
+    dcterms:creator <person/Salman_Rushdie> ;
+    dcterms:issued "2014-05-21"^^xsd:date ;
+    dcterms:language "Español"^^xsd:language ;
+    dcterms:publisher <journal/The_New_York_Times> ;
+    dcterms:references <person/Gabriel_Garcia_Marquez> ;
+    owl:sameAs <https://www.nytimes.com/2014/04/21/books/review/gabriel-garcia-marquezs-work-was-rooted-in-the-real.html> ;
+    schema:about <concept/Magic_Realism> ;
+    schema:countryOfOrigin <place/New_York> ;
+    crm:P102_has_title "Magic in Service of truth"^^xsd:string .
+
+<item/Book_General> a schema:Book ;
+    dcterms:created "1988"^^xsd:gYear ;
+    dcterms:creator <person/Gabriel_Garcia_Marquez> ;
+    dcterms:extent "247 pages"^^xsd:string ;
+    dcterms:isPartOf <institution/Gabriel_Garcia_Marquez_Collection> ;
+    dcterms:language "Spanish"^^xsd:language ;
+    dcterms:subject <concept/Simon_Bolivar> ;
+    schema:about <concept/Politics> ;
+    schema:genre <genre_type/Novels> ;
+    crm:P102_has_title "El general en su laberinto"^^xsd:string ;
+    crm:P52_has_current_owner <institution/HRC_University_of_Texas> ;
+    crm:P55_has_current_location <place/Austin> .
+
+<item/Cien_anos_de_soledad> a schema:Book,
+        schema:Manuscript ;
+    owl:sameAs <https://dbpedia.org/page/One_Hundred_Years_of_Solitude>,
+        <https://hrc.contentdm.oclc.org/digital/collection/p15878coll79/id/395/rec/4> ;
+    schema:about <concept/Magic_Realism> ;
+    schema:genre <genre_type/Fiction_Novel> .
+
+<item/Documentary> a schema:Movie ;
+    dcterms:created "2015"^^xsd:gYear ;
+    dcterms:language "Spanish"^^xsd:language ;
+    dcterms:subject <concept/Gabriel_Garcia_Marquez> ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q22341402> ;
+    schema:countryOfOrigin <place/Colombia> ;
+    schema:director <person/Justin_Webster> ;
+    schema:duration "PT1H30M"^^xsd:duration ;
+    schema:genre <genre_type/Documentary_Film> ;
+    schema:location <place/Aracataca> ;
+    crm:P102_has_title "Gabo, la creación de Gabriel García Márquez"^^xsd:string .
+
+<item/Illustration> a schema:VisualArtwork ;
+    dcterms:created "1969"^^xsd:gYear ;
+    dcterms:creator <person/Melecio_Galvan> ;
+    dcterms:relation <concept/Gabriel_Garcia_Marquez> ;
+    owl:sameAs <https://blanton.emuseum.com/internal/media/dispatcher/22398/full> ;
+    <crmE57_consist_of> "Ink on paper"^^xsd:string ;
+    crm:P102_has_title "Daguerrotipo Coronel Aureliano Buendía"^^xsd:string ;
+    crm:P138_represents <person/Coronel_Aureliano_Buendia> ;
+    crm:P32_used_general_technique <physical_objects/Daguerrotype> ;
+    crm:P43_has_dimension "66 x 39.7"^^xsd:string .
+
+<item/Image> a schema:ImageObject ;
+    dcterms:created "1939"^^xsd:gYear ;
+    dcterms:creator <person/Leo_Matiz> ;
+    dcterms:issued "2017"^^xsd:gYear ;
+    dcterms:relation <concept/Gabriel_Garcia_Marquez> ;
+    owl:sameAs <https://lccn.loc.gov/2017645733> ;
+    schema:locationCreated <place/Cienaga>,
+        <place/Colombia>,
+        <place/Zona_bananera> ;
+    <crmE57_consist_of> "Giclee print"^^xsd:string ;
+    crm:P102_has_title "Zona bananera"^^xsd:string ;
+    crm:P43_has_dimension "40 x 31 cm"^^xsd:string ;
+    crm:P52_has_current_owner <institution/Library_of_Congress> ;
+    crm:P67_refers_to <event/Bananas_Massacre> .
+
+<item/Letter> a schema:Message ;
+    dcterms:created "1996-04-22"^^xsd:date ;
+    dcterms:extent "4 pages"^^xsd:string ;
+    dcterms:format "Manuscript"^^xsd:string ;
+    dcterms:language "Spanish"^^xsd:language ;
+    owl:sameAs <https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/39842/rec/57> ;
+    schema:about <concept/Statements> ;
+    schema:recipient <person/Hugo_Antonio_Toro_Restrepo> ;
+    schema:sender <person/Gabriel_Garcia_Maarquez> ;
+    <crmE57_consist_of> "Signed typescript"^^xsd:string ;
+    crm:P102_has_title "Letter to Bochica (Comandante General)"^^xsd:string ;
+    crm:P52_has_current_owner <institution/HRC_University_of_Texas> .
+
+<item/Manuscript_Hundred> a schema:Manuscript ;
+    dcterms:created "1966"^^xsd:gYear ;
+    dcterms:creator <person/Gabriel_Garcia_Marquez> ;
+    dcterms:extent "493 pages"^^xsd:string ;
+    dcterms:format "Manuscript"^^xsd:string ;
+    dcterms:language "Spanish"^^xsd:language ;
+    dcterms:subject <concept/Bananeras_Massacre>,
+        <concept/Latin_American_Literature> ;
+    owl:sameAs <https://hrc.contentdm.oclc.org/digital/collection/p15878coll79/id/395/rec/4> ;
+    schema:location <place/Macondo> ;
+    <crmE57_consist_of> "Carbon typescript with light corrections by the author"^^xsd:string ;
+    crm:P102_has_title "Cien anos de soledad"^^xsd:string ;
+    crm:P52_has_current_owner <institution/HRC_University_of_Texas> .
+
+<item/Nobel_Speech> a crm:E73_Information_Object ;
+    dcterms:created "1982"^^xsd:gYear ;
+    dcterms:creator <person/Gabriel_Garcia_Marquez> ;
+    dcterms:extent "1 tape"^^xsd:string ;
+    dcterms:isPartOf <institution/Gabriel_Garcia_Marquez_Collection> ;
+    dcterms:language "Spanish"^^xsd:language ;
+    schema:about <concept/Magic_Realism>,
+        <concept/Social_Criticism> ;
+    schema:countryOfOrigin <place/Stokholm> ;
+    schema:duration "PT19M13S"^^xsd:duration ;
+    schema:genre <genre_type/Speech> ;
+    schema:recordedAt <event/Nobel_Ceremony> ;
+    <crmP2_has_type> "Sound recordings"^^xsd:string ;
+    crm:P102_has_title "Audio recording of Nobel Prize in Literature speech"^^xsd:string .
+
+<item/Series> a schema:TVSeries ;
+    dcterms:issued "2024"^^xsd:gYear ;
+    dcterms:language "Spanish"^^xsd:language ;
+    dcterms:publisher <company/Netflix> ;
+    owl:sameAs <https://www.imdb.com/title/tt9892936/fullcredits/?ref_=tt_ov_st#cast> ;
+    schema:about <concept/Social_Criticism> ;
+    schema:countryOfOrigin <place/Colombia> ;
+    schema:director <person/Alex_Garcia_Lopez>,
+        <person/Laura_Mora_Ortega> ;
+    schema:genre <genre_type/Political_TV_show_TV_Drama> ;
+    schema:isBasedOn <physical_objects/Cien_anos_de_soledad_Book> ;
+    schema:numberOfEpisodes "8 Episodes"^^xsd:string ;
+    schema:productionCompany <company/Dynamo_CO> ;
+    <crmE57_consist_of> "Color"^^xsd:string ;
+    crm:P102_has_title "Cien años de soledad"^^xsd:string .
+
+<company/Dynamo_CO> a crm:E74_Group ;
+    owl:sameAs <https://pro.imdb.com/company/co0231812?r=cons_ats_co_pro&ref=cons_ats_co_pro> .
+
+<company/Netflix> a crm:E74_Group ;
+    owl:sameAs <https://dbpedia.org/page/Netflix> .
+
+<concept/Bananeras_Massacre> a crm:E5_Event ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q1134821> .
+
+<concept/Latin_American_Literature> a skos:Concept ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q1147454> .
+
+<concept/Simon_Bolivar> a foaf:Person ;
+    owl:sameAs <https://viaf.org/viaf/35731693> .
+
+<event/Bananas_Massacre> a crm:E5_Event ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q1134821> ;
+    crm:P10_falls_within <period/Colombian_Armed_Conflict> .
+
+<event/Nobel_Ceremony> a crm:E5_Event ;
+    dcterms:created "1995"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q7191> .
+
+<group_of_people/JEGA_Movimiento_Jorge_Eliecer_Gaitan> a crm:E74_Group ;
+    crm:P10_falls_within <period/Colombian_Armed_Conflict> .
+
+<institution/Cien_anos_de_soledad> a schema:Book ;
+    owl:sameAs <https://dbpedia.org/page/One_Hundred_Years_of_Solitude> .
+
+<institution/Library_of_Congress> a crm:E74_Group ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q131454> .
+
+<institution/Repositorio_Documental_de_la_Universidad_de_Salamanca> a crm:E74_Group ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q131454> .
+
+<item/Interview> a schema:Article ;
+    dcterms:creator <person/Ernesto_Gonzalez_Bermejo> ;
+    dcterms:extent "2 pages"^^xsd:string ;
+    dcterms:format "PDF/application"^^xsd:string ;
+    dcterms:issued "1975-12-04"^^xsd:date ;
+    dcterms:language "Spanish"^^xsd:language ;
+    dcterms:publisher <journal/Revista_Triunfo> ;
+    dcterms:subject <item/Interview> ;
+    owl:sameAs <http://hdl.handle.net/10366/61923> ;
+    schema:about <concept/Politics> ;
+    schema:participant <person/Gabriel_Garcia_Marquez> ;
+    crm:P102_has_title "Gabriel García Márquez, la imaginación como arma política"^^xsd:string ;
+    crm:P52_has_current_owner <institution/Repositorio_Documental_de_la_Universidad_de_Salamanca> .
+
+<journal/Revista_Triunfo> a schema:Periodical ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q9090224> .
+
+<journal/The_New_York_Times> a schema:Periodical ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q9684> .
+
+<person/Alex_Garcia_Lopez> a foaf:Person ;
+    owl:sameAs <https://www.imdb.com/es/name/nm3421685/?ref_=ttfc_fc_dr1> .
+
+<person/Coronel_Aureliano_Buendia> a frbrer:Character ;
+    dcterms:isPartOf <institution/Cien_anos_de_soledad> .
+
+<person/Ernesto_Gonzalez_Bermejo> a foaf:Person ;
+    owl:sameAs <http://viaf.org/viaf/76347310> ;
+    schema:hasOccupation <occupation/Journalist> .
+
+<person/Hugo_Antonio_Toro_Restrepo> a foaf:Person ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q130732719> ;
+    crm:P107_has_current_or_former_member <group_of_people/JEGA_Movimiento_Jorge_Eliecer_Gaitan> .
+
+<person/Justin_Webster> a foaf:Person ;
+    owl:sameAs <https://viaf.org/viaf/90693839> .
+
+<person/Laura_Mora_Ortega> a foaf:Person ;
+    owl:sameAs <https://www.imdb.com/es/name/nm2005384/?ref_=ttfc_fc_dr2> .
+
+<person/Leo_Matiz> a foaf:Person ;
+    owl:sameAs <http://viaf.org/viaf/18030004> ;
+    schema:birthPlace <place/Aracataca> ;
+    schema:hasOccupation <occupation/Photographer> .
+
+<person/Louis_Jacques_Mande_Daguerre> a foaf:Person ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q131405> .
+
+<person/Melecio_Galvan> a foaf:Person ;
+    owl:sameAs <http://viaf.org/viaf/73077858> ;
+    schema:hasOccupation <occupation/Artist> .
+
+<person/Salman_Rushdie> a foaf:Person ;
+    owl:sameAs <https://viaf.org/viaf/29540187> .
+
+<physical_objects/Daguerrotype> a <concept/crmE29__Design_or_Procedure> ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q179744> ;
+    crm:P14_carried_out_by <person/Louis_Jacques_Mande_Daguerre> .
+
+<place/Austin> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/4671654/austin.html> .
+
+<place/Cienaga> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/3686279/cienaga.html> .
+
+<place/Macondo> a schema:Place ;
+    dcterms:relation <place/Aracataca> ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q934381> .
+
+<place/New_York> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/5128581/new-york-city.html> .
+
+<place/Stokholm> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/2673730/stockholm.html> .
+
+<place/Zona_bananera> a schema:Place ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q2434796> .
+
+<concept/Social_Criticism> a skos:Concept ;
+    owl:sameAs <https://dbpedia.org/page/Social_criticism> .
+
+<institution/Gabriel_Garcia_Marquez_Collection> a crm:E78_Curated_Holding ;
+    owl:sameAs <https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/> .
+
+<period/Colombian_Armed_Conflict> a crm:E4_Period ;
+    dcterms:relation <concept/Politics> ;
+    owl:sameAs <https://dbpedia.org/page/Colombian_conflict> .
+
+<concept/Gabriel_Garcia_Marquez> a foaf:Person ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q5878> .
+
+<concept/Magic_Realism> a skos:Concept ;
+    owl:sameAs <https://dbpedia.org/page/Category:Magic_realism>,
+        <https://dbpedia.org/page/Magic_realism> .
+
+<concept/Politics> a skos:Concept,
+        <concept/skosconcept> ;
+    owl:sameAs <https://dbpedia.org/page/Politics> .
+
+<institution/HRC_University_of_Texas> a crm:E74_Group ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q5671855> .
+
+<place/Aracataca> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/3689760/aracataca.html> .
+
+<place/Colombia> a schema:Place ;
+    owl:sameAs <https://www.geonames.org/3686110/republic-of-colombia.html> .
+
+<person/Gabriel_Garcia_Marquez> a foaf:Person ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q5878> .
+

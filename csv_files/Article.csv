@@ -6,7 +6,7 @@ Article,dcterms:language,Español
 Article,dcterms:creator,Salman Rushdie 
 Article,dcterms:issued,21-5-2014
 Article,schema:countryOfOrigin,New York
-Article,dcterms:pulisher,The New York Times
+Article,dcterms:publisher,The New York Times
 Article,dcterms:references,Gabriel Garcia Marquez
 Article,schema:about,Magic Realism
 Salman Rushdie,rdf:type,foaf:Person

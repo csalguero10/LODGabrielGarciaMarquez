@@ -78,6 +78,7 @@ group_of_people = URIRef(ggm + "group_of_people/")
 company = URIRef(ggm + "company/")
 occupation = URIRef(ggm + "occupation/")
 genre_type = URIRef(ggm + "genre_type/")
+journal = URIRef(ggm + "journal/")
 
 #bind namespaces to graph
 g.bind("schema", SCHEMA)
@@ -131,7 +132,7 @@ for file in files_csv:
         # specify predicates
         if predicate == "rdf:type":
             predicate_uri = RDF.type
-        elif predicate in ["owl:SameAs", "owl:sameAs"]:
+        elif predicate == "owl:sameAs":
             predicate_uri = OWL.sameAs
         elif predicate == "dcterms:created":
             predicate_uri = DCTERMS.created
@@ -273,16 +274,18 @@ for file in files_csv:
 
         # Mapping of people, persons and organizations
         elif predicate_uri in [DCTERMS.creator, SCHEMA.director, SCHEMA.recipient, SCHEMA.sender, CRM.P14_carried_out_by, SCHEMA.participant, DCTERMS.references, CRM.P138_represents]:
-            normalized_object = normalize(object)
-            if normalized_object not in uris_dict:
-                # Check if it's an item, otherwise assume person for these predicates
-                if object in items_list: # This check might need refinement based on your actual data
-                    obj = URIRef(item + normalized_object)
-                else:    
-                    obj = URIRef(person + normalized_object)
-                uris_dict[normalized_object] = obj
-            else:
-                obj = uris_dict[normalized_object]
+            normalized_object = normalize(object) # object is an entity name string
+            if normalized_object: # Ensure not empty
+                if normalized_object not in uris_dict:
+                    obj_base_path = person # Default for these predicates
+                    if object in ["Netflix", "Dynamo Co"]:
+                        obj_base_path = company
+                    elif object in items_list:
+                        obj_base_path = item
+                    obj = URIRef(obj_base_path + normalized_object)
+                    uris_dict[normalized_object] = obj
+                else:
+                    obj = uris_dict[normalized_object]
 
         elif predicate_uri == CRM.P107_has_current_or_former_member:
             normalized_object = normalize(object)
@@ -302,11 +305,19 @@ for file in files_csv:
 
         elif predicate_uri in [DCTERMS.publisher, CRM.P52_has_current_owner, DCTERMS.isPartOf]:
             normalized_object = normalize(object)
-            if normalized_object not in uris_dict:
-                obj = URIRef(institution + normalized_object)
-                uris_dict[normalized_object] = obj
-            else:
-                obj = uris_dict[normalized_object]
+            if normalized_object:
+                if normalized_object not in uris_dict:
+                    obj_base_path = institution # Default
+                    if object in ["Netflix", "Dynamo Co"]:
+                        obj_base_path = company
+                    elif object in ["Revista Triunfo", "The New York Times"]:
+                        obj_base_path = journal
+                    elif predicate_uri == DCTERMS.isPartOf and object in items_list: # isPartOf can link to other items
+                        obj_base_path = item
+                    obj = URIRef(obj_base_path + normalized_object)
+                    uris_dict[normalized_object] = obj
+                else:
+                    obj = uris_dict[normalized_object]
         
         elif predicate_uri == SCHEMA.hasOccupation:
             normalized_object = normalize(object)

@@ -8,7 +8,7 @@ Book General,schema:genre,Novels
 Book General,dcterms:language,Spanish
 Book General,crm:P52_has_current_owner,"HRC, University of Texas"
 Book General,crm:P55_has_current_location,Austin
-Book General,dcTerms:isPartOf,Gabriel Garcia Marquez Collection
+Book General,dcterms:isPartOf,Gabriel Garcia Marquez Collection
 Book General,dcterms:subject,Simon Bolivar
 Book General,dcterms:creator,Gabriel Garcia Marquez 
 Book General,schema:about,Politics

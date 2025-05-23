@@ -7,7 +7,7 @@ Series,schema:genre,"Political TV show, TV Drama"
 Series,dcterms:language,Spanish
 Series,dcterms:issued,2024
 Series,crm:P102_has_title,Cien años de soledad
-Series,schema:productionCompany,Dynamo
+Series,schema:productionCompany,Dynamo CO
 Series,dcterms:publisher,Netflix
 Series,schema:countryOfOrigin,Colombia
 Series,crm:E57_consist_of,Color 

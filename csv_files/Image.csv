@@ -3,6 +3,8 @@ Image,rdf:type,schema:ImageObject
 Image,owl:sameAs,https://lccn.loc.gov/2017645733
 Image,crm:P102_has_title,Zona bananera
 Image,schema:locationCreated,Ciénaga
+Image,schema:locationCreated,Colombia
+Image,schema:locationCreated,Zona bananera
 Image,dcterms:creator,Leo Matiz
 Image,dcterms:created,1939
 Image,dcterms:issued,2017
@@ -20,7 +22,7 @@ Library of Congress,owl:sameAs,https://www.wikidata.org/wiki/Q131454
 Leo Matiz,rdf:type,foaf:Person
 Leo Matiz,owl:sameAs,http://viaf.org/viaf/18030004
 Leo Matiz,schema:hasOccupation,Photographer
-Aracataca,schema:birthPlace,Leo Matiz
+Leo Matiz,schema:birthPlace,Aracataca
 Aracataca,rdf:type,schema:Place
 Aracataca,owl:sameAs,https://www.geonames.org/3689760/aracataca.html
 Zona bananera,rdf:type,schema:Place
