@@ -1,0 +1,21 @@
+Entity
+crm:E29 _Design_or_Procedure
+crm:E4_Period
+crm:E5_Event
+crm:E73_Information_Object
+crm:E74_Group
+crm:E78_Curated_Holding
+dcterms:Text
+foaf:Person
+frbrer:Character
+schema:Article
+schema:Book
+schema:ImageObject
+schema:Manuscript
+schema:Movie
+schema:Periodical
+schema:Place
+schema:TVSeries
+schema:VisualArtwork
+skos:Concept
+skos:concept
