@@ -11,7 +11,7 @@ Article,dcterms:references,Gabriel Garcia Marquez
 Article,schema:about,Magic Realism
 Salman Rushdie,rdf:type,foaf:Person
 Salman Rushdie,owl:sameAs,https://viaf.org/viaf/29540187
-Magic realism,rdf:type,skos:Concept
+Magic Realism,rdf:type,skos:Concept
 Magic Realism,owl:sameAs,https://dbpedia.org/page/Magic_realism
 New York,rdf:type,schema:Place
 New York,owl:sameAs,https://www.geonames.org/5128581/new-york-city.html

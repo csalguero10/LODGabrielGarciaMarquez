@@ -16,10 +16,10 @@ Cien años de soledad,rdf:type,schema:Book
 Cien años de soledad,owl:sameAs,https://dbpedia.org/page/One_Hundred_Years_of_Solitude
 Cien años de soledad,schema:about,Magic Realism
 Cien años de soledad,schema:genre,Fiction Novel
-Magic realism,rdf:type,skos:Concept
+Magic Realism,rdf:type,skos:Concept
 Magic Realism,owl:sameAs,https://dbpedia.org/page/Magic_realism
-"HRC, University of Texas",rdf:type,crm:E74_Group
-"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855
+HRC University of Texas,rdf:type,crm:E74_Group
+HRC University of Texas,owl:sameAs,https://www.wikidata.org/wiki/Q5671855
 Latin American Literature,rdf:type,skos:Concept
 Latin American Literature,owl:sameAs,https://www.wikidata.org/wiki/Q1147454
 Macondo,rdf:type,schema:Place

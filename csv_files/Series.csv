@@ -13,8 +13,7 @@ Series,schema:countryOfOrigin,Colombia
 Series,crm:E57_consist_of,Color 
 Series,schema:about,Social Criticism
 Series,schema:isBasedOn,Cien años de soledad Book
-Series,"
-schema:numberOfEpisodes",8 Episodes
+Series,schema:numberOfEpisodes,8 Episodes
 Colombia,rdf:type,schema:Place
 Colombia,owl:sameAs,https://www.geonames.org/3686110/republic-of-colombia.html
 Alex García López,rdf:type,foaf:Person

@@ -21,5 +21,5 @@ Colombian Armed Conflict,owl:sameAs,https://dbpedia.org/page/Colombian_conflict
 Colombian Armed Conflict,dcterms:relation,Politics
 Politics,rdf:type,skos:concept
 Politics,owl:sameAs,https://dbpedia.org/page/Politics
-"HRC, University of Texas",rdf:type,crm:E74_Group
-"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855
+HRC University of Texas,rdf:type,crm:E74_Group
+HRC University of Texas,owl:sameAs,https://www.wikidata.org/wiki/Q5671855

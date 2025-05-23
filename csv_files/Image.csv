@@ -21,6 +21,8 @@ Leo Matiz,rdf:type,foaf:Person
 Leo Matiz,owl:sameAs,http://viaf.org/viaf/18030004
 Leo Matiz,schema:hasOccupation,Photographer
 Aracataca,schema:birthPlace,Leo Matiz
+Aracataca,rdf:type,schema:Place
+Aracataca,owl:sameAs,https://www.geonames.org/3689760/aracataca.html
 Zona bananera,rdf:type,schema:Place
 Zona bananera,owl:sameAs,https://www.wikidata.org/wiki/Q2434796
 Gabriel Garcia Marquez,rdf:type,foaf:Person

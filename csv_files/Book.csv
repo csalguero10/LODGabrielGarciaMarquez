@@ -17,8 +17,9 @@ Simon Bolivar,rdf:type,foaf:Person
 Simon Bolivar,owl:sameAs,https://viaf.org/viaf/35731693
 Austin,rdf:type,schema:Place
 Austin,owl:sameAs,https://www.geonames.org/4671654/austin.html
-"HRC, University of Texas",rdf:type,crm:E74_Group
-"HRC, University of Texas",owl:sameAs,https://www.wikidata.org/wiki/Q5671855
+HRC University of Texas,rdf:type,crm:E74_Group
+HRC University of Texas,owl:sameAs,https://www.wikidata.org/wiki/Q5671855
 Politics,rdf:type,skos:Concept
 Politics,owl:sameAs,https://dbpedia.org/page/Politics
 Gabriel Garcia Marquez Collection,rdf:type,crm:E78_Curated_Holding
+Gabriel Garcia Marquez Collection,owl:sameAs,https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/

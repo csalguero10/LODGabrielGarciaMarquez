@@ -18,6 +18,9 @@ Magic Realism,owl:sameAs,https://dbpedia.org/page/Category:Magic_realism
 Social Criticism,rdf:type,skos:Concept
 Social Criticism,owl:sameAs,https://dbpedia.org/page/Social_criticism
 Nobel Ceremony,rdf:type,crm:E5_Event
+Nobel Ceremony,owl:sameAs,https://www.wikidata.org/wiki/Q7191
+Nobel Ceremony,dcterms:created,1995
 Stokholm,rdf:type,schema:Place
 Stokholm,owl:sameAs,https://www.geonames.org/2673730/stockholm.html
 Gabriel Garcia Marquez Collection,rdf:type,crm:E78_Curated_Holding
+Gabriel Garcia Marquez Collection,owl:sameAs,https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/
