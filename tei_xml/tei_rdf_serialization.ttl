@@ -31,7 +31,7 @@
     dcterms:source "Gabriel García Márquez Collection. Gabriel García Márquez Papers, 1930s-2014 (bulk 1966-2006)" ;
     dcterms:title "LOD Gabriel García Márquez" .
 
-<figure/1440426339742042216> a <Figure> ;
+<figure/4925569887194507235> a <Figure> ;
     rdfs:comment "It appears to be a drawing of a floor plan of a space/house." .
 
 <page/leaf001r> a <Page> ;
