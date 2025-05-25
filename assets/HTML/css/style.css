@@ -1923,7 +1923,7 @@ a.social-link:hover {
 #header.featured {
 	background-color: #eee;
 	background-repeat: repeat;
-	background-image: url(../img/sample-header-pattern.png);
+	background-image: url(../img/sample-header-pattern.png); /* esta es la imagen que necesito cambiar para el banner principal, en caso de que quiera cambiar el color gris */
 }
 
 #header #featured-content {
@@ -2588,6 +2588,10 @@ a.social-link:hover {
 	}
 
 	.grid-container .grid4.col {
+		width: 47.5%;
+	}
+
+	.grid-container .gridauthor.col {
 		width: 30%;
 	}
 
