@@ -1,241 +1,425 @@
 <html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="es">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta charset="UTF-8"/>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <title>LOD Gabriel Garc&#237;a M&#225;rquez</title>
     <style>
-                    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-                    h1, h2, h3 { color: #333; }
-                    .unclear { background-color: yellow; }
-                    .metadata { background:rgb(244, 244, 244); padding: 30px; border-radius: 5px; margin-bottom: 20px; }
-                    .content { margin-top: 20px; }
-                    .gap { color: red; font-weight: bold; }
-                    .quote { font-style: italic; }
-                    .note { font-style: italic; color: #666; }
-                    .del { text-decoration: line-through; color: red; }
-                    .add { text-decoration: underline; color: green; }
-                    .page-break { margin: 20px 0; text-align: center; }
-                    .spaced { display: inline-block; width: 100%; margin-top: 10px; }
-                    .figure { font-style: italic;}
-                    /* CSS para asignar colores seg&#250;n el medio */
-                    .hand-pencil { color: gray; }
-                    .hand-blue-ink { color: blue; }
-                    .hand-black-ink { color: black; }
-                    .hand-green-ink { color: green; }
-                </style>
-  </head>
-  <body>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .unclear {
+            background-color: yellow;
+        }
+
+        .metadata {
+            background: rgb(244, 244, 244);
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        .gap {
+            color: red;
+            font-weight: bold;
+        }
+
+        .quote {
+            font-style: italic;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+        }
+
+        .del {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .add {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .page-break {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .spaced {
+            display: inline-block;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .figure {
+            font-style: italic;
+        }
+
+        /* CSS para asignar colores seg&#250;n el medio */
+        .hand-pencil {
+            color: gray;
+        }
+
+        .hand-blue-ink {
+            color: blue;
+        }
+
+        .hand-black-ink {
+            color: black;
+        }
+
+        .hand-green-ink {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
     <div class="metadata">
-      <h1>LOD Gabriel Garc&#237;a M&#225;rquez</h1>
-      <h2>Information Science and Cultural Heritage Project</h2>
-      <br/>
-      <h3>Transcription and Encoding: </h3>
-      <p><b>Responsible: </b>Catalina Salguero</p>
-      <p>
-                    Scholarly Digital Edition
-                    February, 2025.
-                </p>
-      <h3>Source Description: </h3>
-      <p><b>Title: </b>El general en su laberinto</p>
-      <p><b>Alternative Title: </b>The General in His Labyrinth</p>
-      <p><b>Author: </b>Garc&#237;a M&#225;rquez, Gabriel</p>
-      <p><b>Date: </b>5 de octubre 1988</p>
-      <p><b>Place: </b>M&#233;xico</p>
-      <p><b>Extent: </b>247 pages</p>
-      <p><b>Language: </b>Spanish</p>
-      <p><b>Note: </b>Final version 1.</p>
-      <h3>Publication Information: </h3>
-      <p><b>Publisher: </b>The University of Texas at Austin</p>
-      <p><b>Location: </b>Harry Ransom Center</p>
-      <p><b>Collection: </b>Gabriel Garc&#237;a M&#225;rquez Collection. Gabriel Garc&#237;a M&#225;rquez Papers, 1930s-2014 (bulk 1966-2006)</p>
-      <p><b>Availability: </b>
-                     The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners. To read more about the public domain, visit the Creative Commons Public Domain Dedication. 
-                </p>
-      <p><b>Project Description: </b>
-                
-                    The text encoding was created and/or prepared for the GGM Project in LOD for the final project course in Information Science and Cultural Heritage as part of the Digital Humanities and Digital Knowledge master's degree program at the University of Bologna.
-                    
-                    The text encoding refers to the transcription and encoding of the first 10 pages of the original manuscript, digitized by the Harry Ransom Center.
-                
-            </p>
-      <h3>Handnotes from the original source: </h3>
-      <ul>
-        <li><b>Hand ID: </b>hand1 - 
-                                <b>Medium: </b>Pencil</li>
-        <li><b>Hand ID: </b>hand2 - 
-                                <b>Medium: </b>Blue ink</li>
-        <li><b>Hand ID: </b>hand3 - 
-                                <b>Medium: </b>Black ink</li>
-        <li><b>Hand ID: </b>hand4 - 
-                                <b>Medium: </b>Green ink</li>
-      </ul>
+        <h1>LOD Gabriel Garc&#237;a M&#225;rquez</h1>
+        <h2>Information Science and Cultural Heritage Project</h2>
+        <br />
+        <h3>Transcription and Encoding: </h3>
+        <p><b>Responsible: </b>Catalina Salguero</p>
+        <p>
+            Scholarly Digital Edition
+            February, 2025.
+        </p>
+        <h3>Source Description: </h3>
+        <p><b>Title: </b>El general en su laberinto</p>
+        <p><b>Alternative Title: </b>The General in His Labyrinth</p>
+        <p><b>Author: </b>Garc&#237;a M&#225;rquez, Gabriel</p>
+        <p><b>Date: </b>5 de octubre 1988</p>
+        <p><b>Place: </b>M&#233;xico</p>
+        <p><b>Extent: </b>247 pages</p>
+        <p><b>Language: </b>Spanish</p>
+        <p><b>Note: </b>Final version 1.</p>
+        <h3>Publication Information: </h3>
+        <p><b>Publisher: </b>The University of Texas at Austin</p>
+        <p><b>Location: </b>Harry Ransom Center</p>
+        <p><b>Collection: </b>Gabriel Garc&#237;a M&#225;rquez Collection. Gabriel Garc&#237;a M&#225;rquez Papers,
+            1930s-2014 (bulk 1966-2006)</p>
+        <p><b>Availability: </b>
+            The text of the original document is in the public domain. Subject to certain exceptions, public domain
+            works may be freely copied or used in the creation of derivative works without permission, or authorization,
+            of the former copyright owners. To read more about the public domain, visit the Creative Commons Public
+            Domain Dedication.
+        </p>
+        <p><b>Project Description: </b>
+
+            The text encoding was created and/or prepared for the GGM Project in LOD for the final project course in
+            Information Science and Cultural Heritage as part of the Digital Humanities and Digital Knowledge master's
+            degree program at the University of Bologna.
+
+            The text encoding refers to the transcription and encoding of the first 10 pages of the original manuscript,
+            digitized by the Harry Ransom Center.
+
+        </p>
+        <h3>Handnotes from the original source: </h3>
+        <ul>
+            <li><b>Hand ID: </b>hand1 -
+                <b>Medium: </b>Pencil
+            </li>
+            <li><b>Hand ID: </b>hand2 -
+                <b>Medium: </b>Blue ink
+            </li>
+            <li><b>Hand ID: </b>hand3 -
+                <b>Medium: </b>Black ink
+            </li>
+            <li><b>Hand ID: </b>hand4 -
+                <b>Medium: </b>Green ink
+            </li>
+        </ul>
     </div>
     <div class="content">
-        
-        
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/14529/rec/2" alt="Page Image"/></div>
-            <div class="spaced">
-                
-                    
-                        <span style="text-transform: uppercase;">G</span>abriel 
-                        <span style="text-transform: uppercase;">G</span>arc&#237;a 
-                        <span style="text-transform: uppercase;">M</span>&#225;rquez
-                    
-                    
-                        <span style="text-transform: uppercase;">EL GENERAL EN SU LABERINTO</span>
-                    
-                
-                <span class="&#10;                note spaced hand-black-ink">
-                    <span title="Unclear text" class="&#10;                unclear ">Raimondo Manifescoli</span>
-                </span>
-                <span class="&#10;                note spaced hand-blue-ink">
-                    M&#233;xico 5 de Octubre/88
-                </span>
-                <span class="&#10;                note spaced hand-black-ink">
-                    <span style="text-transform: uppercase;">VERSION FINAL N&#176; 1</span>
-                </span>
+
+
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/14529/rec/2"
+                alt="Page Image" /></div>
+        <div class="spaced">
+
+
+            <span style="text-transform: uppercase;">G</span>abriel
+            <span style="text-transform: uppercase;">G</span>arc&#237;a
+            <span style="text-transform: uppercase;">M</span>&#225;rquez
+
+
+            <span style="text-transform: uppercase;">EL GENERAL EN SU LABERINTO</span>
+
+
+            <span class="&#10;                note spaced hand-black-ink">
+                <span title="Unclear text" class="&#10;                unclear ">Raimondo Manifescoli</span>
+            </span>
+            <span class="&#10;                note spaced hand-blue-ink">
+                M&#233;xico 5 de Octubre/88
+            </span>
+            <span class="&#10;                note spaced hand-black-ink">
+                <span style="text-transform: uppercase;">VERSION FINAL N&#176; 1</span>
+            </span>
+        </div>
+
+
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14529.jpg"
+                alt="Page Image" /></div>
+
+        <div class="spaced">
+            <div class="figure">
+                It appears to be a drawing of a floor plan of a space/house.
             </div>
+        </div>
 
-        
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14529.jpg" alt="Page Image"/></div>
 
-            <div class="spaced">
-                <div class="figure">
-                    It appears to be a drawing of a floor plan of a space/house.
-                </div>
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14531.jpg"
+                alt="Page Image" /></div>
+
+        <div class="spaced">
+            <span class="&#10;                note spaced hand-black-ink">
+                <span title="Unclear text" class="&#10;                unclear ">Sangre negra: Fue Mart&#237;n de
+                    Narv&#225;ez en el siglo XVII, tercer abuelo aleman de Bol.</span><span class="gap"
+                    title="Text impossible to transcribe">[&#8230;]</span>
+                <span title="Unclear text" class="&#10;                unclear ">Josefa hija descendiente fue
+                </span><span class="gap" title="Text impossible to transcribe">[&#8230;]</span><ins title="Insertion"
+                    class="&#10;                add hand-green-ink">O.K</ins>
+                <del title="Deletion" class="&#10;                del "><span title="Unclear text"
+                        class="&#10;                unclear ">Sandra ten&#237;a pintas de vincel en tu
+                        carro.</span></del>
+            </span>
+            <span class="&#10;                note spaced ">(tatarabuelo)
+            </span>
+            <span class="&#10;                note spaced ">
+                <span style="text-transform: uppercase;">SANDRA QUIROGA</span>
+            </span>
+        </div>
+
+
+        <div class="spaced">
+            <blockquote>
+                <span class="quote spaced">Parece que el demonio dirige las cosas de mi vida.</span>
+                - SIM&#211;N BOLIVAR
+
+                <br />
+
+                (Carta a Francisco de Paula Santander, agosto 4 de 182<del title="Deletion"
+                    class="&#10;                del hand-green-ink">5</del><ins title="Insertion"
+                    class="&#10;                add hand-green-ink">3</ins>)
+
+
+            </blockquote>
+        </div>
+
+        <div class="spaced">
+            <span class="&#10;                note spaced hand-black-ink">
+                <span class="underline"><span title="Unclear text"
+                        class="&#10;                unclear ">Casaconicia:</span></span> Julio 4 <del title="Deletion"
+                    class="&#10;                del ">1824:<span title="Unclear text"
+                        class="&#10;                unclear " /></del>
+                <span class="underline">MASUR:</span> <del title="Deletion"
+                    class="&#10;                del hand-green-ink"><span title="Unclear text"
+                        class="&#10;                unclear ">352 encargos de Sder: 325</span></del>
+            </span>
+        </div>
+
+
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14532.jpg"
+                alt="Page Image" /></div>
+
+        <div class="spaced">
+            <div class="figure">
+                It appears to be a drawing of a floor plan of a space/house.
             </div>
+        </div>
 
-        
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14531.jpg" alt="Page Image"/></div>
-            
-            <div class="spaced"> 
-                <span class="&#10;                note spaced hand-black-ink">
-                    <span title="Unclear text" class="&#10;                unclear ">Sangre negra: Fue Mart&#237;n de Narv&#225;ez en el siglo XVII, tercer abuelo aleman de Bol.</span><span class="gap" title="Text impossible to transcribe">[&#8230;]</span>
-                    <span title="Unclear text" class="&#10;                unclear ">Josefa hija descendiente fue </span><span class="gap" title="Text impossible to transcribe">[&#8230;]</span><ins title="Insertion" class="&#10;                add hand-green-ink">O.K</ins>
-                    <del title="Deletion" class="&#10;                del "><span title="Unclear text" class="&#10;                unclear ">Sandra ten&#237;a pintas de vincel en tu carro.</span></del>
-                </span>
-                <span class="&#10;                note spaced ">(tatarabuelo)
-                </span>
-                <span class="&#10;                note spaced ">
-                    <span style="text-transform: uppercase;">SANDRA QUIROGA</span>
-                </span>
-            </div>
 
-        
-            <div class="spaced">
-                <blockquote>
-                    <span class="quote spaced">Parece que el demonio dirige las cosas de mi vida.</span>
-                    - SIM&#211;N BOLIVAR
-                    
-                    <br/>
-                    
-                        (Carta a Francisco de Paula Santander, agosto 4 de 182<del title="Deletion" class="&#10;                del hand-green-ink">5</del><ins title="Insertion" class="&#10;                add hand-green-ink">3</ins>)
-                        
-                    
-                </blockquote>
-            </div>
-            
-            <div class="spaced">
-                <span class="&#10;                note spaced hand-black-ink">
-                    <span class="underline"><span title="Unclear text" class="&#10;                unclear ">Casaconicia:</span></span> Julio 4 <del title="Deletion" class="&#10;                del ">1824:<span title="Unclear text" class="&#10;                unclear "/></del>
-                    <span class="underline">MASUR:</span> <del title="Deletion" class="&#10;                del hand-green-ink"><span title="Unclear text" class="&#10;                unclear ">352 encargos de Sder: 325</span></del>
-                </span>
-            </div>
 
-        
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14532.jpg" alt="Page Image"/></div>
 
-            <div class="spaced">
-                <div class="figure">
-                    It appears to be a drawing of a floor plan of a space/house.
-                </div>
-            </div>
-        
-
-        
-        
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/lp15878coll51_14533.jpg" alt="Page Image"/></div>
-            <span class="folio spaced" style="float:right; font-weight:bold;">
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/lp15878coll51_14533.jpg"
+                alt="Page Image" /></div>
+        <span class="folio spaced" style="float:right; font-weight:bold;">
             P&#225;gina 1</span>
 
-            <div class="spaced">
-                <span class="&#10;                note spaced hand-pencil">Parque Humboldt. Mijares 76 <del title="Deletion" class="&#10;                del hand-black-ink"><span title="Unclear text" class="&#10;                unclear ">final: sentarse siempre de pantalones</span></del><ins title="Insertion" class="&#10;                add ">(8 cap)</ins>
-                </span>
-            </div>
+        <div class="spaced">
+            <span class="&#10;                note spaced hand-pencil">Parque Humboldt. Mijares 76 <del title="Deletion"
+                    class="&#10;                del hand-black-ink"><span title="Unclear text"
+                        class="&#10;                unclear ">final: sentarse siempre de pantalones</span></del><ins
+                    title="Insertion" class="&#10;                add ">(8 cap)</ins>
+            </span>
+        </div>
 
-            <div class="spaced">
-                <p style="text-indent: 1em;">
-                    Jos&#233; Palacios, su servidor m&#225;s antiguo, lo encontr&#243; flotando en las aguas depurativas de la ba&#241;era, desnudo y con los ojos abiertos, y crey&#243; que se hab&#237;a ahogado. Sab&#237;a que ese era uno de sus muchos modos de meditar, pero el estado de &#233;xtasis en que yac&#237;a a la deriva parec&#237;a de alguien que ya no era de este mundo. No se atrevi&#243; a acercarse, sino que lo llam&#243; con voz sorda de acuerdo con la orden de despertarlo antes de las cinco para viajar con las primeras luces. &#201;l emergi&#243; del hechizo, reconoci&#243; a su mayordomo de todos los d&#237;as parado en la puerta del ba&#241;o con un pocilio de infusi&#243;n de amapolas con goma <ins title="Insertion" class="&#10;                add hand-pencil">ar&#225;biga</ins>, y sali&#243; chorreando de la ba&#241;era con un &#237;mpetu de delf&#237;n que no era de esperar en un cuerpo tan desmedrado.
-                </p>
+        <div class="spaced">
+            <p style="text-indent: 1em;">
+                Jos&#233; Palacios, su servidor m&#225;s antiguo, lo encontr&#243; flotando en las aguas depurativas de
+                la ba&#241;era, desnudo y con los ojos abiertos, y crey&#243; que se hab&#237;a ahogado. Sab&#237;a que
+                ese era uno de sus muchos modos de meditar, pero el estado de &#233;xtasis en que yac&#237;a a la deriva
+                parec&#237;a de alguien que ya no era de este mundo. No se atrevi&#243; a acercarse, sino que lo
+                llam&#243; con voz sorda de acuerdo con la orden de despertarlo antes de las cinco para viajar con las
+                primeras luces. &#201;l emergi&#243; del hechizo, reconoci&#243; a su mayordomo de todos los d&#237;as
+                parado en la puerta del ba&#241;o con un pocilio de infusi&#243;n de amapolas con goma <ins
+                    title="Insertion" class="&#10;                add hand-pencil">ar&#225;biga</ins>, y sali&#243;
+                chorreando de la ba&#241;era con un &#237;mpetu de delf&#237;n que no era de esperar en un cuerpo tan
+                desmedrado.
+            </p>
 
-                <p style="text-indent: 1em;">
-                    "Vamon&#243;s" dijo, "<ins title="Insertion" class="&#10;                add hand-black-ink">volando</ins> que aqu&#237; no nos quiere nadie"
-                </p>
+            <p style="text-indent: 1em;">
+                "Vamon&#243;s" dijo, "<ins title="Insertion"
+                    class="&#10;                add hand-black-ink">volando</ins> que aqu&#237; no nos quiere nadie"
+            </p>
 
-                <p style="text-indent: 1em;">
-                    Jos&#233; Palacios se lo hab&#237;a o&#237;do decir tantas veces y en ocasiones tan diversas, que todav&#237;a no crey&#243; que fuera cierto, a pesar de que las recuas estaban preparadas en las caballerizas y la comitiva oficial empezaba a reunirse en la sala. Lo ayud&#243; a secarse de cualquier modo, y le puso la ruana de los paramo sobre el cuerpo desnudo, porque la taza le casta&#241;eteaba con el temblor de las manos. Meses antes, puili&#233;ndose unos pantalones de gamuza que no usaba desde las noches romanas de
-                </p>
-            </div>
+            <p style="text-indent: 1em;">
+                Jos&#233; Palacios se lo hab&#237;a o&#237;do decir tantas veces y en ocasiones tan diversas, que
+                todav&#237;a no crey&#243; que fuera cierto, a pesar de que las recuas estaban preparadas en las
+                caballerizas y la comitiva oficial empezaba a reunirse en la sala. Lo ayud&#243; a secarse de cualquier
+                modo, y le puso la ruana de los paramo sobre el cuerpo desnudo, porque la taza le casta&#241;eteaba con
+                el temblor de las manos. Meses antes, puili&#233;ndose unos pantalones de gamuza que no usaba desde las
+                noches romanas de
+            </p>
+        </div>
 
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14534.jpg" alt="Page Image"/></div>
-            <span class="folio spaced" style="float:right; font-weight:bold;">
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14534.jpg"
+                alt="Page Image" /></div>
+        <span class="folio spaced" style="float:right; font-weight:bold;">
             P&#225;gina 2</span>
 
-            <div class="spaced">
-                <p style="text-indent: 1em;"> 
-                    Lima, &#233;l hab&#237;a descubierto que a medida que bajaba de peso iba disminuyendo de estatura. Hasta su desnudez era distinta, pues ten&#237;a el cuerpo p&#225;lido, y la cabeza y las manos <del title="Deletion" class="&#10;                del hand-pencil">casi negras</del> <ins title="Insertion" class="&#10;                add hand-pencil">como achicharradas</ins> por el abuso de la intemperie. Hab&#237;a cumplido cuarenta y seis a&#241;os el pasado mes de julio, pero ya sus &#225;speros rizos caribes se hab&#237;an vuelto de ceniza, y ten&#237;a los huesos desordenados por la decrepitud prematura, y todo &#233;l se ve&#237;a tan desmerecido que no parec&#237;a capaz de perdurar hasta el julio siguiente. Sin embargo, sus ademanes resueltos parec&#237;an ser de otra menos da&#241;ado por la vida, y aun a la intemperie caminaba sin cesar alrededor de nada. Se bebi&#243; la tizana de cinco sorbos ardientes que por poco no le ampollaron la lengua, huyendo de sus propias huellas de agua en las esteras desgre&#241;adas del piso, y fue como beberse el filtro de la resurrecci&#243;n. Pero no dijo una palabra hasta que no sonaron las cinco enla torre de la catedral vecina. 
-                </p>
+        <div class="spaced">
+            <p style="text-indent: 1em;">
+                Lima, &#233;l hab&#237;a descubierto que a medida que bajaba de peso iba disminuyendo de estatura. Hasta
+                su desnudez era distinta, pues ten&#237;a el cuerpo p&#225;lido, y la cabeza y las manos <del
+                    title="Deletion" class="&#10;                del hand-pencil">casi negras</del> <ins
+                    title="Insertion" class="&#10;                add hand-pencil">como achicharradas</ins> por el abuso
+                de la intemperie. Hab&#237;a cumplido cuarenta y seis a&#241;os el pasado mes de julio, pero ya sus
+                &#225;speros rizos caribes se hab&#237;an vuelto de ceniza, y ten&#237;a los huesos desordenados por la
+                decrepitud prematura, y todo &#233;l se ve&#237;a tan desmerecido que no parec&#237;a capaz de perdurar
+                hasta el julio siguiente. Sin embargo, sus ademanes resueltos parec&#237;an ser de otra menos
+                da&#241;ado por la vida, y aun a la intemperie caminaba sin cesar alrededor de nada. Se bebi&#243; la
+                tizana de cinco sorbos ardientes que por poco no le ampollaron la lengua, huyendo de sus propias huellas
+                de agua en las esteras desgre&#241;adas del piso, y fue como beberse el filtro de la resurrecci&#243;n.
+                Pero no dijo una palabra hasta que no sonaron las cinco enla torre de la catedral vecina.
+            </p>
 
-                <p style="text-indent: 1em;">
-                    "S&#225;bado ocho de mayo, d&#237;a de Santa Juana de Arco", anunci&#243; el mayordomo. "Est&#225; lloviendo desde las tres de la madrugada".
-                </p>
+            <p style="text-indent: 1em;">
+                "S&#225;bado ocho de mayo, d&#237;a de Santa Juana de Arco", anunci&#243; el mayordomo. "Est&#225;
+                lloviendo desde las tres de la madrugada".
+            </p>
 
-                <p style="text-indent: 1em;">
-                    "Desde las tres de la madrugada del d&#237;a en que la asaron los ingleses", dijo &#233;l con la voz todav&#237;a perturbada por el aliento acre del insomnio, y agreg&#243; en serio: "No o&#237; los gallos".
-                </p>
+            <p style="text-indent: 1em;">
+                "Desde las tres de la madrugada del d&#237;a en que la asaron los ingleses", dijo &#233;l con la voz
+                todav&#237;a perturbada por el aliento acre del insomnio, y agreg&#243; en serio: "No o&#237; los
+                gallos".
+            </p>
 
-                <p style="text-indent: 1em;">
-                    "Aqu&#237; no hay gallos", dijo el mayordomo. 
-                    </p>
+            <p style="text-indent: 1em;">
+                "Aqu&#237; no hay gallos", dijo el mayordomo.
+            </p>
 
-                <p style="text-indent: 1em;">
-                    "No hay nada", dijo &#233;l. "Es tierra de infieles".
-                </p>
+            <p style="text-indent: 1em;">
+                "No hay nada", dijo &#233;l. "Es tierra de infieles".
+            </p>
 
-                <p style="text-indent: 1em;">
-                    La alcoba enorme de paredes &#225;ridas, expuesta a los vientos helados que se filtraban por las ventanas mal ce&#241;idas, no era la m&#225;s propicia para su salud. Jos&#233; Palacios puso la bac&#237;a de espuma en el m&#225;rmol del 
-                </p>
-            </div>
+            <p style="text-indent: 1em;">
+                La alcoba enorme de paredes &#225;ridas, expuesta a los vientos helados que se filtraban por las
+                ventanas mal ce&#241;idas, no era la m&#225;s propicia para su salud. Jos&#233; Palacios puso la
+                bac&#237;a de espuma en el m&#225;rmol del
+            </p>
+        </div>
 
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14535.jpg" alt="Page Image"/></div>
-            <span class="folio spaced" style="float:right; font-weight:bold;">
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14535.jpg"
+                alt="Page Image" /></div>
+        <span class="folio spaced" style="float:right; font-weight:bold;">
             P&#225;gina 3</span>
 
-            <div class="spaced">
-                <p> 
-                    tocador, y el estuche de terciopelo rojo con la brocha, la peinilla, las tijeras y la navaja, todas de metal dorado. Puso la palmatoria con la vela en una repisa cerca del espejo, de modo que &#233;l tuviera bastante luz para afeitarse, y acerc&#243; el brasero para que se le calentaran los pies. Despu&#233;s le dio unas antiparras de cristales cuadrados con una armaz&#243;n de plata fina, que llevaba siempre para &#233;l en el bolsillo del chaleco. El se las puso, y se afeit&#243; gobernando la navaja <del title="Deletion" class="&#10;                del hand-pencil">lo mismo con</del> <ins title="Insertion" class="&#10;                add hand-pencil">con igual destreza en</ins> la mano izquierda <del title="Deletion" class="&#10;                del hand-pencil">que con</del> <ins title="Insertion" class="&#10;                add hand-pencil">como en</ins> la derecha, y con el mismo pulso que minutos antes no le hab&#237;a servido para sostener la taza. Termin&#243; afeit&#225;ndose o ciegas sin dejar de dar vueltas por el cuarto, pues procuraba verse en el espejp lo menos posible para no encontrarse con sus propios ojos. Luego <ins title="Insertion" class="&#10;                add hand-pencil">se arranc&#243; a tirones los pelos de la nariz y las orejas,</ins> se puli&#243; los dientes perfectos con polvo de carb&#243;n en un cepillo con mango de plata, se cort&#243; y se puli&#243; las u&#241;as de las manos y de los pies, <del title="Deletion" class="&#10;                del hand-pencil">se arranc&#243; a tirones los pelos de la nariz y las orejas,</del> y por &#250;ltimo se quit&#243; la ruana y se vaci&#243; encima un frasco grande de agua de colonia, d&#225;ndose fricciones con ambas manos en el cuerpo entero hasta quedar exhausto. Pues aquella madrugada oficiaba la misa diaria de la limpieza con una sevicia m&#225;s fren&#233;tica que la habitual, tratando de purificar el cuerpo y el &#225;nima de veinte a&#241;os de guerras in&#250;tiles y desenga&#241;os de poder. 
-                </p>
+        <div class="spaced">
+            <p>
+                tocador, y el estuche de terciopelo rojo con la brocha, la peinilla, las tijeras y la navaja, todas de
+                metal dorado. Puso la palmatoria con la vela en una repisa cerca del espejo, de modo que &#233;l tuviera
+                bastante luz para afeitarse, y acerc&#243; el brasero para que se le calentaran los pies. Despu&#233;s
+                le dio unas antiparras de cristales cuadrados con una armaz&#243;n de plata fina, que llevaba siempre
+                para &#233;l en el bolsillo del chaleco. El se las puso, y se afeit&#243; gobernando la navaja <del
+                    title="Deletion" class="&#10;                del hand-pencil">lo mismo con</del> <ins
+                    title="Insertion" class="&#10;                add hand-pencil">con igual destreza en</ins> la mano
+                izquierda <del title="Deletion" class="&#10;                del hand-pencil">que con</del> <ins
+                    title="Insertion" class="&#10;                add hand-pencil">como en</ins> la derecha, y con el
+                mismo pulso que minutos antes no le hab&#237;a servido para sostener la taza. Termin&#243;
+                afeit&#225;ndose o ciegas sin dejar de dar vueltas por el cuarto, pues procuraba verse en el espejp lo
+                menos posible para no encontrarse con sus propios ojos. Luego <ins title="Insertion"
+                    class="&#10;                add hand-pencil">se arranc&#243; a tirones los pelos de la nariz y las
+                    orejas,</ins> se puli&#243; los dientes perfectos con polvo de carb&#243;n en un cepillo con mango
+                de plata, se cort&#243; y se puli&#243; las u&#241;as de las manos y de los pies, <del title="Deletion"
+                    class="&#10;                del hand-pencil">se arranc&#243; a tirones los pelos de la nariz y las
+                    orejas,</del> y por &#250;ltimo se quit&#243; la ruana y se vaci&#243; encima un frasco grande de
+                agua de colonia, d&#225;ndose fricciones con ambas manos en el cuerpo entero hasta quedar exhausto. Pues
+                aquella madrugada oficiaba la misa diaria de la limpieza con una sevicia m&#225;s fren&#233;tica que la
+                habitual, tratando de purificar el cuerpo y el &#225;nima de veinte a&#241;os de guerras in&#250;tiles y
+                desenga&#241;os de poder.
+            </p>
 
-                <p style="text-indent: 1em;">
-                    La &#250;ltima visita gue recibi&#243; la noche anterior fue la de Manuela S&#225;enz, la aguerrida guite&#241;a gue amaba y gue lo amaba, pero que no iba a seguirlo hasta la muerte. Se quedaba, en efecto, porque &#233;l quer&#237;a estarmbien informado de todo cuanto ocurriera en ausencia suya, y no confiaba
-                </p>
-            </div>
+            <p style="text-indent: 1em;">
+                La &#250;ltima visita gue recibi&#243; la noche anterior fue la de Manuela S&#225;enz, la aguerrida
+                guite&#241;a gue amaba y gue lo amaba, pero que no iba a seguirlo hasta la muerte. Se quedaba, en
+                efecto, porque &#233;l quer&#237;a estarmbien informado de todo cuanto ocurriera en ausencia suya, y no
+                confiaba
+            </p>
+        </div>
 
-            <div class="page-break spaced"><img src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14536.jpg" alt="Page Image"/></div>
-            <span class="folio spaced" style="float:right; font-weight:bold;">
+        <div class="page-break spaced"><img
+                src="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/p15878coll51_14536.jpg"
+                alt="Page Image" /></div>
+        <span class="folio spaced" style="float:right; font-weight:bold;">
             P&#225;gina 4</span>
-            <div class="spaced">
-                <p> 
-                    en nadie m&#225;s que en ella. <del title="Deletion" class="&#10;                del hand-pencil">Por to mismo</del> le d<del title="Deletion" class="&#10;                del hand-pencil">a</del><ins title="Insertion" class="&#10;                add hand-pencil">e</ins>jaba en custodia algunas reliquias sin m&#225;s valor que el de haber sido suyas, as&#237; como algunos desus libros m&#225;s preciados y dos cofres de sus archivos personales. El d&#237;a anterior, durante la breve despedida formal, le hab&#237;a dicho: "Mucho te amo, pero m&#225;s te amar&#233; si ahora tienes m&#225;s juicio que nunca". Ella lo entendi&#243; como otro homenaje de los tantos que &#233;l le hab&#237;a rendido en ocho a&#241;os de amores <del title="Deletion" class="&#10;                del hand-pencil">de guerra</del><ins title="Insertion" class="&#10;                add hand-pencil"> ardientes</ins>. De todos sus conocidos ella era la &#250;nica que lo sab&#237;a: esta vez era verdad que se iba. Pero tambi&#233;n era la &#250;nica que ten&#237;a al menos un motivo cierto para esperar que volviera. 
-                </p>
-                <p style="text-indent: 1em;">
-                    No pensaban verse otra vez antes del viaje. Sin embargo, do&#241;a Amalia, la due&#241;a de casa, quiso darles a ambos el regalo de un &#250;ltimo adi&#243;s furtivo, e hizo entrar a Manuela vestida de jinete por el port&#243;n de los establos burlando los prejuicios de la beata comunidad local. No porque fueran amantes clandestinos, pues lo eran a plena luz y con esc&#225;ndalo p&#250;blico, sino por preservar a toda costa el buen nombre de la casa. &#201;l fue a&#250;n m&#225;s timorato, pues le orden&#243; a Jos&#233; Palacios que no cerrara la puerte de la sala contigua, que era un paso obligado de la servidumbre domestica, y donde los edecanes de guardia jugaron a las barajas hasta mucho despu&#233;s que termin&#243; la visita.
-                </p>
-                <p style="text-indent: 1em;">
-                    Manuela le ley&#243; durante dos horas. Hab&#237;a sido joven hasta hac&#237;a muy poco tiempo, cuando sus carnes empezaron a ganarle a su edad, y le gustaba fumar una cachimba de marinero, vestirse de hombre y andar entre soldados, pero su voz af&#243;nica segu&#237;a siendo buena para las penumbras del amor. Le&#237;a a la luz escasa de la palmatoria, sentada en
-                </p>
-            </div>
-        
+        <div class="spaced">
+            <p>
+                en nadie m&#225;s que en ella. <del title="Deletion" class="&#10;                del hand-pencil">Por to
+                    mismo</del> le d<del title="Deletion" class="&#10;                del hand-pencil">a</del><ins
+                    title="Insertion" class="&#10;                add hand-pencil">e</ins>jaba en custodia algunas
+                reliquias sin m&#225;s valor que el de haber sido suyas, as&#237; como algunos desus libros m&#225;s
+                preciados y dos cofres de sus archivos personales. El d&#237;a anterior, durante la breve despedida
+                formal, le hab&#237;a dicho: "Mucho te amo, pero m&#225;s te amar&#233; si ahora tienes m&#225;s juicio
+                que nunca". Ella lo entendi&#243; como otro homenaje de los tantos que &#233;l le hab&#237;a rendido en
+                ocho a&#241;os de amores <del title="Deletion" class="&#10;                del hand-pencil">de
+                    guerra</del><ins title="Insertion" class="&#10;                add hand-pencil"> ardientes</ins>. De
+                todos sus conocidos ella era la &#250;nica que lo sab&#237;a: esta vez era verdad que se iba. Pero
+                tambi&#233;n era la &#250;nica que ten&#237;a al menos un motivo cierto para esperar que volviera.
+            </p>
+            <p style="text-indent: 1em;">
+                No pensaban verse otra vez antes del viaje. Sin embargo, do&#241;a Amalia, la due&#241;a de casa, quiso
+                darles a ambos el regalo de un &#250;ltimo adi&#243;s furtivo, e hizo entrar a Manuela vestida de jinete
+                por el port&#243;n de los establos burlando los prejuicios de la beata comunidad local. No porque fueran
+                amantes clandestinos, pues lo eran a plena luz y con esc&#225;ndalo p&#250;blico, sino por preservar a
+                toda costa el buen nombre de la casa. &#201;l fue a&#250;n m&#225;s timorato, pues le orden&#243; a
+                Jos&#233; Palacios que no cerrara la puerte de la sala contigua, que era un paso obligado de la
+                servidumbre domestica, y donde los edecanes de guardia jugaron a las barajas hasta mucho despu&#233;s
+                que termin&#243; la visita.
+            </p>
+            <p style="text-indent: 1em;">
+                Manuela le ley&#243; durante dos horas. Hab&#237;a sido joven hasta hac&#237;a muy poco tiempo, cuando
+                sus carnes empezaron a ganarle a su edad, y le gustaba fumar una cachimba de marinero, vestirse de
+                hombre y andar entre soldados, pero su voz af&#243;nica segu&#237;a siendo buena para las penumbras del
+                amor. Le&#237;a a la luz escasa de la palmatoria, sentada en
+            </p>
+        </div>
+
     </div>
-  </body>
+</body>
+
 </html>
