@@ -1900,11 +1900,10 @@ a.social-link:hover {
 
 .main .full-width-section {
 	text-align: center;
-	background-color: #eee;
+	background-color: #81cae6;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	background-image: url(../img/sample-post.png);
 }
 
 .main .full-width-section .wrapper {
@@ -3177,8 +3176,9 @@ a.social-link:hover {
 		max-width: none;
 	}
 
-	.main .full-width-section .wrapper {
-		padding: 15em 2em;
+	/* Este es el que modifica el tamaño del baner de indice */
+	.main .full-width-section .wrapper {  
+		padding: 6em 2em;
 	}
 
 	.post h5 {
