@@ -2,3 +2,289 @@
 .main .full-width-section-2 .wrapper {
 	padding: 6em 0;
 }
+
+.unclear {
+	background-color: yellow;
+}
+
+.metadata {
+	background: rgb(244, 244, 244);
+	padding: 30px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.content {
+	margin-top: 20px;
+}
+
+.gap {
+	color: red;
+	font-weight: bold;
+}
+
+.quote {
+	font-style: italic;
+}
+
+.note {
+	font-style: italic;
+	color: #666;
+}
+
+.del {
+	text-decoration: line-through;
+	color: red;
+}
+
+.add {
+	text-decoration: underline;
+	color: green;
+}
+
+.page-break {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.spaced {
+	display: inline-block;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.figure {
+	font-style: italic;
+}
+
+/* CSS para asignar colores seg&#250;n el medio */
+.hand-pencil {
+	color: gray;
+}
+
+.hand-blue-ink {
+	color: blue;
+}
+
+.hand-black-ink {
+	color: black;
+}
+
+.hand-green-ink {
+	color: green;
+}
+
+
+/* Carrousel */
+
+.vertical-carousel-container {
+    width: 450px;
+    height: 700px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    border: 0px solid #e6d265;
+	border-radius: 10px; /* This border will be behind the yellow shadow border */
+}
+
+#miCarruselVertical.carousel,
+#miCarruselVertical .carousel-inner,
+#miCarruselVertical .carousel-item {
+	height: 100%;
+	/* Hacen que el carrusel y sus partes internas ocupen toda la altura del contenedor */
+}
+
+#miCarruselVertical .carousel-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Asegura que la imagen cubra el slide, puede recortar */
+	border-radius: 10px;
+}
+
+/* Ocultar los indicadores estándar si no se adaptan bien o no se desean */
+#miCarruselVertical .carousel-indicators {
+	/* display: none; */
+	/* Descomentar para ocultarlos */
+	/* Si se muestran, necesitarían reestilizarse para posición vertical */
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	flex-direction: column;
+	/* Apila los indicadores verticalmente */
+	left: auto;
+	/* Resetea 'left' que Bootstrap podría ponerles */
+	margin: 0;
+}
+
+#miCarruselVertical .carousel-indicators li {
+	display: block;
+	/* Hace que cada indicador ocupe su línea */
+	margin-bottom: 5px;
+	/* Espacio entre indicadores */
+}
+
+/* --- Lógica de Clases para Transición Vertical --- */
+/* El slide que va a entrar desde ABAJO */
+#miCarruselVertical .carousel-item-next:not(.carousel-item-left):not(.carousel-item-right) {
+	transform: translateY(100%);
+}
+
+/* El slide que va a entrar desde ARRIBA */
+#miCarruselVertical .carousel-item-prev:not(.carousel-item-left):not(.carousel-item-right) {
+	transform: translateY(-100%);
+}
+
+/* El slide ACTIVO que se DESPLAZA HACIA ARRIBA (para dar paso al que viene de abajo) */
+/* Bootstrap usa carousel-item-left para el activo que se va cuando entra el "next" */
+#miCarruselVertical .active.carousel-item-left {
+	transform: translateY(-100%);
+}
+
+/* El slide ACTIVO que se DESPLAZA HACIA ABAJO (para dar paso al que viene de arriba) */
+/* Bootstrap usa carousel-item-right para el activo que se va cuando entra el "prev" */
+#miCarruselVertical .active.carousel-item-right {
+	transform: translateY(100%);
+}
+
+/* --- Fin de Lógica de Clases --- */
+
+
+/* Iconos de control para vertical */
+#miCarruselVertical .carousel-control-prev-icon,
+#miCarruselVertical .carousel-control-next-icon {
+	background-image: none;
+	/* Quitamos la imagen de fondo por defecto de Bootstrap */
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	/* Tamaño del icono (si usas fuente o SVG inline) */
+}
+
+/* Flecha ARRIBA para "Anterior" en vertical */
+#miCarruselVertical .carousel-control-prev-icon::before {
+	content: '▲';
+	/* O usa un icono de fuente como FontAwesome */
+	color: #000000;
+	/* Color del icono */
+	text-shadow: 1px 1px 2px black;
+	/* Sombra para mejor visibilidad */
+}
+
+/* Flecha ABAJO para "Siguiente" en vertical */
+#miCarruselVertical .carousel-control-next-icon::before {
+	content: '▼';
+	/* O usa un icono de fuente */
+	color: #000000;
+	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+/* Posicionamiento de controles para vertical */
+#miCarruselVertical .carousel-control-prev {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 15%;
+	/* Área de click para el control */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+	/* Degradado sutil */
+}
+
+#miCarruselVertical .carousel-control-next {
+	bottom: 0;
+	top: auto;
+	/* Sobrescribe 'top' */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 15%;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#miCarruselVertical .carousel-caption {
+	/* Ajusta la posición de los captions si es necesario */
+	bottom: 20px;
+	/* Ejemplo, por defecto ya están abajo */
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+
+/* Tus otros estilos personalizados de style-custom.css */
+
+/* Add your custom styles below this line */
+
+/* Responsive fix for grid columns to avoid overlapping */
+@media (max-width: 991px) {
+    .grid-container {
+        display: block; /* Cambia a block para que ocupe todo el ancho y sus hijos se apilen */
+    }
+
+    .col.grid6,
+    .col.grid6.omega {
+        width: 100% !important; /* Fuerza las columnas a ocupar el 100% del ancho */
+        float: none !important; /* Elimina el float que las pone una al lado de la otra */
+        margin: 0 0 2rem 0; /* Añade margen inferior para separar las columnas apiladas */
+        box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
+        display: block; /* Asegura que se comporten como bloques apilados */
+    }
+
+    .col.grid6.omega {
+        padding-top: 0 !important; /* Elimina cualquier padding-top que pueda causar espacio extra */
+    }
+}
+
+
+.gist-container {
+            max-height: 600px; /* Adjust this value to your desired height */
+            overflow-y: scroll; /* This is the magic property! */
+            border: 1px solid #ccc; /* Optional: adds a border to visualize the container */
+            padding: 10px; /* Optional: adds some internal spacing */
+            margin: 20px 0; /* Optional: adds space around the container */
+            background-color: #f9f9f9; /* Optional: a light background */
+        }
+
+
+/* Limit styles to the second tab container only */
+#code-tab-container .tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1em;
+}
+
+#code-tab-container .tabs li {
+    margin-right: 1em;
+}
+
+#code-tab-container .tabs li a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    color: #333;
+}
+
+#code-tab-container .tabs li.active a {
+    background: white;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+#code-tab-container .tab_content {
+    display: none;
+    padding: 1em;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+#code-tab-container .tab_content.active {
+    display: block;
+}

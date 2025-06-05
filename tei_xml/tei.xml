@@ -7,8 +7,8 @@
 
 
     <teiHeader>
+        <!-- File description, and description of the project -->
         <fileDesc>
-            <!--Information about the work titles and those responsible for its content, u referes to unpublished material as it was a draft of the final book-->
             <titleStmt>
                 <title level="u" type="desc">LOD Gabriel García Márquez</title>
                 <title level="u" type="sub">Information Science and Cultural Heritage Project</title>
@@ -17,14 +17,16 @@
                     <persName xml:id="cs">Catalina Salguero</persName>
                 </respStmt>
             </titleStmt>
-
+            
+            <!-- Edition statement of the digital project -->
             <editionStmt>
                 <edition>
                     Scholarly Digital Edition
                     <date>February, 2025.</date>
                 </edition>
             </editionStmt>
-
+            
+            <!-- Publication of the digital version of the manuscript (digitalization of the physical manuscript) -->
             <publicationStmt>
                 <publisher>The University of Texas at Austin</publisher>
                 <address>
@@ -43,7 +45,8 @@
                 <note type="project"> This manuscript form part of <ref target="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51">Gabriel García Márquez Collection.</ref>
                 </note>
             </notesStmt>
-
+            
+            <!-- Physicsl object description: manuscript -->
             <sourceDesc>
                 <bibl type="base" xml:lang="es">
                     <title type="main">El general en su laberinto</title>
@@ -79,7 +82,8 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-
+        
+        <!-- Profile description of the manuscript, including language usage and hand notes -->
         <profileDesc>
             <langUsage xml:lang="es">
                 <language ident="es-CO">Spanish</language>
@@ -91,7 +95,8 @@
                 <handNote xml:id="hand4" scribeRef="#ggm" medium="Green ink" />
             </handNotes>
         </profileDesc>
-
+        
+        <!-- Encoding description, including project description, editorial decisions, and revision history -->
         <encodingDesc>
             <projectDesc xml:id="LODproject">
                 <p>
@@ -123,9 +128,9 @@
             <change who="#cs" when="2025-01-14">Transcribed and encoded on 14 of January of 2025</change>
         </revisionDesc>
     </teiHeader>
-
+    
+    <!-- Front page containing header, title page, epigraph, and annotations -->
     <text xml:lang="es" type="typescript">
-        <!--Front page containing header, title page and epigraph-->
         <front>
             <pb xml:id="leaf001r" facs="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/14529/rec/2" type="recto" />
             <div type="titlePage">
@@ -208,6 +213,7 @@
 
         <!--Body of the text with the first 4 pages of the manuscript-->
         <body>
+            <!-- First page encoding -->
             <pb xml:id="leaf003r" facs="lp15878coll51_14533.jpg" type="recto" n="1"/>
             <fw type="pageNum" place="top right" hand="#hand1">1</fw>
 
@@ -230,6 +236,7 @@
                 </p>
             </div>
 
+            <!-- Second page encoding -->
             <pb xml:id="leaf004r" facs="p15878coll51_14534.jpg" type="recto" n="2"/>
             <fw type="pageNum" place="top right" hand="#hand1">2</fw>
 
@@ -258,7 +265,8 @@
                     La alcoba enorme de paredes áridas, expuesta a los vientos helados que se filtraban por las ventanas mal ceñidas, no era la más propicia para su salud. <name type="person">José Palacios</name> puso la bacía de espuma en el mármol del 
                 </p>
             </div>
-
+            
+            <!-- Third page encoding -->
             <pb xml:id="leaf005r" facs="p15878coll51_14535.jpg" type="recto" />
             <fw type="pageNum" place="top right" hand="#hand1">3</fw>
 
@@ -271,7 +279,8 @@
                     La última visita gue recibió la noche anterior fue la de <name type="person">Manuela Sáenz</name>, la aguerrida guiteña gue amaba y gue lo amaba, pero que no iba a seguirlo hasta la muerte. Se quedaba, en efecto, porque él quería estarmbien informado de todo cuanto ocurriera en ausencia suya, y no confiaba
                 </p>
             </div>
-
+            
+            <!-- Fourth page encoding -->
             <pb xml:id="leaf005v" facs="p15878coll51_14536.jpg" type="verso" />
             <fw type="pageNum" place="top right" hand="#hand1">4</fw>
             <div>
