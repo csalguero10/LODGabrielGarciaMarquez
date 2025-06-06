@@ -670,6 +670,21 @@ table {
 	border: 0;
 }
 
+.table-container {
+    overflow-x: auto; /* Correcto, esto DEBE funcionar */
+    -webkit-overflow-scrolling: touch;
+    padding: 15px; /* Este padding está bien, pero reduce el espacio disponible para la tabla */
+    box-sizing: border-box;
+}
+
+.table-container table {
+    width: 100%; /* Esto es crucial: la tabla debe intentar ocupar el 100% del contenedor. */
+    border-collapse: collapse;
+    margin: 0; /* Asegúrate de que no haya ningún margin lateral aquí que empuje. */
+    /* Considera también esto: */
+    min-width: 0; /* Asegura que la tabla pueda encogerse si es necesario */
+}
+
 table caption {
 	padding: 0 0.4em 0.4em;
 	border: 0;
@@ -698,6 +713,7 @@ table tbody th,
 table tbody td {
 	padding: 0.4em;
 	border-bottom: 2px solid #eee;
+	word-break: break-all;
 }
 
 table tbody tr:last-child th,

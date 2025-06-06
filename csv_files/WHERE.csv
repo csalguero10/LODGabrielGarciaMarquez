@@ -1,0 +1,8 @@
+Property,Dublin Core,Schema.org,CIDOC-CRM,FOAF
+Location,dcterms:place,schema:location,E53 Place + P55 has current location,N/A
+Country of Origin,dcterms:spatial,schema:countryOfOrigin,E53 Place + P89 falls within,N/A
+Birth Place,dcterms:spatial,schema:birthPlace,E67 Birth + P7 took place at,foaf:based_near
+Place of Publication,dcterms:spatial,schema:locationCreated,E12 Production + P7 took place at,N/A
+Creation Location,dcterms:spatial,schema:locationCreated,E65 Creation + P7 took place at,N/A
+Has current location,dcterms:spatial,schema:contentLocation,E53 Place + P55 has current location,N/A
+Recorded at,N/A,schema:recordedAt,E73 Information Object + P7 took place at,N/A

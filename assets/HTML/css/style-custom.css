@@ -248,43 +248,10 @@
         }
 
 
-/* Limit styles to the second tab container only */
-#code-tab-container .tabs {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 1em;
+.tab_content {
+    display: none; /* Hide inactive tab content by default */
 }
 
-#code-tab-container .tabs li {
-    margin-right: 1em;
-}
-
-#code-tab-container .tabs li a {
-    display: block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
-    color: #333;
-}
-
-#code-tab-container .tabs li.active a {
-    background: white;
-    border-bottom: 2px solid white;
-    font-weight: bold;
-}
-
-#code-tab-container .tab_content {
-    display: none;
-    padding: 1em;
-    background: #fff;
-    border: 1px solid #ccc;
-}
-
-#code-tab-container .tab_content.active {
-    display: block;
+.tab_content.active {
+    display: block; /* Show the active tab content */
 }

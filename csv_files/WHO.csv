@@ -1,0 +1,11 @@
+Property,Dublin Core,Schema.org,CIDOC-CRM,FOAF
+Creator,dcterms:creator,schema:creator,E39 Actor + P94 has created,foaf:maker
+Institution/Repository,dcterms:contributor,schema:contributor,E74 Group,foaf:Organization
+Publisher,dc:publisher,schema:publisher,N/A,N/A
+Director,N/A,schema:director,E39 Actor + P94 has created,N/A
+Member of,dcterms:isPartOf,schema:memberOf,P107 has current or former member,foaf:member
+Owner,dcterms:rightsHolder,schema:owner,P52 has current owner,N/A
+Made by,dcterms:creator,schema:manufacturer,P14 carried out by,foaf:maker
+Sender,dcterms:creator,schema:sender,N/A,N/A
+Recipient,N/A,schema:recipient,N/A,N/A
+Company,dcterms:publisher,schema:productionCompany,N/A,foaf:Organization

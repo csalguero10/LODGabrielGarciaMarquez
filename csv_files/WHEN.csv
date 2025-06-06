@@ -1,0 +1,6 @@
+Property,Dublin Core,Schema.org,CIDOC-CRM,FOAF
+Creation Date,dcterms:created,schema:dateCreated,E65 Creation,N/A
+Publication Date,dcterms:issued,schema:datePublished,E12 Production,N/A
+Birth Date,dcterms:date,schema:birthDate,E67 Birth,foaf:birthday
+Period,dcterms:temporal,schema:temporalCoverage,P10_falls_within (E4 Period),N/A
+Recorded At,"dcterms:spatial, dcterms:temporal",schema:recordedAt,P7 took place at + E52 Time-Span,N/A

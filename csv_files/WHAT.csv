@@ -1,0 +1,25 @@
+Property,Dublin Core,Schema.org,CIDOC-CRM,FOAF
+Title,dcterms:title,schema:name,P102 has title,N/A
+Subtitle,N/A,schema:alternateName,P102 has title,N/A
+Type,dcterms:type,schema:additionalType,E55 Type + P2 has type,N/A
+Dimension,dcterms:medium,"schema:width, schema:height",E54 Dimension + P43 has dimension,N/A
+Material,N/A,schema:material,E57 Material + P45 consists of,N/A
+Genre,dcterms:type,schema:genre,E55 Type + P2 has type,N/A
+Language,dcterms:language,schema:inLanguage,P72 has language,foaf:language
+Duration,dcterms:extent,schema:duration,N/A,N/A
+Subject,dcterms:subject,schema:about,P129 is about,N/A
+Format,dcterms:format,schema:encodingFormat,E55 Type,N/A
+Part Of,dcterms:isPartOf,schema:isPartOf,P46 is composed of,N/A
+Represents,N/A,schema:representativeOfPage,P138 represents,N/A
+Depicts,N/A,schema:depiction,P62 depicts,foaf:depiction
+Technique,N/A,schema:artMedium,P32 used general technique,N/A
+References,dcterms:references,schema:citation,P67 refers to,N/A
+Discusses,dcterms:description,schema:about,P129 is about,N/A
+Copyright,dcterms:rights,"schema:copyrightHolder, schema:license",P104 is subject to,N/A
+Edition,dcterms:hasVersion,schema:edition,N/A,N/A
+Refers To,dcterms:relation,schema:isBasedOn,P67 refers to,N/A
+Consists Of,dcterms:hasPart,schema:hasPart,P46 is composed of,N/A
+Relation,dcterms:relation,N/A,N/A,N/A
+Profession,N/A,schema:hasOccupation,N/A,N/A
+Number of Episodes,N/A,schema:numberOfEpisodes,E73 Information Object + P57 has number of parts,N/A
+Based On,dcterms:source,schema:isBasedOn,P70 documents / P67 refers to,N/A

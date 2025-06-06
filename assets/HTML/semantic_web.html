@@ -1,0 +1,260 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>LOD Gabriel Garcí Márquez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <meta name="description" content="Buuk is fully responsive microsite template that looks great on any device.">
+    <meta name="keywords" content="HTML5, Template, Design, Development">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style-custom.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div id="header">
+            <div class="inner">
+                <div class="table-layout">
+
+                    <header id="logo" class="table-cell">
+                        <h1 class="site-title text"><a href="index.html" rel="home" tabindex="1">Semantic Web</a></h1>
+                        <p class="site-description">Foundations and Applications of the Semantic Web</p>
+                    </header>
+
+                    <nav id="site-menu" class="table-cell menu-separators">
+                        <ul>
+                            <li><a href="index.html">About</a></li>
+                            <li>
+                                <a href="text_encoding.html">Text Encoding</a>
+                            </li>
+                            <li><a href="knowlege_org.html">Structuring Knowledge</a></li>
+                            <li class="menu-item-has-children current-menu-parent">
+                                <a href="semantic_web.html">Semantic Web</a>
+                                <ul>
+                                    <li class="current-menu-item"><a href="features.html">Shortcodes &amp; Widgets</a>
+                                    </li>
+                                    <li><a href="sidebar.html">Sidebar Template</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Submenu Test</a>
+                                        <ul>
+                                            <li><a href="#">Submenu Item 1</a></li>
+                                            <li><a href="#">Submenu Item 2</a></li>
+                                            <li><a href="#">Submenu Item 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="404.html">404 &mdash; Not Found</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <div class="sep-sections">
+                <div class="sep"></div>
+            </div>
+
+        </div>
+
+        <main id="content">
+            <div class="inner">
+
+                <h2 class="title">RDF Serialization</h2>
+
+                <p>At this stage, the previously generated URIs are used to construct statements in RDF (Resource Description Framework), specifically utilizing the Turtle serialization format. RDF is a foundational standard of the Semantic Web designed to represent information about resources in a structured, machine-readable format. It expresses data in the form of triples—subject, predicate, and object—that enable the linking of disparate data sources through shared identifiers.</p>
+                <p>The generated RDF triples incorporate not only the internal URIs associated with the selected items but also reference external authorities and controlled vocabularies, establishing meaningful links between local data and broader knowledge networks. This structured approach facilitates data interoperability, semantic enrichment, and integration across platforms, ensuring that the described items are situated within a larger web of contextual relationships</p>
+                <br>
+
+
+                <!-- texto adicional explicativo del proyecto de tei/xml etc -->
+
+                <h5>URI Collection</h5>
+                <div>
+                    <p>Specific items from the curated list are selected to serve as RDF subjects. For each of these items and their related entities, unique URIs (Uniform Resource Identifiers) are systematically constructed. These URIs act as persistent and unambiguous references within the RDF framework, enabling detailed descriptions of properties and interrelationships according to semantic web principles.</p>
+                    <p>Through the assignment of URIs, each resource becomes part of a globally addressable information space. This ensures that data can be linked, queried, and reused across different platforms and knowledge domains, promoting interoperability and enriching the context in which each item exists.</p>
+                    <p>To view the Python scripts used for RDF generation and URI collection, click here.</p>
+                </div>
+                <br>
+
+                
+                <!-- tabla con codigos -->
+
+                <h5>Linked Data Workflow: URI Generation and RDF Serialization</h5>
+                <br>
+                <div class="col grid10">
+                    <div class="tab-container">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#rdf-tab-1">RDF</a></li>
+                            <li><a href="#rdf-tab-2">URIs</a></li>
+
+                        </ul>
+                        <div id="rdf-tab-1" class="tab_content active">
+                            <div class="gist-container">
+                                <script
+                                    src="https://gist.github.com/csalguero10/d9ec3b877a81d9e14221395a10e797d7.js"></script>
+                            </div>
+                        </div>
+                        <div id="rdf-tab-2" class="tab_content">
+                            <div class="gist-container">
+                                <script src="https://gist.github.com/csalguero10/256eb02f22cc4c517a6cc123eadbca56.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+        </main>
+
+        <footer id="footer">
+            <div class="sep-sections">
+                <div class="sep"></div>
+            </div>
+            <div class="inner clearfix">
+                <p><a href="#" class="social-link icon-facebook"></a> <a href="#" class="social-link icon-twitter"></a>
+                    <a href="#" class="social-link icon-googleplus"></a>
+                </p>
+                <p>&copy; 2025 - Website powered by Catalina Salguero. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="secondary-links">
+        <div class="links">
+            <a href="#panel-menu" class="toggle-menu" title="Toggle Sample Chapters" tabindex="2"><em
+                    class="icon-menu"></em><em class="icon-close"></em></a>
+            <a href="#panel-search" class="toggle-search" title="Toggle Search" tabindex="2"><em
+                    class="icon-search"></em><em class="icon-close"></em></a>
+        </div>
+    </div>
+
+    <div class="secondary">
+        <div class="panels">
+
+            <div id="panel-menu" class="panel">
+
+                <nav class="mobile-menu">
+                    <span class="list-description">Main Menu:</span>
+                </nav>
+
+                <nav class="chapter-menu">
+                    <span class="list-description">Sample Chapters:</span>
+                    <ul>
+                        <li class="menu-item-has-children current-menu-parent">
+                            <a href="blog.html">Chapter I: Less, but better</a>
+                            <ul>
+                                <li><a href="post.html">A word of introduction</a></li>
+                                <li><a href="post.html">Beauty in simplicity</a></li>
+                                <li><a href="post.html">Nothing can be arbitrary</a></li>
+                                <li><a href="post.html">Self-explanatory design</a></li>
+                                <li><a href="post.html">Products must fulfill a specific</a></li>
+                                <li><a href="post.html">Innovative design always in tandem with innovative
+                                        technology</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="blog.html">Chapter II: Practice safe design</a>
+                            <ul>
+                                <li><a href="post.html">Good design lasts a lifetime</a></li>
+                                <li><a href="post.html">Concentrate on the essential aspects and the products will not
+                                        burdened with non-essentials</a></li>
+                                <li><a href="post.html">New opportunities for innovative design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="blog.html">Chapter III: As little design as possible</a>
+                            <ul>
+                                <li><a href="post.html">Good design is aesthetic</a></li>
+                                <li><a href="post.html">Only well-executed objects can be beautiful</a></li>
+                                <li><a href="post.html">Usefulness in design</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="blog.html">Chapter IV: Aesthetic, yet useful</a>
+                            <ul>
+                                <li><a href="post.html">Avoids being fashionable</a></li>
+                                <li><a href="post.html">Nothing can be arbitrary</a></li>
+                                <li><a href="post.html">A product is bought to be used</a></li>
+                                <li><a href="post.html">Use innovative technology in classical context</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="blog.html">Chapter V: Talking products</a>
+                            <ul>
+                                <li><a href="post.html">Good design is thorough down to the last detail</a></li>
+                                <li><a href="post.html">Make the product talk</a></li>
+                                <li><a href="post.html">Products not burdened with non-essentials</a></li>
+                                <li><a href="post.html">A final thought</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="panel-search" class="panel">
+                <span class="list-description">Search:</span>
+                <form method="get" class="searchform ajax" action="search.html"
+                    data-ajax-action="img/sample-search-results.php">
+                    <div class="fields">
+                        <input type="text" name="s" autocomplete="off" placeholder="Enter keyword here&hellip;">
+                        <input type="submit" value="">
+                        <span class="icon-search"></span>
+                    </div>
+                    <ul class="ajax-results"></ul>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="secondary-helper"></div>
+
+    <a href="#header" class="go-to-top" title="Scroll back to the top"><em class="icon-arrow-up"></em></a>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="js/jquery.cerchezslider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        /* JavaScript para el Carrusel Vertical (Ajustado para Bootstrap 4) */
+        document.addEventListener('DOMContentLoaded', function () {
+            var miCarruselVertical = document.getElementById('miCarruselVertical');
+            if (miCarruselVertical) {
+                // For Bootstrap 4, you initialize it with jQuery or the vanilla JS `Carousel` constructor
+                // but the options are passed slightly differently than Bootstrap 5's new API.
+                // Using jQuery is the most common way for Bootstrap 4.
+                $(miCarruselVertical).carousel({
+                    interval: false, // This stops the automatic transition
+                    ride: false      // This prevents it from starting automatically on page load
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

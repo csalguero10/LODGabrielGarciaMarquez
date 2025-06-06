@@ -34,8 +34,9 @@
                         <ul>
                             <li><a href="index.html">About</a></li>
                             <li>
-                                <a href="blog.html">Blog</a>
+                                <a href="text_encoding.html">Text Encoding</a>
                             </li>
+                            <li><a href="knowlege_org.html">Structuring Knowledge</a></li>
                             <li class="menu-item-has-children current-menu-parent">
                                 <a href="text_encoding.html">Text Encoding</a>
                                 <ul>
@@ -489,7 +490,7 @@
 
                 <!-- texto adicional explicativo del proyecto de tei/xml etc -->
 
-                <h5>XML/TEI Conversions</h5>
+                <h5>TEI Encoding of the Manuscript</h5>
                 <div>
                     <p>Following the application of XML/TEI encoding, the project focused on representing the first
                         eight
@@ -512,7 +513,7 @@
                 </div>
                 <br>
 
-                <h5>XSLT Document for XML to HTML Conversion</h5>
+                <h5>Transforming XML/TEI to HTML with XSLT</h5>
                 <div>
                     <p>In this section, we apply XSLT (Extensible Stylesheet Language Transformations) to convert the
                         XML/TEI-encoded excerpt of The General in His Labyrinth into an HTML format. This transformation
@@ -522,8 +523,7 @@
                     <p>You can explore the transformation code used in our implementation [here].</p>
                     <p>
                         <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei.xml"
-                            target="_blank">Click here </a>he resulting HTML version of the transformed TEI sample can
-                        be accessed [here].
+                            target="_blank">Click here </a>The code for this transformation process can be accessed [here]
                     </p>
                     <p>
                         To streamline and automate the transformation workflow, we developed a Python script tailored to
@@ -532,247 +532,61 @@
                     </p>
                 </div>
                 <br>
+
+                <h5>RDF/Turtle Dataset</h5>
+                <div>
+                    <p>As part of the digital edition of The General in His Labyrinth, we developed a Python script to convert the XML/TEI-encoded text into RDF/Turtle format. This script allowed us to extract key components from the TEI markup—such as characters, places, lines, and quotations—and assign each of them a unique URI (Uniform Resource Identifier) for semantic referencing.</p>
+                    <p>You can explore the transformation code used in our implementation [here].</p>
+                    <p>
+                        <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei.xml"
+                            target="_blank">Click here </a>Using properties from established metadata standards, we modeled meaningful relationships between these entities. The code for this transformation process can be accessed [here]..
+                    </p>
+                    <p>
+                        The output is presented in the following Turtle dataset. First, the text itself is defined as a central entity, linked to its descriptive metadata, including author, publisher, and publication date. We also identified characters and places, linking them to the specific lines in which they are mentioned, and vice versa: each line is connected to the URIs of the entities it references. Additionally, we extracted dialogue quotations and specified which character delivered each one.
+                    </p>
+                </div>
+                <br>
+                
+
                 <!-- tabla con codigos -->
 
-                <h5>XML - XSLT - HTML Scripts</h5>
+                <h5>TEI Processing Pipeline: XML to HTML and RDF with Python</h5>
+                <br>
                 <div class="col grid10">
                     <div class="tab-container">
                         <ul class="tabs clearfix">
-                            <li class="active"><a href="#tab-1">XML</a></li>
-                            <li><a href="#tab-2">XSLT</a></li>
-                            <li><a href="#tab-3">HTML</a></li>
-                            <li><a href="#tab-4">Python Script</a></li>
+                            <li class="active"><a href="#code-tab-1">XML</a></li>
+                            <li><a href="#code-tab-2">XSLT</a></li>
+                            <li><a href="#code-tab-3">HTML</a></li>
+                            <li><a href="#code-tab-4">RDF/Turtle</a></li>
+
+
                         </ul>
-                        <div id="tab-1" class="tab_content active">
+                        <div id="code-tab-1" class="tab_content active">
                             <div class="gist-container">
                                 <script
                                     src="https://gist.github.com/csalguero10/d9ec3b877a81d9e14221395a10e797d7.js"></script>
                             </div>
                         </div>
-                        <div id="tab-2" class="tab_content">
+                        <div id="code-tab-2" class="tab_content">
                             <div class="gist-container">
                                 <script src="https://gist.github.com/csalguero10/256eb02f22cc4c517a6cc123eadbca56.js"></script>
                             </div>
                         </div>
-                        <div id="tab-3" class="tab_content">
+                        <div id="code-tab-3" class="tab_content">
                             <div class="gist-container">
                                 <script src="https://gist.github.com/csalguero10/687ef4d5a091ed7b3008be11ac321b39.js"></script>
                             </div>
                         </div>
-                        <div id="tab-4" class="tab_content">
+                        <div id="code-tab-4" class="tab_content">
                             <div class="gist-container">
-                                <script src="https://gist.github.com/csalguero10/5f0b1c8d3e2f4a6b7c9d3c1e0f8a2b4f.js"></script>
+                                <script src="https://gist.github.com/csalguero10/3dc7e380f582a232a93976da4a11dee4.js"></script>
                             </div>
                         </div>
                     </div>
                     <br>
                 </div>
 
-
-                <div class="grid-container">
-                    <div class="col grid6">
-                        <h5>Alert boxes</h5>
-                        <div class="alert">Information alert box</div>
-                        <div class="alert success">Success alert box</div>
-                        <div class="alert notice">Notice alert box</div>
-                        <div class="alert error">Error alert box</div>
-                        <br>
-                    </div>
-
-                </div>
-
-                <br>
-
-                <h5>Pricing tables</h5>
-                <div class="pricing-table grid-container">
-                    <div class="col grid4">
-                        <div class="price-item">
-                            <h3 class="price-title">Free</h3>
-                            <strong class="price-tag">$0 <span>per month</span></strong>
-                            <ul>
-                                <li>Integer posuere erat a venenatis</li>
-                                <li>Nulla vitae elit libero</li>
-                                <li>Praesent commodo cursus magna</li>
-                                <li>Etiam porta sem malesuada</li>
-                                <li>Aenean lacinia bibendum null</li>
-                            </ul>
-                            <p class="no-bottom"><a class="button">Read More</a></p>
-                        </div>
-                    </div>
-                    <div class="col grid4">
-                        <div class="price-item special">
-                            <h3 class="price-title">Standard</h3>
-                            <strong class="price-tag">$19.99 <span>per month</span></strong>
-                            <ul>
-                                <li>Integer posuere erat a venenatis</li>
-                                <li>Nulla vitae elit libero</li>
-                                <li>Praesent commodo cursus magna</li>
-                                <li>Etiam porta sem malesuada</li>
-                                <li>Aenean lacinia bibendum null</li>
-                            </ul>
-                            <p class="no-bottom"><a class="button filled">Read More</a></p>
-                        </div>
-                    </div>
-                    <div class="col grid4 omega">
-                        <div class="price-item">
-                            <h3 class="price-title">Premium</h3>
-                            <strong class="price-tag">$29.99 <span>per month</span></strong>
-                            <ul>
-                                <li>Integer posuere erat a venenatis</li>
-                                <li>Nulla vitae elit libero</li>
-                                <li>Praesent commodo cursus magna</li>
-                                <li>Etiam porta sem malesuada</li>
-                                <li>Aenean lacinia bibendum null</li>
-                            </ul>
-                            <p class="no-bottom"><a class="button">Read More</a></p>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <br>
-
-                <h5>Grid elements</h5>
-                <div class="grid-container">
-                    <div class="col grid10">
-                        <div class="box">
-                            <h4>One Half</h4>
-                            <p class="small no-bottom">Consectetur adipiscing elit. Integer commodo tristique
-                                odio,
-                                quis
-                                fringilla ligula aliquet ut. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit
-                                tristique.</p>
-                        </div>
-                    </div>
-                    <div class="col grid6 omega">
-                        <div class="box">
-                            <h4>One Half</h4>
-                            <p class="small no-bottom">Consectetur adipiscing elit. Integer commodo tristique
-                                odio,
-                                quis
-                                fringilla ligula aliquet ut. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit
-                                tristique.</p>
-                        </div>
-                    </div>
-                    <div class="col grid4">
-                        <div class="box">
-                            <h4>One Third</h4>
-                            <p class="small no-bottom">Consectetur adipiscing elit. Integer commodo tristique
-                                odio
-                                ligula aliquet ut consectetur adipiscing elit tristique.</p>
-                        </div>
-                    </div>
-                    <div class="col grid4">
-                        <div class="box">
-                            <h4>One Third</h4>
-                            <p class="small no-bottom">Consectetur adipiscing elit. Integer commodo tristique
-                                odio
-                                ligula aliquet ut consectetur adipiscing elit tristique.</p>
-                        </div>
-                    </div>
-                    <div class="col grid4 omega">
-                        <div class="box">
-                            <h4>One Third</h4>
-                            <p class="small no-bottom">Consectetur adipiscing elit. Integer commodo tristique
-                                odio
-                                ligula aliquet ut consectetur adipiscing elit tristique.</p>
-                        </div>
-                    </div>
-                    <div class="col grid3">
-                        <div class="box">
-                            <h4>One Fourth</h4>
-                            <p class="small no-bottom">Commodo tristique odio quis ligula aliquet.</p>
-                        </div>
-                    </div>
-                    <div class="col grid3">
-                        <div class="box">
-                            <h4>One Fourth</h4>
-                            <p class="small no-bottom">Commodo tristique odio quis ligula aliquet.</p>
-                        </div>
-                    </div>
-                    <div class="col grid3">
-                        <div class="box">
-                            <h4>One Fourth</h4>
-                            <p class="small no-bottom">Commodo tristique odio quis ligula aliquet.</p>
-                        </div>
-                    </div>
-                    <div class="col grid3 omega">
-                        <div class="box">
-                            <h4>One Fourth</h4>
-                            <p class="small no-bottom">Commodo tristique odio quis ligula aliquet.</p>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <br>
-
-                <h5>Separators</h5>
-                <div class="sep"></div>
-                <div class="sep dark"></div>
-                <br>
-
-                <h5>Typography</h5>
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <blockquote>
-                    <p>Feedback the readers to her on time a to of morals, opposite touch any importance ad
-                        <mark>minim</mark> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea
-                        commodo <ins>consequat</ins> esse cillum dolore eu fugiat nulla pariatur sunt in culpa
-                        qui
-                        officia likely to the much from coast.
-                    </p>
-                    <cite><img src="img/sample-thumb-small.png" width="28" height="28" alt=""> <strong>Joshua
-                            Sortino</strong> &mdash; Designer, startup advisor, photographer</cite>
-                </blockquote>
-                <pre>pre {
-   padding: 1em;
-   white-space: pre;
-   white-space: pre-wrap;
-   word-wrap: break-word;
-}
-</pre>
-                <br>
-
-                <h5>Table element</h5>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Header 1</th>
-                            <th>Header 2</th>
-                            <th>Header 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>First Line</td>
-                            <td>First Line</td>
-                            <td>First Line</td>
-                        </tr>
-                        <tr>
-                            <td>Entry Line 2</td>
-                            <td>Entry Line 2</td>
-                            <td>Entry Line 2</td>
-                        </tr>
-                        <tr>
-                            <td>Last Line</td>
-                            <td>Last Line</td>
-                            <td>Last Line</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Table footer is also present</td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-            </div>
         </main>
 
         <footer id="footer">
@@ -783,7 +597,7 @@
                 <p><a href="#" class="social-link icon-facebook"></a> <a href="#" class="social-link icon-twitter"></a>
                     <a href="#" class="social-link icon-googleplus"></a>
                 </p>
-                <p>&copy; 2015 Buuk Concept by Liviu Cerchez. All Rights Reserved.</p>
+                <p>&copy; 2025 - Website powered by Catalina Salguero. All Rights Reserved.</p>
             </div>
         </footer>
 
