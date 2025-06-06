@@ -504,37 +504,60 @@
                 <h5>Transforming XML/TEI to HTML with XSLT</h5>
                 <div>
                     <p>In this section, we apply XSLT (Extensible Stylesheet Language Transformations) to convert the
-                        XML/TEI-encoded excerpt of The General in His Labyrinth into an HTML format. This transformation
-                        allows the structured textual data to be rendered in a web-friendly and readable way. Throughout
+                        XML/TEI-encoded excerpt of <em>The General in His Labyrinth</em> into HTML format. This
+                        transformation
+                        enables the structured textual data to be rendered in a web-friendly and readable way.
+                        Throughout
                         the process, special attention is given to preserving the original document’s structural and
                         stylistic features, ensuring a consistent and coherent display across formats.</p>
-                    <p>You can explore the transformation code used in our implementation [here].</p>
-                    <p>
-                        <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei.xml"
-                            target="_blank">Click here </a>The code for this transformation process can be accessed [here]
-                    </p>
+                    <p>To explore the transformation code, see the table below outlining the pipeline.</p>
                     <p>
                         To streamline and automate the transformation workflow, we developed a Python script tailored to
-                        process XML/TEI documents. Leveraging libraries such as lxml, the script handles the conversion
+                        process XML/TEI documents. Leveraging libraries such as <code>lxml</code>, the script performs
+                        the conversion
                         efficiently and accurately.
                     </p>
+                    <p>
+                        To explore the Python code used in our implementation, <a
+                            href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei_to_html.py"
+                            target="_blank">click here</a>.
+                    </p>
+
                 </div>
                 <br>
 
                 <h5>RDF/Turtle Dataset</h5>
                 <div>
-                    <p>As part of the digital edition of The General in His Labyrinth, we developed a Python script to convert the XML/TEI-encoded text into RDF/Turtle format. This script allowed us to extract key components from the TEI markup—such as characters, places, lines, and quotations—and assign each of them a unique URI (Uniform Resource Identifier) for semantic referencing.</p>
-                    <p>You can explore the transformation code used in our implementation [here].</p>
+                    <p>As part of the digital edition of <em>The General in His Labyrinth</em>, we developed a Python
+                        script to
+                        convert the XML/TEI-encoded text into RDF/Turtle format. This script enables the extraction of
+                        key
+                        components from the TEI markup—such as characters, places, lines, and quotations—and assigns
+                        each
+                        one a unique URI (Uniform Resource Identifier) for semantic referencing.</p>
+
+                    <p>To explore the results of the RDF serialization, refer to the table below outlining the full
+                        pipeline.</p>
+
                     <p>
-                        <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei.xml"
-                            target="_blank">Click here </a>Using properties from established metadata standards, we modeled meaningful relationships between these entities. The code for this transformation process can be accessed [here]..
+                        By using properties from established metadata standards, we modeled meaningful relationships
+                        between these entities. The Python code used for this transformation process can be accessed
+                        <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei_to_rdf.py"
+                            target="_blank">
+                            here</a>.
                     </p>
                     <p>
-                        The output is presented in the following Turtle dataset. First, the text itself is defined as a central entity, linked to its descriptive metadata, including author, publisher, and publication date. We also identified characters and places, linking them to the specific lines in which they are mentioned, and vice versa: each line is connected to the URIs of the entities it references. Additionally, we extracted dialogue quotations and specified which character delivered each one.
+                        The output is presented in the following Turtle dataset. The text is defined as a central entity
+                        and linked to its descriptive metadata, including author, publisher, and publication date.
+                        In addition, references to places, people, epigraphs, and folios from the original manuscript
+                        were identified and linked to the corresponding lines in which they are mentioned.
+                        Conversely, each line is connected to the URIs of the entities it refers to, allowing for a
+                        bidirectional semantic representation.
                     </p>
                 </div>
+
                 <br>
-                
+
 
                 <!-- tabla con codigos -->
 
@@ -558,26 +581,30 @@
                         </div>
                         <div id="code-tab-2" class="tab_content">
                             <div class="gist-container">
-                                <script src="https://gist.github.com/csalguero10/256eb02f22cc4c517a6cc123eadbca56.js"></script>
+                                <script
+                                    src="https://gist.github.com/csalguero10/256eb02f22cc4c517a6cc123eadbca56.js"></script>
                             </div>
                         </div>
                         <div id="code-tab-3" class="tab_content">
                             <div class="gist-container">
-                                <script src="https://gist.github.com/csalguero10/687ef4d5a091ed7b3008be11ac321b39.js"></script>
+                                <script
+                                    src="https://gist.github.com/csalguero10/687ef4d5a091ed7b3008be11ac321b39.js"></script>
                             </div>
                         </div>
                         <div id="code-tab-4" class="tab_content">
                             <div class="gist-container">
-                                <script src="https://gist.github.com/csalguero10/3dc7e380f582a232a93976da4a11dee4.js"></script>
+                                <script
+                                    src="https://gist.github.com/csalguero10/3dc7e380f582a232a93976da4a11dee4.js"></script>
                             </div>
                         </div>
                         <div id="code-tab-5" class="tab_content">
                             <div class="gist-container">
-                                <script src="https://gist.github.com/csalguero10/cb11cd462d68389e0939ecc5e943e8e1.js"></script>
+                                <script
+                                    src="https://gist.github.com/csalguero10/cb11cd462d68389e0939ecc5e943e8e1.js"></script>
                             </div>
+                        </div>
+                        <br>
                     </div>
-                    <br>
-                </div>
 
         </main>
 
@@ -614,29 +641,29 @@
                 </nav>
 
                 <nav class="chapter-menu">
-					<span class="list-description">LOD Gabriell García Márquez</span>
-					<ul>
-						<li class="menu-item-has-children current-menu-parent">
-							<a href="index.html">About</a>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="text_encoding.html">Text Encoding</a>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="knowlege_org.html">Structuring Knowledge</a>
-							<ul>
-								<li><a href="#conceptual-map">Conceptual Map</a></li>
-								<li><a href="#metadata-analysis">Metadata Analysis</a></li>
-								<li><a href="#metadata-alignment">Metadata Alignment</a></li>
-								<li><a href="#items-description">Items Description</a></li>
-								<li><a href="#theoretical-model">Metadata Modeling</a></li>
-							</ul>
-						</li>
-						<li class="menu-item-has-children">
-							<a href="semantic_web.html">Semantic Web</a>
-						</li>
-					</ul>
-				</nav>
+                    <span class="list-description">LOD Gabriell García Márquez</span>
+                    <ul>
+                        <li class="menu-item-has-children current-menu-parent">
+                            <a href="index.html">About</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="text_encoding.html">Text Encoding</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="knowlege_org.html">Structuring Knowledge</a>
+                            <ul>
+                                <li><a href="#conceptual-map">Conceptual Map</a></li>
+                                <li><a href="#metadata-analysis">Metadata Analysis</a></li>
+                                <li><a href="#metadata-alignment">Metadata Alignment</a></li>
+                                <li><a href="#items-description">Items Description</a></li>
+                                <li><a href="#theoretical-model">Metadata Modeling</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="semantic_web.html">Semantic Web</a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
 
