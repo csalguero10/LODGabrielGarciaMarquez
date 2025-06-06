@@ -33,31 +33,19 @@
 
                     <nav id="site-menu" class="table-cell menu-separators">
                         <ul>
-                            <li><a href="index.html">About</a></li>
-                            <li>
-                                <a href="text_encoding.html">Text Encoding</a>
-                            </li>
-                            <li><a href="knowlege_org.html">Structuring Knowledge</a></li>
-                            <li class="menu-item-has-children current-menu-parent">
-                                <a href="text_encoding.html">Text Encoding</a>
+                            <li class="current-menu-item"><a href="index.html">About</a></li>
+                            <li><a href="text_encoding.html">Text Encoding</a></li>
+                            <li class="menu-item-has-children"><a href="knowlege_org.html">Structuring Knowledge</a>
                                 <ul>
-                                    <li class="current-menu-item"><a href="features.html">Shortcodes &amp; Widgets</a>
-                                    </li>
-                                    <li><a href="sidebar.html">Sidebar Template</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Submenu Test</a>
-                                        <ul>
-                                            <li><a href="#">Submenu Item 1</a></li>
-                                            <li><a href="#">Submenu Item 2</a></li>
-                                            <li><a href="#">Submenu Item 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="404.html">404 &mdash; Not Found</a></li>
+                                    <li><a href="#conceptual-map">Conceptual Map</a></li>
+                                    <li><a href="#metadata-analysis">Metadata Analysis</a></li>
+                                    <li><a href="#metadata-alignment">Metadata Alignment</a></li>
+                                    <li><a href="#items-description">Items Description</a></li>
+                                    <li><a href="#theoretical-model">Metadata Modeling</a></li>
+
                                 </ul>
                             </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
+                            <li><a href="semantic_web.html">Semantic Web</a></li>
                         </ul>
                     </nav>
 
@@ -75,7 +63,8 @@
             <div class="inner">
 
                 <h2 class="title">Mapping Metadata</h2>
-                <h5 class="subtitle">Conceptual Map</h5>
+
+                <h5 class="subtitle" id="conceptual-map">Conceptual Map</h5>
 
                 <p>In the context of Gabriel García Márquez Linked Open Data, the selected items serve a key function in
                     conveying the narrative in an authentic and meaningful way. The conceptual map is designed to
@@ -85,7 +74,32 @@
                 <br>
 
                 <div class="thumb">
-                    <div class="photo"><img src="img/sample-post.png" width="1028" height="600" alt=""></div>
+                    <div class="photo">
+                        <a href="#imageModal" data-toggle="modal" data-target="#imageModal">
+                            <img src="img/Conceptual Map.png" width="1028" height="600" alt="Mapa Conceptual">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Imagen en Detalle</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="img/Conceptual Map.png" class="img-fluid" alt="Mapa Conceptual"
+                                    id="modalImage">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
 
@@ -98,11 +112,36 @@
                 <br>
 
                 <div class="thumb">
-                    <div class="photo"><img src="img/sample-post.png" width="1028" height="600" alt=""></div>
+                    <div class="photo">
+                        <a href="#imageModal" data-toggle="modal" data-target="#imageModal">
+                            <img src="img/Conceptual Map.png" width="1028" height="600" alt="Mapa Conceptual">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Imagen en Detalle</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="img/Conceptual Map.png" class="img-fluid" alt="Mapa Conceptual"
+                                    id="modalImage">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
 
-                <h5>Metadata analysis</h5>
+                <h5 class="subtitle" id="metadata-analysis">Metadata Analysis</h5>
                 <div>
                     <p>A detailed assessment was carried out on the selected items, focusing on how each is described on
                         its original source website. This involved closely analyzing the existing descriptions to
@@ -196,7 +235,7 @@
                 <br>
 
                 <!-- Metadata Aligment -->
-                <h5>Metadata Aligment</h5>
+                <h5 class="subtitle" id="metadata-alignment">Metadata Aligment</h5>
                 <div>
                     <p>After identifying the relevant standards, this final stage enables a comprehensive description
                         and interconnection of the selected items. The project’s overarching aim has been to ensure
@@ -658,7 +697,7 @@
 
 
                 <!-- tabla con items -->
-                <h5>Items Description</h5>
+                <h5 class="subtitle" id="items-description">Items Description</h5>
                 <div>
                     <p>In this section, the items were revisited to be characterized according to the attributes defined
                         in the Conceptual Model. For each item, a table is presented with three columns representing the
@@ -2157,7 +2196,45 @@
                 </div>
                 <br>
 
-                <h5>Theoretical Model</h5>
+                <h5 class="subtitle" id="theoretical-model">Theoretical Model</h5>
+                <div>
+                    <p>In this second model, the information and associations derived from the conceptual map are
+                        presented in a more abstract form. Elements such as individuals, dates, topics, and locations
+                        are treated as entities, and the links among them are shown as relationships.</p>
+                </div>
+                <br>
+
+<div class="thumb">
+                    <div class="photo">
+                        <a href="#imageModal" data-toggle="modal" data-target="#imageModal">
+                            <img src="img/Conceptual Map.png" width="1028" height="600" alt="Mapa Conceptual">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Imagen en Detalle</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="img/Conceptual Map.png" class="img-fluid" alt="Mapa Conceptual"
+                                    id="modalImage">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h5 class="subtitle" id="enhanced-er">Enhanced E/R Model</h5>
                 <div>
                     <p>In this second model, the information and associations derived from the conceptual map are
                         presented in a more abstract form. Elements such as individuals, dates, topics, and locations
@@ -2166,11 +2243,36 @@
                 <br>
 
                 <div class="thumb">
-                    <div class="photo"><img src="img/sample-post.png" width="1028" height="600" alt=""></div>
+                    <div class="photo">
+                        <a href="#imageModal" data-toggle="modal" data-target="#imageModal">
+                            <img src="img/Conceptual Map.png" width="1028" height="600" alt="Mapa Conceptual">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Imagen en Detalle</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="img/Conceptual Map.png" class="img-fluid" alt="Mapa Conceptual"
+                                    id="modalImage">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
 
-                <h5>Enhanced E/R Model</h5>
+                <h5 class="subtitle" id="conceptual-model">Conceptual Model</h5>
                 <div>
                     <p>In this second model, the information and associations derived from the conceptual map are
                         presented in a more abstract form. Elements such as individuals, dates, topics, and locations
@@ -2179,39 +2281,51 @@
                 <br>
 
                 <div class="thumb">
-                    <div class="photo"><img src="img/sample-post.png" width="1028" height="600" alt=""></div>
+                    <div class="photo">
+                        <a href="#imageModal" data-toggle="modal" data-target="#imageModal">
+                            <img src="img/Conceptual Map.png" width="1028" height="600" alt="Mapa Conceptual">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Imagen en Detalle</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="img/Conceptual Map.png" class="img-fluid" alt="Mapa Conceptual"
+                                    id="modalImage">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
 
-                <h5>Conceptual Model</h5>
-                <div>
-                    <p>In this second model, the information and associations derived from the conceptual map are
-                        presented in a more abstract form. Elements such as individuals, dates, topics, and locations
-                        are treated as entities, and the links among them are shown as relationships.</p>
-                </div>
-                <br>
-
-                <div class="thumb">
-                    <div class="photo"><img src="img/sample-post.png" width="1028" height="600" alt=""></div>
-                </div>
-                <br>
 
 
 
+        </main>
 
-    </main>
-
-    <footer id="footer">
-        <div class="sep-sections">
-            <div class="sep"></div>
-        </div>
-        <div class="inner clearfix">
-            <p><a href="#" class="social-link icon-facebook"></a> <a href="#" class="social-link icon-twitter"></a>
-                <a href="#" class="social-link icon-googleplus"></a>
-            </p>
-            <p>&copy; 2015 Buuk Concept by Liviu Cerchez. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <footer id="footer">
+            <div class="sep-sections">
+                <div class="sep"></div>
+            </div>
+            <div class="inner clearfix">
+                <p><a href="#" class="social-link icon-facebook"></a> <a href="#" class="social-link icon-twitter"></a>
+                    <a href="#" class="social-link icon-googleplus"></a>
+                </p>
+                <p>&copy; 2015 Buuk Concept by Liviu Cerchez. All Rights Reserved.</p>
+            </div>
+        </footer>
 
     </div>
 
@@ -2234,54 +2348,26 @@
                 </nav>
 
                 <nav class="chapter-menu">
-                    <span class="list-description">Sample Chapters:</span>
+                    <span class="list-description">LOD Gabriell García Márquez</span>
                     <ul>
                         <li class="menu-item-has-children current-menu-parent">
-                            <a href="blog.html">Chapter I: Less, but better</a>
+                            <a href="index.html">About</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="text_encoding.html">Text Encoding</a>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="knowlege_org.html">Structuring Knowledge</a>
                             <ul>
-                                <li><a href="post.html">A word of introduction</a></li>
-                                <li><a href="post.html">Beauty in simplicity</a></li>
-                                <li><a href="post.html">Nothing can be arbitrary</a></li>
-                                <li><a href="post.html">Self-explanatory design</a></li>
-                                <li><a href="post.html">Products must fulfill a specific</a></li>
-                                <li><a href="post.html">Innovative design always in tandem with innovative
-                                        technology</a></li>
+                                <li><a href="#conceptual-map">Conceptual Map</a></li>
+                                <li><a href="#metadata-analysis">Metadata Analysis</a></li>
+                                <li><a href="#metadata-alignment">Metadata Alignment</a></li>
+                                <li><a href="#items-description">Items Description</a></li>
+                                <li><a href="#theoretical-model">Metadata Modeling</a></li>
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="blog.html">Chapter II: Practice safe design</a>
-                            <ul>
-                                <li><a href="post.html">Good design lasts a lifetime</a></li>
-                                <li><a href="post.html">Concentrate on the essential aspects and the products will not
-                                        burdened with non-essentials</a></li>
-                                <li><a href="post.html">New opportunities for innovative design</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="blog.html">Chapter III: As little design as possible</a>
-                            <ul>
-                                <li><a href="post.html">Good design is aesthetic</a></li>
-                                <li><a href="post.html">Only well-executed objects can be beautiful</a></li>
-                                <li><a href="post.html">Usefulness in design</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="blog.html">Chapter IV: Aesthetic, yet useful</a>
-                            <ul>
-                                <li><a href="post.html">Avoids being fashionable</a></li>
-                                <li><a href="post.html">Nothing can be arbitrary</a></li>
-                                <li><a href="post.html">A product is bought to be used</a></li>
-                                <li><a href="post.html">Use innovative technology in classical context</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="blog.html">Chapter V: Talking products</a>
-                            <ul>
-                                <li><a href="post.html">Good design is thorough down to the last detail</a></li>
-                                <li><a href="post.html">Make the product talk</a></li>
-                                <li><a href="post.html">Products not burdened with non-essentials</a></li>
-                                <li><a href="post.html">A final thought</a></li>
-                            </ul>
+                            <a href="semantic_web.html">Semantic Web</a>
                         </li>
                     </ul>
                 </nav>

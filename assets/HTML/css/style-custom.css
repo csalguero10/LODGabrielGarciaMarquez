@@ -255,3 +255,55 @@
 .tab_content.active {
     display: block; /* Show the active tab content */
 }
+
+
+/* Para que el modal ocupe casi todo el ancho de la pantalla */
+.modal-xl {
+    max-width: 95%; /* Ajusta este valor si quieres más o menos ancho. 95% es casi pantalla completa. */
+}
+
+/* O, si quieres un modal casi totalmente fullscreen, puedes usar esto: */
+/*
+.modal-dialog.modal-xl {
+    max-width: none;
+    width: 95vw; // 95% del viewport width
+    height: 95vh; // 95% del viewport height
+    margin: auto; // Centrar
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content {
+    height: 100%;
+}
+*/
+
+/* Para la imagen dentro del modal */
+#modalImage {
+    max-width: 100%; /* Asegura que no se desborde del cuerpo del modal */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    display: block;  /* Para evitar espacios extra debajo de la imagen */
+
+    /* Para que la imagen sea lo más grande posible, incluso si excede el tamaño inicial del modal-body,
+       y que el modal pueda tener scroll si la imagen es GIGANTE.
+       Puedes eliminar la clase `img-fluid` del HTML si usas estas reglas para tener más control.
+    */
+    width: auto; /* Permite que la imagen se expanda más allá del 100% si es grande */
+    min-width: 100%; /* Asegura que la imagen sea al menos el 100% del contenedor si es más pequeña */
+    /* Si la imagen es más grande que el modal, se habilitará el scroll en el modal-body */
+    object-fit: contain; /* Asegura que la imagen se vea completa sin recortar, incluso si deja espacios */
+}
+
+/* Ajusta el cuerpo del modal para permitir el desplazamiento si la imagen es grande */
+.modal-body {
+    overflow-y: auto; /* Permite desplazamiento vertical en el cuerpo del modal */
+    overflow-x: auto; /* Permite desplazamiento horizontal en el cuerpo del modal */
+    max-height: calc(100vh - 120px); /* Ajusta la altura máxima del cuerpo del modal (vh - altura header/footer) */
+                                     /* Esto es para evitar que el modal se haga más alto que la ventana */
+}
+
+/* Para que la imagen quede centrada si el modal es más grande que la imagen */
+.modal-body.text-center #modalImage {
+    margin: 0 auto;
+}
