@@ -67,7 +67,7 @@
                     examine the manuscript of <i><a
                             href="https://hrc.contentdm.oclc.org/digital/collection/p15878coll51/id/14529/rec/2"
                             target="_blank">The General in His Labyrinth</a></i>, written by Gabriel García Márquez in
-                    1988 and p≤reserved at the Harry Ransom Center, University of Texas at Austin.</p>
+                    1988 and preserved at the Harry Ransom Center, University of Texas at Austin.</p>
                 <p>Text encoding refers to the structured representation of textual content—commonly using XML/TEI
                     standards—to capture semantic, structural, and interpretive elements. Through TEI markup, XSLT
                     transformations, RDF/XML representations, and Python scripting, the project aimed to reveal the
@@ -489,14 +489,12 @@
                         as Cartagena and Mexico D.C, as well as page numbers and marginal notes.</p>
                     <p>By following the TEI (Text Encoding Initiative) guidelines, the encoding preserves the material,
                         spatial, and narrative features of the manuscript, highlighting the interplay between text and
-                        paratext in García Márquez’s creative process. The resulting digital edition allows users to
+                        annotations in García Márquez’s creative process. The resulting digital edition allows users to
                         explore a synchronized interface, where the facsimile of each manuscript page is displayed
                         alongside its corresponding encoded transcription, offering an immersive and philologically
                         accurate reading experience.</p>
-                    <p>
-                        <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei.xml"
-                            target="_blank">Click here </a>to access the XML/TEI document of <i>The General in His
-                            Labyrinth</i> text sample.
+                    <p>To explore the XML/TEI document encoding of <i>The General in His
+                            Labyrinth</i> see the table below outlining the pipeline.
                     </p>
                 </div>
                 <br>
@@ -512,13 +510,14 @@
                         stylistic features, ensuring a consistent and coherent display across formats.</p>
                     <p>To explore the transformation code, see the table below outlining the pipeline.</p>
                     <p>
-                        To streamline and automate the transformation workflow, we developed a Python script tailored to
+                        To streamline and automate the transformation workflow, was developed a Python script tailored
+                        to
                         process XML/TEI documents. Leveraging libraries such as <code>lxml</code>, the script performs
                         the conversion
                         efficiently and accurately.
                     </p>
                     <p>
-                        To explore the Python code used in our implementation, <a
+                        To explore the Python code used in the implementation, <a
                             href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei_to_html.py"
                             target="_blank">click here</a>.
                     </p>
@@ -528,32 +527,28 @@
 
                 <h5>RDF/Turtle Dataset</h5>
                 <div>
-                    <p>As part of the digital edition of <em>The General in His Labyrinth</em>, we developed a Python
-                        script to
-                        convert the XML/TEI-encoded text into RDF/Turtle format. This script enables the extraction of
-                        key
-                        components from the TEI markup—such as characters, places, lines, and quotations—and assigns
-                        each
-                        one a unique URI (Uniform Resource Identifier) for semantic referencing.</p>
+                    <p>As part of the digital edition of <em>The General in His Labyrinth</em>, a Python script was
+                        developed to convert the XML/TEI-encoded text into RDF/Turtle format. The script enables the
+                        extraction of key components from the TEI markup—such as characters, places, images, and
+                        ephigraphs—and assigns each one a unique URI (Uniform Resource Identifier) for semantic
+                        referencing.</p>
 
-                    <p>To explore the results of the RDF serialization, refer to the table below outlining the full
-                        pipeline.</p>
-
+                    <p>The results of the RDF serialization can be explored through the table below, which outlines the
+                        full pipeline.</p>
                     <p>
-                        By using properties from established metadata standards, we modeled meaningful relationships
-                        between these entities. The Python code used for this transformation process can be accessed
+                        By using properties from established metadata standards, meaningful relationships between the
+                        entities were modeled. The Python code used for this transformation process is available
                         <a href="https://github.com/csalguero10/LODGabrielGarciaMarquez/blob/main/tei_xml/tei_to_rdf.py"
                             target="_blank">
                             here</a>.
                     </p>
                     <p>
                         The output is presented in the following Turtle dataset. The text is defined as a central entity
-                        and linked to its descriptive metadata, including author, publisher, and publication date.
-                        In addition, references to places, people, epigraphs, and folios from the original manuscript
-                        were identified and linked to the corresponding lines in which they are mentioned.
-                        Conversely, each line is connected to the URIs of the entities it refers to, allowing for a
-                        bidirectional semantic representation.
+                        and is linked to its descriptive metadata, including author, publisher, and publication date.
+                        Additionally, references to places, people, epigraphs, and figures from the original manuscript
+                        were identified and linked to the corresponding pages in which they are mentioned.
                     </p>
+
                 </div>
 
                 <br>
