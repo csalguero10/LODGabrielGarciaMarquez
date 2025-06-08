@@ -66,11 +66,8 @@
 
                 <h5 class="subtitle" id="conceptual-map">Conceptual Map</h5>
 
-                <p>In the context of Gabriel García Márquez Linked Open Data, the selected items serve a key function in
-                    conveying the narrative in an authentic and meaningful way. The conceptual map is designed to
-                    represent the collected data in natural language, outlining both the extracted information and the
-                    relationships among entities. In the graph, light blue nodes indicate the selected items, while grey
-                    nodes represent metadata, including relevant events and individuals linked to the main subject.</p>
+                <p>In the context of Gabriel García Márquez Linked Open Data, the selected items serve a key role in conveying the narrative in an authentic and meaningful way. The conceptual map is designed to represent the collected data in natural language, outlining both the extracted information and the relationships among entities. In the graph, each item has a different color and is connected to the main subject, with nodes of the same color representing relevant events and individuals linked to the main subject.</p>
+
                 <br>
 
                 <div class="thumb">
@@ -232,468 +229,6 @@
                     </table>
                 </div>
                 <br>
-
-                <!-- Metadata Aligment -->
-                <h5 class="subtitle" id="metadata-alignment">Metadata Aligment</h5>
-                <div>
-                    <p>After identifying the relevant standards, this final stage enables a comprehensive description
-                        and interconnection of the selected items. The project’s overarching aim has been to ensure
-                        coherent and interoperable data delivery by adopting widely recognized semantic ontologies. To
-                        structure the information effectively, all properties were organized into four categories: WHO,
-                        WHERE, WHEN, and WHAT.</p>
-                    <ul>
-                        <li><strong>Dublin Core:</strong> The Dublin Core Metadata Initiative (DCMI) Terms were selected
-                            for their broad applicability and established use in describing diverse types of resources
-                            through a standardized vocabulary.</li>
-                        <li><strong>Schema.org:</strong> Schema.org was chosen for its extensive and widely implemented
-                            schemas, which support the structuring of data across the web and enhance interoperability.
-                        </li>
-                        <li><strong>CIDOC CRM:</strong> The CIDOC Conceptual Reference Model (CRM) was adopted due to
-                            its suitability for cultural heritage contexts. As a domain-specific ontology, it supports
-                            the integration and contextualization of heterogeneous data from various institutions and
-                            disciplines—key requirements for this project.</li>
-                        <li><strong>FOAF:</strong> The Friend of a Friend (FOAF) ontology was included to model
-                            information about people and their relationships. It is particularly useful for describing
-                            individuals, their roles, and their connections within broader cultural and historical
-                            networks.</li>
-                    </ul>
-                    <p>In instances where no direct metadata alignment was identified, "N/A" was indicated in the table
-                        below to reflect the absence of a suitable mapping.</p>
-                </div>
-                <br>
-                <div class="col grid10">
-                    <div class="tab-container">
-                        <ul class="tabs clearfix">
-                            <li class="active"><a href="#ali-tab-1">WHO</a></li>
-                            <li><a href="#ali-tab-2">WHERE</a></li>
-                            <li><a href="#ali-tab-3">WHEN</a></li>
-                            <li><a href="#ali-tab-4">WHAT</a></li>
-                        </ul>
-                        <!-- Table WHO -->
-                        <div id="ali-tab-1" class="tab_content active">
-                            <div class="table-container">
-                                <table style="padding: 2em;">
-                                    <thead>
-                                        <tr>
-                                            <th title="Field #1">Property</th>
-                                            <th title="Field #2">Dublin Core</th>
-                                            <th title="Field #3">Schema.org</th>
-                                            <th title="Field #4">CIDOC-CRM</th>
-                                            <th title="Field #5">FOAF</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Creator</td>
-                                            <td>dcterms:creator</td>
-                                            <td>schema:creator</td>
-                                            <td>E39 Actor + P94 has created</td>
-                                            <td>foaf:maker</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Institution/Repository</td>
-                                            <td>dcterms:contributor</td>
-                                            <td>schema:contributor</td>
-                                            <td>E74 Group</td>
-                                            <td>foaf:Organization</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Publisher</td>
-                                            <td>dc:publisher</td>
-                                            <td>schema:publisher</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Director</td>
-                                            <td>N/A</td>
-                                            <td>schema:director</td>
-                                            <td>E39 Actor + P94 has created</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Member of</td>
-                                            <td>dcterms:isPartOf</td>
-                                            <td>schema:memberOf</td>
-                                            <td>P107 has current or former member</td>
-                                            <td>foaf:member</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Owner</td>
-                                            <td>dcterms:rightsHolder</td>
-                                            <td>schema:owner</td>
-                                            <td>P52 has current owner</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Made by</td>
-                                            <td>dcterms:creator</td>
-                                            <td>schema:manufacturer</td>
-                                            <td>P14 carried out by</td>
-                                            <td>foaf:maker</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sender</td>
-                                            <td>dcterms:creator</td>
-                                            <td>schema:sender</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Recipient</td>
-                                            <td>N/A</td>
-                                            <td>schema:recipient</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Company</td>
-                                            <td>dcterms:publisher</td>
-                                            <td>schema:productionCompany</td>
-                                            <td>N/A</td>
-                                            <td>foaf:Organization</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="5"></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- Table WHERE -->
-                        <div id="ali-tab-2" class="tab_content">
-                            <div class="table-container">
-                                <table style="padding: 2em;">
-                                    <thead>
-                                        <tr>
-                                            <th title="Field #1">Property</th>
-                                            <th title="Field #2">Dublin Core</th>
-                                            <th title="Field #3">Schema.org</th>
-                                            <th title="Field #4">CIDOC-CRM</th>
-                                            <th title="Field #5">FOAF</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Location</td>
-                                            <td>dcterms:place</td>
-                                            <td>schema:location</td>
-                                            <td>E53 Place + P55 has current location</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Country of Origin</td>
-                                            <td>dcterms:spatial</td>
-                                            <td>schema:countryOfOrigin</td>
-                                            <td>E53 Place + P89 falls within</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Birth Place</td>
-                                            <td>dcterms:spatial</td>
-                                            <td>schema:birthPlace</td>
-                                            <td>E67 Birth + P7 took place at</td>
-                                            <td>foaf:based_near</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Place of Publication</td>
-                                            <td>dcterms:spatial</td>
-                                            <td>schema:locationCreated</td>
-                                            <td>E12 Production + P7 took place at</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation Location</td>
-                                            <td>dcterms:spatial</td>
-                                            <td>schema:locationCreated</td>
-                                            <td>E65 Creation + P7 took place at</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Has current location</td>
-                                            <td>dcterms:spatial</td>
-                                            <td>schema:contentLocation</td>
-                                            <td>E53 Place + P55 has current location</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Recorded at</td>
-                                            <td>N/A</td>
-                                            <td>schema:recordedAt</td>
-                                            <td>E73 Information Object + P7 took place at</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                    </tbody>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="5"></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- Table WHEN-->
-                        <div id="ali-tab-3" class="tab_content">
-                            <div class="table-container">
-                                <table style="padding: 2em;">
-                                    <thead>
-                                        <tr>
-                                            <th title="Field #1">Property</th>
-                                            <th title="Field #2">Dublin Core</th>
-                                            <th title="Field #3">Schema.org</th>
-                                            <th title="Field #4">CIDOC-CRM</th>
-                                            <th title="Field #5">FOAF</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Creation Date</td>
-                                            <td>dcterms:created</td>
-                                            <td>schema:dateCreated</td>
-                                            <td>E65 Creation</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Publication Date</td>
-                                            <td>dcterms:issued</td>
-                                            <td>schema:datePublished</td>
-                                            <td>E12 Production</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Birth Date</td>
-                                            <td>dcterms:date</td>
-                                            <td>schema:birthDate</td>
-                                            <td>E67 Birth</td>
-                                            <td>foaf:birthday</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Period</td>
-                                            <td>dcterms:temporal</td>
-                                            <td>schema:temporalCoverage</td>
-                                            <td>P10_falls_within (E4 Period)</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Recorded At</td>
-                                            <td>dcterms:spatial, dcterms:temporal</td>
-                                            <td>schema:recordedAt</td>
-                                            <td>P7 took place at + E52 Time-Span</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="5"></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- Table WHAT-->
-                        <div id="ali-tab-4" class="tab_content">
-                            <div class="table-container">
-                                <table style="padding: 2em;">
-                                    <thead>
-                                        <tr>
-                                            <th title="Field #1">Property</th>
-                                            <th title="Field #2">Dublin Core</th>
-                                            <th title="Field #3">Schema.org</th>
-                                            <th title="Field #4">CIDOC-CRM</th>
-                                            <th title="Field #5">FOAF</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Title</td>
-                                            <td>dcterms:title</td>
-                                            <td>schema:name</td>
-                                            <td>P102 has title</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subtitle</td>
-                                            <td>N/A</td>
-                                            <td>schema:alternateName</td>
-                                            <td>P102 has title</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td>dcterms:type</td>
-                                            <td>schema:additionalType</td>
-                                            <td>E55 Type + P2 has type</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dimension</td>
-                                            <td>dcterms:medium</td>
-                                            <td>schema:width, schema:height</td>
-                                            <td>E54 Dimension +
-                                                <br>P43 has dimension
-                                            </td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Material</td>
-                                            <td>N/A</td>
-                                            <td>schema:material</td>
-                                            <td>E57 Material + P45 consists of</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Genre</td>
-                                            <td>dcterms:type</td>
-                                            <td>schema:genre</td>
-                                            <td>E55 Type + P2 has type</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Language</td>
-                                            <td>dcterms:language</td>
-                                            <td>schema:inLanguage</td>
-                                            <td>P72 has language</td>
-                                            <td>foaf:language</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Duration</td>
-                                            <td>dcterms:extent</td>
-                                            <td>schema:duration</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subject</td>
-                                            <td>dcterms:subject</td>
-                                            <td>schema:about</td>
-                                            <td>P129 is about</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Format</td>
-                                            <td>dcterms:format</td>
-                                            <td>schema:encodingFormat</td>
-                                            <td>E55 Type</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Part Of</td>
-                                            <td>dcterms:isPartOf</td>
-                                            <td>schema:isPartOf</td>
-                                            <td>P46 is composed of</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Represents</td>
-                                            <td>N/A</td>
-                                            <td>schema:representativeOfPage</td>
-                                            <td>P138 represents</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Depicts</td>
-                                            <td>N/A</td>
-                                            <td>schema:depiction</td>
-                                            <td>P62 depicts</td>
-                                            <td>foaf:depiction</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Technique</td>
-                                            <td>N/A</td>
-                                            <td>schema:artMedium</td>
-                                            <td>P32 used general technique</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>References</td>
-                                            <td>dcterms:references</td>
-                                            <td>schema:citation</td>
-                                            <td>P67 refers to</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Discusses</td>
-                                            <td>dcterms:description</td>
-                                            <td>schema:about</td>
-                                            <td>P129 is about</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Copyright</td>
-                                            <td>dcterms:rights</td>
-                                            <td>schema:copyrightHolder,
-                                                <br>schema:license
-                                            </td>
-                                            <td>P104 is subject to</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Edition</td>
-                                            <td>dcterms:hasVersion</td>
-                                            <td>schema:edition</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Refers To</td>
-                                            <td>dcterms:relation</td>
-                                            <td>schema:isBasedOn</td>
-                                            <td>P67 refers to</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Consists Of</td>
-                                            <td>dcterms:hasPart</td>
-                                            <td>schema:hasPart</td>
-                                            <td>P46 is composed of</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Relation</td>
-                                            <td>dcterms:relation</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Profession</td>
-                                            <td>N/A</td>
-                                            <td>schema:hasOccupation</td>
-                                            <td>N/A</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Number of Episodes</td>
-                                            <td>N/A</td>
-                                            <td>schema:numberOfEpisodes</td>
-                                            <td>E73 Information Object +
-                                                <br>P57 has number of parts
-                                            </td>
-                                            <td>N/A</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Based On</td>
-                                            <td>dcterms:source</td>
-                                            <td>schema:isBasedOn</td>
-                                            <td>P70 documents / P67 refers to</td>
-                                            <td>N/A</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="5"></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-
 
                 <!-- tabla con items -->
                 <h5 class="subtitle" id="items-description">Items Description</h5>
@@ -2185,6 +1720,468 @@
                                     <tfoot>
                                         <tr>
                                             <td colspan="3"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+                <!-- Metadata Aligment -->
+                <h5 class="subtitle" id="metadata-alignment">Metadata Aligment</h5>
+                <div>
+                    <p>After identifying the relevant standards, this final stage enables a comprehensive description
+                        and interconnection of the selected items. The project’s overarching aim has been to ensure
+                        coherent and interoperable data delivery by adopting widely recognized semantic ontologies. To
+                        structure the information effectively, all properties were organized into four categories: WHO,
+                        WHERE, WHEN, and WHAT.</p>
+                    <ul>
+                        <li><strong>Dublin Core:</strong> The Dublin Core Metadata Initiative (DCMI) Terms were selected
+                            for their broad applicability and established use in describing diverse types of resources
+                            through a standardized vocabulary.</li>
+                        <li><strong>Schema.org:</strong> Schema.org was chosen for its extensive and widely implemented
+                            schemas, which support the structuring of data across the web and enhance interoperability.
+                        </li>
+                        <li><strong>CIDOC CRM:</strong> The CIDOC Conceptual Reference Model (CRM) was adopted due to
+                            its suitability for cultural heritage contexts. As a domain-specific ontology, it supports
+                            the integration and contextualization of heterogeneous data from various institutions and
+                            disciplines—key requirements for this project.</li>
+                        <li><strong>FOAF:</strong> The Friend of a Friend (FOAF) ontology was included to model
+                            information about people and their relationships. It is particularly useful for describing
+                            individuals, their roles, and their connections within broader cultural and historical
+                            networks.</li>
+                    </ul>
+                    <p>In instances where no direct metadata alignment was identified, "N/A" was indicated in the table
+                        below to reflect the absence of a suitable mapping.</p>
+                </div>
+                <br>
+                <div class="col grid10">
+                    <div class="tab-container">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#ali-tab-1">WHO</a></li>
+                            <li><a href="#ali-tab-2">WHERE</a></li>
+                            <li><a href="#ali-tab-3">WHEN</a></li>
+                            <li><a href="#ali-tab-4">WHAT</a></li>
+                        </ul>
+                        <!-- Table WHO -->
+                        <div id="ali-tab-1" class="tab_content active">
+                            <div class="table-container">
+                                <table style="padding: 2em;">
+                                    <thead>
+                                        <tr>
+                                            <th title="Field #1">Property</th>
+                                            <th title="Field #2">Dublin Core</th>
+                                            <th title="Field #3">Schema.org</th>
+                                            <th title="Field #4">CIDOC-CRM</th>
+                                            <th title="Field #5">FOAF</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Creator</td>
+                                            <td>dcterms:creator</td>
+                                            <td>schema:creator</td>
+                                            <td>E39 Actor + P94 has created</td>
+                                            <td>foaf:maker</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Institution/Repository</td>
+                                            <td>dcterms:contributor</td>
+                                            <td>schema:contributor</td>
+                                            <td>E74 Group</td>
+                                            <td>foaf:Organization</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Publisher</td>
+                                            <td>dc:publisher</td>
+                                            <td>schema:publisher</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Director</td>
+                                            <td>N/A</td>
+                                            <td>schema:director</td>
+                                            <td>E39 Actor + P94 has created</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Member of</td>
+                                            <td>dcterms:isPartOf</td>
+                                            <td>schema:memberOf</td>
+                                            <td>P107 has current or former member</td>
+                                            <td>foaf:member</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Owner</td>
+                                            <td>dcterms:rightsHolder</td>
+                                            <td>schema:owner</td>
+                                            <td>P52 has current owner</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Made by</td>
+                                            <td>dcterms:creator</td>
+                                            <td>schema:manufacturer</td>
+                                            <td>P14 carried out by</td>
+                                            <td>foaf:maker</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sender</td>
+                                            <td>dcterms:creator</td>
+                                            <td>schema:sender</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recipient</td>
+                                            <td>N/A</td>
+                                            <td>schema:recipient</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company</td>
+                                            <td>dcterms:publisher</td>
+                                            <td>schema:productionCompany</td>
+                                            <td>N/A</td>
+                                            <td>foaf:Organization</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Table WHERE -->
+                        <div id="ali-tab-2" class="tab_content">
+                            <div class="table-container">
+                                <table style="padding: 2em;">
+                                    <thead>
+                                        <tr>
+                                            <th title="Field #1">Property</th>
+                                            <th title="Field #2">Dublin Core</th>
+                                            <th title="Field #3">Schema.org</th>
+                                            <th title="Field #4">CIDOC-CRM</th>
+                                            <th title="Field #5">FOAF</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Location</td>
+                                            <td>dcterms:place</td>
+                                            <td>schema:location</td>
+                                            <td>E53 Place + P55 has current location</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Country of Origin</td>
+                                            <td>dcterms:spatial</td>
+                                            <td>schema:countryOfOrigin</td>
+                                            <td>E53 Place + P89 falls within</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Birth Place</td>
+                                            <td>dcterms:spatial</td>
+                                            <td>schema:birthPlace</td>
+                                            <td>E67 Birth + P7 took place at</td>
+                                            <td>foaf:based_near</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Place of Publication</td>
+                                            <td>dcterms:spatial</td>
+                                            <td>schema:locationCreated</td>
+                                            <td>E12 Production + P7 took place at</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation Location</td>
+                                            <td>dcterms:spatial</td>
+                                            <td>schema:locationCreated</td>
+                                            <td>E65 Creation + P7 took place at</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Has current location</td>
+                                            <td>dcterms:spatial</td>
+                                            <td>schema:contentLocation</td>
+                                            <td>E53 Place + P55 has current location</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recorded at</td>
+                                            <td>N/A</td>
+                                            <td>schema:recordedAt</td>
+                                            <td>E73 Information Object + P7 took place at</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                    </tbody>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Table WHEN-->
+                        <div id="ali-tab-3" class="tab_content">
+                            <div class="table-container">
+                                <table style="padding: 2em;">
+                                    <thead>
+                                        <tr>
+                                            <th title="Field #1">Property</th>
+                                            <th title="Field #2">Dublin Core</th>
+                                            <th title="Field #3">Schema.org</th>
+                                            <th title="Field #4">CIDOC-CRM</th>
+                                            <th title="Field #5">FOAF</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Creation Date</td>
+                                            <td>dcterms:created</td>
+                                            <td>schema:dateCreated</td>
+                                            <td>E65 Creation</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Publication Date</td>
+                                            <td>dcterms:issued</td>
+                                            <td>schema:datePublished</td>
+                                            <td>E12 Production</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Birth Date</td>
+                                            <td>dcterms:date</td>
+                                            <td>schema:birthDate</td>
+                                            <td>E67 Birth</td>
+                                            <td>foaf:birthday</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Period</td>
+                                            <td>dcterms:temporal</td>
+                                            <td>schema:temporalCoverage</td>
+                                            <td>P10_falls_within (E4 Period)</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recorded At</td>
+                                            <td>dcterms:spatial, dcterms:temporal</td>
+                                            <td>schema:recordedAt</td>
+                                            <td>P7 took place at + E52 Time-Span</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Table WHAT-->
+                        <div id="ali-tab-4" class="tab_content">
+                            <div class="table-container">
+                                <table style="padding: 2em;">
+                                    <thead>
+                                        <tr>
+                                            <th title="Field #1">Property</th>
+                                            <th title="Field #2">Dublin Core</th>
+                                            <th title="Field #3">Schema.org</th>
+                                            <th title="Field #4">CIDOC-CRM</th>
+                                            <th title="Field #5">FOAF</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Title</td>
+                                            <td>dcterms:title</td>
+                                            <td>schema:name</td>
+                                            <td>P102 has title</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subtitle</td>
+                                            <td>N/A</td>
+                                            <td>schema:alternateName</td>
+                                            <td>P102 has title</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Type</td>
+                                            <td>dcterms:type</td>
+                                            <td>schema:additionalType</td>
+                                            <td>E55 Type + P2 has type</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dimension</td>
+                                            <td>dcterms:medium</td>
+                                            <td>schema:width, schema:height</td>
+                                            <td>E54 Dimension +
+                                                <br>P43 has dimension
+                                            </td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Material</td>
+                                            <td>N/A</td>
+                                            <td>schema:material</td>
+                                            <td>E57 Material + P45 consists of</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Genre</td>
+                                            <td>dcterms:type</td>
+                                            <td>schema:genre</td>
+                                            <td>E55 Type + P2 has type</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Language</td>
+                                            <td>dcterms:language</td>
+                                            <td>schema:inLanguage</td>
+                                            <td>P72 has language</td>
+                                            <td>foaf:language</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Duration</td>
+                                            <td>dcterms:extent</td>
+                                            <td>schema:duration</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subject</td>
+                                            <td>dcterms:subject</td>
+                                            <td>schema:about</td>
+                                            <td>P129 is about</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Format</td>
+                                            <td>dcterms:format</td>
+                                            <td>schema:encodingFormat</td>
+                                            <td>E55 Type</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Part Of</td>
+                                            <td>dcterms:isPartOf</td>
+                                            <td>schema:isPartOf</td>
+                                            <td>P46 is composed of</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Represents</td>
+                                            <td>N/A</td>
+                                            <td>schema:representativeOfPage</td>
+                                            <td>P138 represents</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Depicts</td>
+                                            <td>N/A</td>
+                                            <td>schema:depiction</td>
+                                            <td>P62 depicts</td>
+                                            <td>foaf:depiction</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Technique</td>
+                                            <td>N/A</td>
+                                            <td>schema:artMedium</td>
+                                            <td>P32 used general technique</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>References</td>
+                                            <td>dcterms:references</td>
+                                            <td>schema:citation</td>
+                                            <td>P67 refers to</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discusses</td>
+                                            <td>dcterms:description</td>
+                                            <td>schema:about</td>
+                                            <td>P129 is about</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Copyright</td>
+                                            <td>dcterms:rights</td>
+                                            <td>schema:copyrightHolder,
+                                                <br>schema:license
+                                            </td>
+                                            <td>P104 is subject to</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Edition</td>
+                                            <td>dcterms:hasVersion</td>
+                                            <td>schema:edition</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Refers To</td>
+                                            <td>dcterms:relation</td>
+                                            <td>schema:isBasedOn</td>
+                                            <td>P67 refers to</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consists Of</td>
+                                            <td>dcterms:hasPart</td>
+                                            <td>schema:hasPart</td>
+                                            <td>P46 is composed of</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relation</td>
+                                            <td>dcterms:relation</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profession</td>
+                                            <td>N/A</td>
+                                            <td>schema:hasOccupation</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Episodes</td>
+                                            <td>N/A</td>
+                                            <td>schema:numberOfEpisodes</td>
+                                            <td>E73 Information Object +
+                                                <br>P57 has number of parts
+                                            </td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Based On</td>
+                                            <td>dcterms:source</td>
+                                            <td>schema:isBasedOn</td>
+                                            <td>P70 documents / P67 refers to</td>
+                                            <td>N/A</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5"></td>
                                         </tr>
                                     </tfoot>
                                 </table>
